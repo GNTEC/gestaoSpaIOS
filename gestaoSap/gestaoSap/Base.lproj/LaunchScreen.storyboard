@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logotipo" translatesAutoresizingMaskIntoConstraints="NO" id="fDQ-Vw-ra7">
+                                <rect key="frame" x="106" y="88" width="151" height="121"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ET-xF-YRI">
+                                <rect key="frame" x="17" y="236" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rodape" translatesAutoresizingMaskIntoConstraints="NO" id="qaE-DN-TdW">
+                                <rect key="frame" x="-1" y="611" width="376" height="56"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Cl-LL-wIs">
+                                <rect key="frame" x="16" y="326" width="343" height="216"/>
+                                <color key="backgroundColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">BUDDHA SPA: Um oásis na sua rotina !
+
+O Buddha Spa é a maior rede de Spa Urbano do país, atualmento com 25 unidades em diversos estados.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUk-ca-kES">
+                                <rect key="frame" x="11" y="278" width="343" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="iZQ-dv-hS7">
+                                <rect key="frame" x="172" y="453" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ET-xF-YRI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="17" id="1Qm-2h-hGV"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5Cl-LL-wIs" secondAttribute="bottom" constant="125" id="5tt-kI-yFE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDQ-Vw-ra7" secondAttribute="trailing" constant="102" id="7jq-FW-Fme"/>
+                            <constraint firstItem="iZQ-dv-hS7" firstAttribute="top" secondItem="5Cl-LL-wIs" secondAttribute="bottom" constant="-89" id="BgZ-SJ-Cft"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qaE-DN-TdW" secondAttribute="trailing" constant="-16" id="DLN-Wl-kwB"/>
+                            <constraint firstItem="iZQ-dv-hS7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="156" id="LER-n9-iDo"/>
+                            <constraint firstItem="8ET-xF-YRI" firstAttribute="top" secondItem="fDQ-Vw-ra7" secondAttribute="bottom" constant="27" id="Ml8-uH-Jhw"/>
+                            <constraint firstItem="qaE-DN-TdW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-17" id="Xc8-Sa-cBp"/>
+                            <constraint firstItem="YUk-ca-kES" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-5" id="XwY-Mb-Pw5"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qaE-DN-TdW" secondAttribute="bottom" id="YzG-aq-XJP"/>
+                            <constraint firstItem="fDQ-Vw-ra7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="90" id="ZNi-Q3-uFn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Cl-LL-wIs" secondAttribute="trailing" id="biI-Ib-Vnn"/>
+                            <constraint firstItem="fDQ-Vw-ra7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="68" id="d0G-0B-mvi"/>
+                            <constraint firstItem="5Cl-LL-wIs" firstAttribute="top" secondItem="YUk-ca-kES" secondAttribute="bottom" constant="33" id="edU-iJ-Zvy"/>
+                            <constraint firstItem="5Cl-LL-wIs" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="f2L-kN-478"/>
+                            <constraint firstItem="YUk-ca-kES" firstAttribute="top" secondItem="8ET-xF-YRI" secondAttribute="bottom" constant="12" id="gCF-6E-XoB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YUk-ca-kES" secondAttribute="trailing" constant="5" id="gyj-0a-GHF"/>
+                            <constraint firstAttribute="trailing" secondItem="8ET-xF-YRI" secondAttribute="trailing" constant="15" id="pgN-GN-GKl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iZQ-dv-hS7" secondAttribute="trailing" constant="167" id="yXN-3O-54g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logotipo" width="121" height="121"/>
+        <image name="rodape" width="375" height="56"/>
+    </resources>
+</document>

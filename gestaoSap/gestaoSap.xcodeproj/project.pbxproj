@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7507D776B598D5A468FF7FEB /* Pods_gestaoSap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029251EE620A0EB6162B130 /* Pods_gestaoSap.framework */; };
+		CEE2EFD81E0BF61000F7EC4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFD71E0BF61000F7EC4B /* main.m */; };
+		CEE2EFDB1E0BF61000F7EC4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */; };
+		CEE2EFE11E0BF61000F7EC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */; };
+		CEE2EFE31E0BF61000F7EC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFE21E0BF61000F7EC4B /* Assets.xcassets */; };
+		CEE2EFE61E0BF61000F7EC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */; };
+		CEE6ED221E1178E500237F5A /* VariaveisGlobais.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */; };
+		CEE6ED281E117D8900237F5A /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED271E117D8900237F5A /* loginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0029251EE620A0EB6162B130 /* Pods_gestaoSap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gestaoSap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C38F5AEC3158C1E5506336 /* Pods-gestaoSap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestaoSap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gestaoSap/Pods-gestaoSap.debug.xcconfig"; sourceTree = "<group>"; };
+		A883B66E906AB9FD858EFFFB /* Pods-gestaoSap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestaoSap.release.xcconfig"; path = "Pods/Target Support Files/Pods-gestaoSap/Pods-gestaoSap.release.xcconfig"; sourceTree = "<group>"; };
+		CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestaoSap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE2EFD71E0BF61000F7EC4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEE2EFD91E0BF61000F7EC4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEE2EFE01E0BF61000F7EC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEE2EFE21E0BF61000F7EC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEE2EFE51E0BF61000F7EC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEE2EFE71E0BF61000F7EC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE6ED1F1E1178E500237F5A /* VariaveisGlobais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VariaveisGlobais.h; path = Files/Utils/VariaveisGlobais.h; sourceTree = "<group>"; };
+		CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VariaveisGlobais.m; path = Files/Utils/VariaveisGlobais.m; sourceTree = "<group>"; };
+		CEE6ED261E117D8900237F5A /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loginViewController.h; path = Files/Screen/Login/ViewController/loginViewController.h; sourceTree = "<group>"; };
+		CEE6ED271E117D8900237F5A /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = loginViewController.m; path = Files/Screen/Login/ViewController/loginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEE2EFD01E0BF61000F7EC4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7507D776B598D5A468FF7FEB /* Pods_gestaoSap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50C2B57A20EF7BCE0620A40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0029251EE620A0EB6162B130 /* Pods_gestaoSap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5B3A86E1DD6B9B99D7D7BE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39C38F5AEC3158C1E5506336 /* Pods-gestaoSap.debug.xcconfig */,
+				A883B66E906AB9FD858EFFFB /* Pods-gestaoSap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEE2EFCA1E0BF61000F7EC4B = {
+			isa = PBXGroup;
+			children = (
+				CEE2EFD51E0BF61000F7EC4B /* gestaoSap */,
+				CEE2EFD41E0BF61000F7EC4B /* Products */,
+				B5B3A86E1DD6B9B99D7D7BE3 /* Pods */,
+				A50C2B57A20EF7BCE0620A40 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEE2EFD41E0BF61000F7EC4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEE2EFD51E0BF61000F7EC4B /* gestaoSap */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED181E1176E300237F5A /* Screen */,
+				CEE2EFED1E0BF61C00F7EC4B /* Utils */,
+				CEE2EFD91E0BF61000F7EC4B /* AppDelegate.h */,
+				CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */,
+				CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */,
+				CEE2EFE21E0BF61000F7EC4B /* Assets.xcassets */,
+				CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */,
+				CEE2EFE71E0BF61000F7EC4B /* Info.plist */,
+				CEE2EFD61E0BF61000F7EC4B /* Supporting Files */,
+			);
+			path = gestaoSap;
+			sourceTree = "<group>";
+		};
+		CEE2EFD61E0BF61000F7EC4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2EFD71E0BF61000F7EC4B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEE2EFED1E0BF61C00F7EC4B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED1F1E1178E500237F5A /* VariaveisGlobais.h */,
+				CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		CEE6ED181E1176E300237F5A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED191E11780400237F5A /* Login */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
+		CEE6ED191E11780400237F5A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED1C1E11788E00237F5A /* Model */,
+				CEE6ED1A1E11780B00237F5A /* ViewController */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		CEE6ED1A1E11780B00237F5A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED261E117D8900237F5A /* loginViewController.h */,
+				CEE6ED271E117D8900237F5A /* loginViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CEE6ED1C1E11788E00237F5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEE2EFD21E0BF61000F7EC4B /* gestaoSap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSap" */;
+			buildPhases = (
+				64A0BBAC04DE089AEAC0D0D4 /* [CP] Check Pods Manifest.lock */,
+				CEE2EFCF1E0BF61000F7EC4B /* Sources */,
+				CEE2EFD01E0BF61000F7EC4B /* Frameworks */,
+				CEE2EFD11E0BF61000F7EC4B /* Resources */,
+				B74184E1324ECA1A2D8AC8C7 /* [CP] Embed Pods Frameworks */,
+				170BFA4EC99455CAA3EC2B70 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gestaoSap;
+			productName = gestaoSap;
+			productReference = CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEE2EFCB1E0BF61000F7EC4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = gntec;
+				TargetAttributes = {
+					CEE2EFD21E0BF61000F7EC4B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2S5Q2MH7V4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEE2EFCE1E0BF61000F7EC4B /* Build configuration list for PBXProject "gestaoSap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEE2EFCA1E0BF61000F7EC4B;
+			productRefGroup = CEE2EFD41E0BF61000F7EC4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEE2EFD21E0BF61000F7EC4B /* gestaoSap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEE2EFD11E0BF61000F7EC4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE2EFE61E0BF61000F7EC4B /* LaunchScreen.storyboard in Resources */,
+				CEE2EFE31E0BF61000F7EC4B /* Assets.xcassets in Resources */,
+				CEE2EFE11E0BF61000F7EC4B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		170BFA4EC99455CAA3EC2B70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gestaoSap/Pods-gestaoSap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64A0BBAC04DE089AEAC0D0D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B74184E1324ECA1A2D8AC8C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gestaoSap/Pods-gestaoSap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEE2EFCF1E0BF61000F7EC4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE2EFDB1E0BF61000F7EC4B /* AppDelegate.m in Sources */,
+				CEE6ED221E1178E500237F5A /* VariaveisGlobais.m in Sources */,
+				CEE6ED281E117D8900237F5A /* loginViewController.m in Sources */,
+				CEE2EFD81E0BF61000F7EC4B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEE2EFE01E0BF61000F7EC4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEE2EFE51E0BF61000F7EC4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEE2EFE81E0BF61000F7EC4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEE2EFE91E0BF61000F7EC4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEE2EFEB1E0BF61000F7EC4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39C38F5AEC3158C1E5506336 /* Pods-gestaoSap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2S5Q2MH7V4;
+				INFOPLIST_FILE = gestaoSap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.inf.gntec.gestaoSap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEE2EFEC1E0BF61000F7EC4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A883B66E906AB9FD858EFFFB /* Pods-gestaoSap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2S5Q2MH7V4;
+				INFOPLIST_FILE = gestaoSap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.inf.gntec.gestaoSap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEE2EFCE1E0BF61000F7EC4B /* Build configuration list for PBXProject "gestaoSap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE2EFE81E0BF61000F7EC4B /* Debug */,
+				CEE2EFE91E0BF61000F7EC4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE2EFEB1E0BF61000F7EC4B /* Debug */,
+				CEE2EFEC1E0BF61000F7EC4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEE2EFCB1E0BF61000F7EC4B /* Project object */;
+}

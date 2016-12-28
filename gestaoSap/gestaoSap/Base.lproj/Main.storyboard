@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="loginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logotipo" translatesAutoresizingMaskIntoConstraints="NO" id="0pV-Me-sTE">
+                                <rect key="frame" x="106" y="88" width="151" height="121"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhh-Qv-GGn">
+                                <rect key="frame" x="17" y="236" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.43529411764705883" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-Sb-sS5">
+                                <rect key="frame" x="11" y="278" width="343" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembrar email e senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBc-EK-Ywb">
+                                <rect key="frame" x="226" y="388.5" width="128" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-1O-Qqh">
+                                <rect key="frame" x="170" y="380" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmc-qk-Pod">
+                                <rect key="frame" x="16" y="461" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CtP-EK-RbE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="ENTRAR">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vwe-fV-rDv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CjU-zn-CTn">
+                                <rect key="frame" x="16" y="303" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Plk-7S-2QL">
+                                <rect key="frame" x="16" y="334" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rodape" translatesAutoresizingMaskIntoConstraints="NO" id="8tv-d0-Ris">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0pV-Me-sTE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="0u0-eb-7dq"/>
+                            <constraint firstItem="DVZ-Sb-sS5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="2g6-YM-Cjd"/>
+                            <constraint firstItem="8tv-d0-Ris" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5pa-RW-4VH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CjU-zn-CTn" secondAttribute="trailing" id="779-rn-AaM"/>
+                            <constraint firstItem="CjU-zn-CTn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7SJ-tA-tga"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dmc-qk-Pod" secondAttribute="trailing" id="BiS-BF-os2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mhh-Qv-GGn" secondAttribute="trailing" constant="-1" id="DO1-gi-y24"/>
+                            <constraint firstItem="Plk-7S-2QL" firstAttribute="top" secondItem="CjU-zn-CTn" secondAttribute="bottom" constant="1" id="FqJ-T4-WIe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8tv-d0-Ris" secondAttribute="bottom" id="H65-2w-wEs"/>
+                            <constraint firstItem="Dmc-qk-Pod" firstAttribute="top" secondItem="2iF-1O-Qqh" secondAttribute="bottom" constant="50" id="IaY-dX-0cm"/>
+                            <constraint firstItem="2iF-1O-Qqh" firstAttribute="top" secondItem="Plk-7S-2QL" secondAttribute="bottom" constant="16" id="NRp-PU-V8e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0pV-Me-sTE" secondAttribute="trailing" constant="102" id="RHJ-Ch-j66"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8tv-d0-Ris" secondAttribute="trailing" constant="-16" id="RZA-po-OOo"/>
+                            <constraint firstItem="DVZ-Sb-sS5" firstAttribute="top" secondItem="mhh-Qv-GGn" secondAttribute="bottom" constant="12" id="SDj-G5-PeU"/>
+                            <constraint firstAttribute="trailing" secondItem="8tv-d0-Ris" secondAttribute="trailing" id="Uha-kM-abX"/>
+                            <constraint firstItem="BBc-EK-Ywb" firstAttribute="leading" secondItem="2iF-1O-Qqh" secondAttribute="trailing" constant="7" id="UpM-Hh-yk2"/>
+                            <constraint firstItem="CjU-zn-CTn" firstAttribute="top" secondItem="DVZ-Sb-sS5" secondAttribute="bottom" constant="10" id="YRm-x3-XgX"/>
+                            <constraint firstItem="mhh-Qv-GGn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="aSu-2g-cmy"/>
+                            <constraint firstItem="mhh-Qv-GGn" firstAttribute="top" secondItem="0pV-Me-sTE" secondAttribute="bottom" constant="27" id="dBB-1W-LCp"/>
+                            <constraint firstItem="Plk-7S-2QL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gC6-F1-twh"/>
+                            <constraint firstItem="2iF-1O-Qqh" firstAttribute="centerY" secondItem="BBc-EK-Ywb" secondAttribute="centerY" id="hQn-sx-oKr"/>
+                            <constraint firstItem="0pV-Me-sTE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="mjS-u5-CGM"/>
+                            <constraint firstItem="Dmc-qk-Pod" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="prS-ma-itd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BBc-EK-Ywb" secondAttribute="trailing" constant="5" id="rYv-uT-IWm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DVZ-Sb-sS5" secondAttribute="trailing" constant="5" id="ucx-dj-UIv"/>
+                            <constraint firstItem="Plk-7S-2QL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zM4-mL-paJ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="textEmail" destination="CjU-zn-CTn" id="Aqx-nq-30N"/>
+                        <outlet property="textSenha" destination="Plk-7S-2QL" id="Ctc-BX-U2B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logotipo" width="121" height="121"/>
+        <image name="rodape" width="375" height="56"/>
+    </resources>
+</document>
