@@ -7,76 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		073D0C2E35ECCCD23AFB145042ED2079 /* SKSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DE00D61EDB5A735962E258EA55DCF7 /* SKSpinner-dummy.m */; };
-		1EA46C848BE1BF4E901170C72123FAA3 /* Pods-gestaoSap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C916236444A8C12579E9A3C15EF17F90 /* Pods-gestaoSap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FF2E0771CF7158A9623CDB91278E98A /* SKSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDECA4FC3DD864AB28681141ACDA2D3 /* SKSpinner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9EF2ECDE033B7D0024ACA2E2180CE7CC /* SKSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D64DC6711B1EDD36CAF6F4A07AB8A3 /* SKSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4D06B474716832F5F17C7F29D690F9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
-		B4EC04E9CC7C5A4D25A7CEE12493F671 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */; };
-		F5D60B3193C84CBED56C799ABD33C5C5 /* SKSpinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 2944EFC713AC32DB713AA23061821E0E /* SKSpinner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F708462EAF76B441E9485BDDC98246BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
-		F72CB67405917256962E564E354BE647 /* Pods-gestaoSap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06A871F617D27808F7094082E4CDA6 /* Pods-gestaoSap-dummy.m */; };
+		006A8B90E09EB773BC90C454BFDE746D /* LLARingSpinnerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4761EF147DC6DED71A1C2B2BD5FBFD8C /* LLARingSpinnerView-dummy.m */; };
+		2DD05A7DA0DEA010F7696CC5E66A16D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */; };
+		405F09EDC091DD7B6827A531ED55D3DF /* LLARingSpinnerView.h in Headers */ = {isa = PBXBuildFile; fileRef = CA02473C1F3AB1A2973155D616995374 /* LLARingSpinnerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41D40FA7A227D3CF7823F7EBFF0DE693 /* LLARingSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 110B1B884DEE1DE9B1AC42C8757A7084 /* LLARingSpinnerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		679FE8F89F6549038643D0A126A638D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		983153A90EAB29AE9C2EF2319326EE83 /* Pods-gestaoSap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06A871F617D27808F7094082E4CDA6 /* Pods-gestaoSap-dummy.m */; };
+		A32CFB297A48D038057384BD63CEF3E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */; };
+		A5E13274E06E629E17862CDBAA551CCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		B93DD5117CCB73B03688D4C6CC6F6947 /* Pods-gestaoSap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C916236444A8C12579E9A3C15EF17F90 /* Pods-gestaoSap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF23F775EC433DA8107B994F75678E9B /* LLARingSpinnerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F69539733761FFECC28A556B6B08E210 /* LLARingSpinnerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		56C29581BFAD5F5FDE70DA88DE2429DC /* PBXContainerItemProxy */ = {
+		EE6714ACEA7DAA331FCDA28EE58825FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA2B3DF89BFC8FD66E47BBDE1609303A;
-			remoteInfo = SKSpinner;
+			remoteGlobalIDString = 74F1A61ABC3AF50BA57C055370166967;
+			remoteInfo = LLARingSpinnerView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		03095B5A0295CB43A9BCB9A4BBBCD02B /* Pods-gestaoSap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-gestaoSap-resources.sh"; sourceTree = "<group>"; };
 		0F39A1915008C2A487FFE1172E3C353F /* Pods-gestaoSap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-gestaoSap-acknowledgements.plist"; sourceTree = "<group>"; };
-		147EA8890CB17FAC5B89437B3615FE9B /* SOAPEngine64.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SOAPEngine64.framework; sourceTree = "<group>"; };
+		110B1B884DEE1DE9B1AC42C8757A7084 /* LLARingSpinnerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LLARingSpinnerView.m; path = LLARingSpinnerView/LLARingSpinnerView.m; sourceTree = "<group>"; };
 		1CF6F2C2970B4BCF0070DE6A5B933150 /* Pods-gestaoSap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-gestaoSap-acknowledgements.markdown"; sourceTree = "<group>"; };
-		22DE00D61EDB5A735962E258EA55DCF7 /* SKSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKSpinner-dummy.m"; sourceTree = "<group>"; };
-		27D64DC6711B1EDD36CAF6F4A07AB8A3 /* SKSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKSpinner-umbrella.h"; sourceTree = "<group>"; };
-		2944EFC713AC32DB713AA23061821E0E /* SKSpinner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKSpinner.h; path = Pod/SKSpinner.h; sourceTree = "<group>"; };
+		2AD89EDA0AA433854F6833936F34FF81 /* SOAPEngine64.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SOAPEngine64.framework; sourceTree = "<group>"; };
 		30DA8F3627EE19E499B05112F594F1A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		56CF610ABB5E050A873587BD947AEAA4 /* SKSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SKSpinner.framework; path = SKSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F650448A7B092F4D5BA66C2D75CBE44 /* LLARingSpinnerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LLARingSpinnerView.modulemap; sourceTree = "<group>"; };
+		4761EF147DC6DED71A1C2B2BD5FBFD8C /* LLARingSpinnerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LLARingSpinnerView-dummy.m"; sourceTree = "<group>"; };
+		4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		571D75173541FA8514458135E14D9C8B /* Pods_gestaoSap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_gestaoSap.framework; path = "Pods-gestaoSap.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D06A871F617D27808F7094082E4CDA6 /* Pods-gestaoSap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-gestaoSap-dummy.m"; sourceTree = "<group>"; };
-		6DDECA4FC3DD864AB28681141ACDA2D3 /* SKSpinner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKSpinner.m; path = Pod/SKSpinner.m; sourceTree = "<group>"; };
+		5FE3F30A472EC80678959BDAA1F44AD7 /* LLARingSpinnerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LLARingSpinnerView.framework; path = LLARingSpinnerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		784CBB7E65A2AAFC0872CE726A74DDC4 /* Pods-gestaoSap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-gestaoSap.debug.xcconfig"; sourceTree = "<group>"; };
-		8973CF62AE1AB9B804BB9A255BA1B7AF /* Pods_gestaoSap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_gestaoSap.framework; path = "Pods-gestaoSap.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91EBD2A9AD9765ED7ECC9D956D5CC1BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		792165F2CA033667D6F57205316D40A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A9C8844A834927CC549A6F9770B6C367 /* Pods-gestaoSap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-gestaoSap.modulemap"; sourceTree = "<group>"; };
-		B8F79C020F3819D56544D0476A626E03 /* SKSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKSpinner.xcconfig; sourceTree = "<group>"; };
-		BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AAA82E8EE13D4AD4D40C4DFCD7BCEE1F /* LLARingSpinnerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LLARingSpinnerView.xcconfig; sourceTree = "<group>"; };
+		B0F6E9DC5F72367E464FD1D972B2B423 /* SOAPEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOAPEngine.h; path = SOAPEngine64.framework/Headers/SOAPEngine.h; sourceTree = "<group>"; };
+		B35FDFCEB6B20FB8DD5AA2569C02E1D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C916236444A8C12579E9A3C15EF17F90 /* Pods-gestaoSap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-gestaoSap-umbrella.h"; sourceTree = "<group>"; };
-		C997C9E22E6348F10D5EA007151FA65B /* SOAPEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOAPEngine.h; path = SOAPEngine64.framework/Headers/SOAPEngine.h; sourceTree = "<group>"; };
-		D92CAE12A26F654E71D217F4B6027241 /* SKSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKSpinner-prefix.pch"; sourceTree = "<group>"; };
+		CA02473C1F3AB1A2973155D616995374 /* LLARingSpinnerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LLARingSpinnerView.h; path = LLARingSpinnerView/LLARingSpinnerView.h; sourceTree = "<group>"; };
+		D3399F1769034C4C57F99D231283310E /* LLARingSpinnerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLARingSpinnerView-prefix.pch"; sourceTree = "<group>"; };
 		E471EE8DC76E4B490EAFB4510351A022 /* Pods-gestaoSap-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-gestaoSap-frameworks.sh"; sourceTree = "<group>"; };
 		EB748D62C86B7811F8E51EAC461346C1 /* Pods-gestaoSap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-gestaoSap.release.xcconfig"; sourceTree = "<group>"; };
-		FC0F38EFBCBD7BA08B6335F2E2A30E05 /* SKSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SKSpinner.modulemap; sourceTree = "<group>"; };
+		F69539733761FFECC28A556B6B08E210 /* LLARingSpinnerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLARingSpinnerView-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7EF805B06FFC8197D4DF937B1E01E058 /* Frameworks */ = {
+		CCCF18B1E03DD83D7A218A508AC762CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D06B474716832F5F17C7F29D690F9B /* Foundation.framework in Frameworks */,
-				B4EC04E9CC7C5A4D25A7CEE12493F671 /* QuartzCore.framework in Frameworks */,
+				679FE8F89F6549038643D0A126A638D2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF3863373FA9AB30E2EC6CC3951BDDE3 /* Frameworks */ = {
+		E92ECD6619DF562724ADE88DA1747794 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F708462EAF76B441E9485BDDC98246BD /* Foundation.framework in Frameworks */,
+				2DD05A7DA0DEA010F7696CC5E66A16D7 /* CoreGraphics.framework in Frameworks */,
+				A5E13274E06E629E17862CDBAA551CCF /* Foundation.framework in Frameworks */,
+				A32CFB297A48D038057384BD63CEF3E6 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E9F74C8959B2E3F12CDD127D6BA717 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B35FDFCEB6B20FB8DD5AA2569C02E1D8 /* Info.plist */,
+				3F650448A7B092F4D5BA66C2D75CBE44 /* LLARingSpinnerView.modulemap */,
+				AAA82E8EE13D4AD4D40C4DFCD7BCEE1F /* LLARingSpinnerView.xcconfig */,
+				4761EF147DC6DED71A1C2B2BD5FBFD8C /* LLARingSpinnerView-dummy.m */,
+				D3399F1769034C4C57F99D231283310E /* LLARingSpinnerView-prefix.pch */,
+				F69539733761FFECC28A556B6B08E210 /* LLARingSpinnerView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LLARingSpinnerView";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		184D49DE38DEC623E7E1C27B0A02FE45 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,21 +110,40 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2B1CCAD276CEDE3D606BC1D1B765F5C4 /* SKSpinner */ = {
+		1D56569E3DE9AB319A63C309889F8119 /* LLARingSpinnerView */ = {
 			isa = PBXGroup;
 			children = (
-				2944EFC713AC32DB713AA23061821E0E /* SKSpinner.h */,
-				6DDECA4FC3DD864AB28681141ACDA2D3 /* SKSpinner.m */,
-				B2445E8A69414B95FE3F7971D81CF71C /* Support Files */,
+				CA02473C1F3AB1A2973155D616995374 /* LLARingSpinnerView.h */,
+				110B1B884DEE1DE9B1AC42C8757A7084 /* LLARingSpinnerView.m */,
+				03E9F74C8959B2E3F12CDD127D6BA717 /* Support Files */,
 			);
-			name = SKSpinner;
-			path = SKSpinner;
+			name = LLARingSpinnerView;
+			path = LLARingSpinnerView;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C7AB6F27FF3606F9360547F8F1977A63 /* iOS */,
+				4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */,
+				792165F2CA033667D6F57205316D40A1 /* Foundation.framework */,
+				695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2FA889590C989958F60BA0071F796D67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FE3F30A472EC80678959BDAA1F44AD7 /* LLARingSpinnerView.framework */,
+				571D75173541FA8514458135E14D9C8B /* Pods_gestaoSap.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59C4464D6E845D41458419B417E20402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AD89EDA0AA433854F6833936F34FF81 /* SOAPEngine64.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,128 +170,88 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				AC5AAF81FD693D791E6A85F440C5CFB7 /* Pods */,
-				BA71C83CB1A1B6C6897B7235DB8E3C4E /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				FFBF34D52FF0B59F5D8A560DAFDEC8B8 /* Pods */,
+				2FA889590C989958F60BA0071F796D67 /* Products */,
 				184D49DE38DEC623E7E1C27B0A02FE45 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		AC5AAF81FD693D791E6A85F440C5CFB7 /* Pods */ = {
+		90557C87CEFD4F03A76959CA8CEDE02A /* SOAPEngine */ = {
 			isa = PBXGroup;
 			children = (
-				2B1CCAD276CEDE3D606BC1D1B765F5C4 /* SKSpinner */,
-				EFC51D202997B25C8C03FDB3EBE89826 /* SOAPEngine */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B2445E8A69414B95FE3F7971D81CF71C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				91EBD2A9AD9765ED7ECC9D956D5CC1BF /* Info.plist */,
-				FC0F38EFBCBD7BA08B6335F2E2A30E05 /* SKSpinner.modulemap */,
-				B8F79C020F3819D56544D0476A626E03 /* SKSpinner.xcconfig */,
-				22DE00D61EDB5A735962E258EA55DCF7 /* SKSpinner-dummy.m */,
-				D92CAE12A26F654E71D217F4B6027241 /* SKSpinner-prefix.pch */,
-				27D64DC6711B1EDD36CAF6F4A07AB8A3 /* SKSpinner-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SKSpinner";
-			sourceTree = "<group>";
-		};
-		BA71C83CB1A1B6C6897B7235DB8E3C4E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8973CF62AE1AB9B804BB9A255BA1B7AF /* Pods_gestaoSap.framework */,
-				56CF610ABB5E050A873587BD947AEAA4 /* SKSpinner.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BE9C610CBA013873907672CEAC2048B4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				147EA8890CB17FAC5B89437B3615FE9B /* SOAPEngine64.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C7AB6F27FF3606F9360547F8F1977A63 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */,
-				BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		EFC51D202997B25C8C03FDB3EBE89826 /* SOAPEngine */ = {
-			isa = PBXGroup;
-			children = (
-				C997C9E22E6348F10D5EA007151FA65B /* SOAPEngine.h */,
-				BE9C610CBA013873907672CEAC2048B4 /* Frameworks */,
+				B0F6E9DC5F72367E464FD1D972B2B423 /* SOAPEngine.h */,
+				59C4464D6E845D41458419B417E20402 /* Frameworks */,
 			);
 			name = SOAPEngine;
 			path = SOAPEngine;
 			sourceTree = "<group>";
 		};
+		FFBF34D52FF0B59F5D8A560DAFDEC8B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D56569E3DE9AB319A63C309889F8119 /* LLARingSpinnerView */,
+				90557C87CEFD4F03A76959CA8CEDE02A /* SOAPEngine */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		353104B5BD641D22B43FC595D9AA3307 /* Headers */ = {
+		000044ED3E799288EAEBBDC029199E5A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EF2ECDE033B7D0024ACA2E2180CE7CC /* SKSpinner-umbrella.h in Headers */,
-				F5D60B3193C84CBED56C799ABD33C5C5 /* SKSpinner.h in Headers */,
+				DF23F775EC433DA8107B994F75678E9B /* LLARingSpinnerView-umbrella.h in Headers */,
+				405F09EDC091DD7B6827A531ED55D3DF /* LLARingSpinnerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8765B963D77AD51086F70F6B03F9BA5C /* Headers */ = {
+		D73B2419E45502F051348C8A36739639 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA46C848BE1BF4E901170C72123FAA3 /* Pods-gestaoSap-umbrella.h in Headers */,
+				B93DD5117CCB73B03688D4C6CC6F6947 /* Pods-gestaoSap-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63BF136035CAE4E5CC4B6607BE6FC488 /* Pods-gestaoSap */ = {
+		28418CD0D8BB4243A8DD3464F551B9CB /* Pods-gestaoSap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AFEED65F8F1B2938616CC66D8463674 /* Build configuration list for PBXNativeTarget "Pods-gestaoSap" */;
+			buildConfigurationList = B28396A57386F120FE5843A8C99A010E /* Build configuration list for PBXNativeTarget "Pods-gestaoSap" */;
 			buildPhases = (
-				C55C1929BD5CD9894A35EA3CBEB0E815 /* Sources */,
-				AF3863373FA9AB30E2EC6CC3951BDDE3 /* Frameworks */,
-				8765B963D77AD51086F70F6B03F9BA5C /* Headers */,
+				CEB849A1BB557D06EC268DFFD53D0400 /* Sources */,
+				CCCF18B1E03DD83D7A218A508AC762CE /* Frameworks */,
+				D73B2419E45502F051348C8A36739639 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				849E690D872201A6C682DBD8D80AC6FF /* PBXTargetDependency */,
+				97971D6D9F8CD27A1F1DE47FC423CE61 /* PBXTargetDependency */,
 			);
 			name = "Pods-gestaoSap";
 			productName = "Pods-gestaoSap";
-			productReference = 8973CF62AE1AB9B804BB9A255BA1B7AF /* Pods_gestaoSap.framework */;
+			productReference = 571D75173541FA8514458135E14D9C8B /* Pods_gestaoSap.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AA2B3DF89BFC8FD66E47BBDE1609303A /* SKSpinner */ = {
+		74F1A61ABC3AF50BA57C055370166967 /* LLARingSpinnerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD097EB9E58D573528D645865BD9B1FB /* Build configuration list for PBXNativeTarget "SKSpinner" */;
+			buildConfigurationList = 62D8C816016D19ED5F7A5E30382377C7 /* Build configuration list for PBXNativeTarget "LLARingSpinnerView" */;
 			buildPhases = (
-				7FC3DF6327846BB0DC79BC4F233AF42F /* Sources */,
-				7EF805B06FFC8197D4DF937B1E01E058 /* Frameworks */,
-				353104B5BD641D22B43FC595D9AA3307 /* Headers */,
+				728A481F5805AC69DF152574A6ED2796 /* Sources */,
+				E92ECD6619DF562724ADE88DA1747794 /* Frameworks */,
+				000044ED3E799288EAEBBDC029199E5A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SKSpinner;
-			productName = SKSpinner;
-			productReference = 56CF610ABB5E050A873587BD947AEAA4 /* SKSpinner.framework */;
+			name = LLARingSpinnerView;
+			productName = LLARingSpinnerView;
+			productReference = 5FE3F30A472EC80678959BDAA1F44AD7 /* LLARingSpinnerView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -267,49 +271,49 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BA71C83CB1A1B6C6897B7235DB8E3C4E /* Products */;
+			productRefGroup = 2FA889590C989958F60BA0071F796D67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63BF136035CAE4E5CC4B6607BE6FC488 /* Pods-gestaoSap */,
-				AA2B3DF89BFC8FD66E47BBDE1609303A /* SKSpinner */,
+				74F1A61ABC3AF50BA57C055370166967 /* LLARingSpinnerView */,
+				28418CD0D8BB4243A8DD3464F551B9CB /* Pods-gestaoSap */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7FC3DF6327846BB0DC79BC4F233AF42F /* Sources */ = {
+		728A481F5805AC69DF152574A6ED2796 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073D0C2E35ECCCD23AFB145042ED2079 /* SKSpinner-dummy.m in Sources */,
-				1FF2E0771CF7158A9623CDB91278E98A /* SKSpinner.m in Sources */,
+				006A8B90E09EB773BC90C454BFDE746D /* LLARingSpinnerView-dummy.m in Sources */,
+				41D40FA7A227D3CF7823F7EBFF0DE693 /* LLARingSpinnerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C55C1929BD5CD9894A35EA3CBEB0E815 /* Sources */ = {
+		CEB849A1BB557D06EC268DFFD53D0400 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F72CB67405917256962E564E354BE647 /* Pods-gestaoSap-dummy.m in Sources */,
+				983153A90EAB29AE9C2EF2319326EE83 /* Pods-gestaoSap-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		849E690D872201A6C682DBD8D80AC6FF /* PBXTargetDependency */ = {
+		97971D6D9F8CD27A1F1DE47FC423CE61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SKSpinner;
-			target = AA2B3DF89BFC8FD66E47BBDE1609303A /* SKSpinner */;
-			targetProxy = 56C29581BFAD5F5FDE70DA88DE2429DC /* PBXContainerItemProxy */;
+			name = LLARingSpinnerView;
+			target = 74F1A61ABC3AF50BA57C055370166967 /* LLARingSpinnerView */;
+			targetProxy = EE6714ACEA7DAA331FCDA28EE58825FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2FFF45E603BAE6E5FF5B9648EB2122A9 /* Release */ = {
+		2E7208B44EA09FE562A508D21975CDAE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8F79C020F3819D56544D0476A626E03 /* SKSpinner.xcconfig */;
+			baseConfigurationReference = AAA82E8EE13D4AD4D40C4DFCD7BCEE1F /* LLARingSpinnerView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -322,14 +326,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SKSpinner/SKSpinner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SKSpinner/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LLARingSpinnerView/LLARingSpinnerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LLARingSpinnerView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SKSpinner/SKSpinner.modulemap";
+				MODULEMAP_FILE = "Target Support Files/LLARingSpinnerView/LLARingSpinnerView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SKSpinner;
+				PRODUCT_NAME = LLARingSpinnerView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,9 +342,9 @@
 			};
 			name = Release;
 		};
-		52D92797D72896F518C600E8FD7DE6B0 /* Debug */ = {
+		541A61FA967674DB6F196641BBE34DC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8F79C020F3819D56544D0476A626E03 /* SKSpinner.xcconfig */;
+			baseConfigurationReference = AAA82E8EE13D4AD4D40C4DFCD7BCEE1F /* LLARingSpinnerView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -353,14 +357,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SKSpinner/SKSpinner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SKSpinner/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LLARingSpinnerView/LLARingSpinnerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LLARingSpinnerView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SKSpinner/SKSpinner.modulemap";
+				MODULEMAP_FILE = "Target Support Files/LLARingSpinnerView/LLARingSpinnerView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SKSpinner;
+				PRODUCT_NAME = LLARingSpinnerView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,41 +417,6 @@
 			};
 			name = Debug;
 		};
-		82837F66A627E06146DD24960D098BEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 784CBB7E65A2AAFC0872CE726A74DDC4 /* Pods-gestaoSap.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-gestaoSap/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-gestaoSap/Pods-gestaoSap.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_gestaoSap;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -488,7 +457,42 @@
 			};
 			name = Release;
 		};
-		DF4DE624AEA6298CAE95614420DF7895 /* Release */ = {
+		EAE9FA7118AFBCD15624F462F727B2B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784CBB7E65A2AAFC0872CE726A74DDC4 /* Pods-gestaoSap.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-gestaoSap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-gestaoSap/Pods-gestaoSap.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_gestaoSap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F06B73AA8B653DB04A9B2A238DDA92A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB748D62C86B7811F8E51EAC461346C1 /* Pods-gestaoSap.release.xcconfig */;
 			buildSettings = {
@@ -535,20 +539,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AFEED65F8F1B2938616CC66D8463674 /* Build configuration list for PBXNativeTarget "Pods-gestaoSap" */ = {
+		62D8C816016D19ED5F7A5E30382377C7 /* Build configuration list for PBXNativeTarget "LLARingSpinnerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82837F66A627E06146DD24960D098BEB /* Debug */,
-				DF4DE624AEA6298CAE95614420DF7895 /* Release */,
+				541A61FA967674DB6F196641BBE34DC7 /* Debug */,
+				2E7208B44EA09FE562A508D21975CDAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD097EB9E58D573528D645865BD9B1FB /* Build configuration list for PBXNativeTarget "SKSpinner" */ = {
+		B28396A57386F120FE5843A8C99A010E /* Build configuration list for PBXNativeTarget "Pods-gestaoSap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52D92797D72896F518C600E8FD7DE6B0 /* Debug */,
-				2FFF45E603BAE6E5FF5B9648EB2122A9 /* Release */,
+				EAE9FA7118AFBCD15624F462F727B2B1 /* Debug */,
+				F06B73AA8B653DB04A9B2A238DDA92A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

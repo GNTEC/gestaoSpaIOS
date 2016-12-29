@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-gestaoSap.xcscheme</key>
+		<key>LLARingSpinnerView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SKSpinner.xcscheme</key>
+		<key>Pods-gestaoSap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>63BF136035CAE4E5CC4B6607BE6FC488</key>
+		<key>28418CD0D8BB4243A8DD3464F551B9CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA2B3DF89BFC8FD66E47BBDE1609303A</key>
+		<key>74F1A61ABC3AF50BA57C055370166967</key>
 		<dict>
 			<key>primary</key>
 			<true/>

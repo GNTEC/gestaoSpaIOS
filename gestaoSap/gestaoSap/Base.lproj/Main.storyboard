@@ -117,8 +117,125 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
+        <!--histórico-->
+        <scene sceneID="STU-9C-kJY">
+            <objects>
+                <viewController title="histórico" id="Yvg-bE-lS7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csO-aq-np7"/>
+                        <viewControllerLayoutGuide type="bottom" id="kGg-CP-ww2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jfr-qU-GcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="histórico" image="icohistorico" id="Hg6-KX-C3n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kj1-X0-R0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="802"/>
+        </scene>
+        <!--localização-->
+        <scene sceneID="ocL-2v-gz3">
+            <objects>
+                <viewController title="localização" id="JVX-m4-XJ0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uWk-WY-fAD"/>
+                        <viewControllerLayoutGuide type="bottom" id="hrz-9E-tWq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y5h-wA-X1f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="localização" image="icoLocalizacao" id="bTa-H0-fYH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4r-Jo-kpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="802"/>
+        </scene>
+        <!--sair-->
+        <scene sceneID="SG8-av-Mnf">
+            <objects>
+                <viewController title="sair" id="6Kv-G1-m6C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SNf-7E-lqr"/>
+                        <viewControllerLayoutGuide type="bottom" id="j9P-20-gQW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="90X-Hw-Sui">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="sair" image="icoSair" id="3yz-lf-7Iz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv1-0h-r8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="803"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EM3-Qr-fD1">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jLp-Z8-AEp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="XeV-4c-cqV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fRS-xV-lGh" kind="relationship" relationship="viewControllers" id="UA6-VV-Yzq"/>
+                        <segue destination="Yvg-bE-lS7" kind="relationship" relationship="viewControllers" id="Yof-ec-10h"/>
+                        <segue destination="JVX-m4-XJ0" kind="relationship" relationship="viewControllers" id="bV0-US-cTz"/>
+                        <segue destination="6Kv-G1-m6C" kind="relationship" relationship="viewControllers" id="zlr-10-ksx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxw-Qv-zRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="41"/>
+        </scene>
+        <!--Agendamento-->
+        <scene sceneID="FSq-lU-Fcf">
+            <objects>
+                <navigationController id="fRS-xV-lGh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Agendamento" image="icoAgendamento" id="QRG-IV-zue"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TwE-40-mze">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RqJ-B0-m60" kind="relationship" relationship="rootViewController" id="LcR-Xt-Jcy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5v-lb-o3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="800"/>
+        </scene>
+        <!--Agendamento View Controller-->
+        <scene sceneID="XAa-NT-stT">
+            <objects>
+                <viewController storyboardIdentifier="agendamentoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RqJ-B0-m60" customClass="agendamentoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="86G-BV-LgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="tcJ-qM-q0K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Mt-tp-pkn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MpZ-ap-RG3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yb8-Qp-7Px" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218" y="1572"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icoAgendamento" width="25" height="25"/>
+        <image name="icoLocalizacao" width="25" height="25"/>
+        <image name="icoSair" width="25" height="25"/>
+        <image name="icohistorico" width="25" height="25"/>
         <image name="logotipo" width="121" height="121"/>
         <image name="rodape" width="375" height="56"/>
     </resources>

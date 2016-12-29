@@ -9,7 +9,8 @@
 #import "loginViewController.h"
 #import <SOAPEngine64/SOAPEngine.h>
 #import "VariaveisGlobais.h"
-#import "SKSpinner.h"
+#import <LLARingSpinnerView/LLARingSpinnerView.h>
+#import "agendamentoViewController.h"
 
 static const int COD_EMPRESA = 58 ;
 
@@ -28,7 +29,6 @@ static const int COD_EMPRESA = 58 ;
     
     self.textEmail.delegate = self;
     self.textSenha.delegate = self;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,12 +52,30 @@ static const int COD_EMPRESA = 58 ;
 //- (IBAction)start:(UIButton *)sender w
 - (IBAction)logar:(UIButton *)sender
 {
-
-    [SKSpinner showTo:self.view animated:YES];
+    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    spinnerView.tintColor = [UIColor blackColor];
+    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    
+    // Optionally set the current progress
+    spinnerView.lineWidth = 1.5f;
+    
+    // Add it as a subview
+    [self.view addSubview:spinnerView];
+    
+    // Spin it
+    [spinnerView startAnimating];
     
     //Verifica se a os campos foram preenchidos
     if([_textEmail.text  isEqual: @""])
     {
+        // Stop animation
+        if(spinnerView.isAnimating)
+        {
+            [spinnerView stopAnimating];
+            [spinnerView removeFromSuperview];
+        }
+        
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"informação" message:@"Digite seu E-Mail !" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -72,6 +90,13 @@ static const int COD_EMPRESA = 58 ;
     if([_textSenha.text  isEqual: @""])
     {
         
+        // Stop animation
+        if(spinnerView.isAnimating)
+        {
+            [spinnerView stopAnimating];
+            [spinnerView removeFromSuperview];
+        }
+        
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"informação" message:@"Digite sua Senha !" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -82,6 +107,7 @@ static const int COD_EMPRESA = 58 ;
         return;
     }
     
+    
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self login:^(NSDictionary *dict, NSError *error) {
         
@@ -89,15 +115,17 @@ static const int COD_EMPRESA = 58 ;
         
         if ([msgRet isEqualToString:@"OK"]) {
          
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"informação" message:@"Usuário Logado com sucesso !" preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-            [alertController addAction:ok];
-            
-            [self presentViewController:alertController animated:YES completion:nil];
+            UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+            tbc.selectedIndex=0;
+            [self presentViewController:tbc animated:YES completion:nil];
             
             NSLog(@"%@",msgRet);
             
+            if(spinnerView.isAnimating)
+            {
+                [spinnerView stopAnimating];
+                [spinnerView removeFromSuperview];
+            }
         }
         
         else
@@ -110,6 +138,12 @@ static const int COD_EMPRESA = 58 ;
             [self presentViewController:alertController animated:YES completion:nil];
             
              NSLog(@"%@",msgRet);
+            
+            if(spinnerView.isAnimating)
+            {
+                [spinnerView stopAnimating];
+                [spinnerView removeFromSuperview];
+            }
         }
     }];
 }

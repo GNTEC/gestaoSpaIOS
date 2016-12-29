@@ -1,15 +1,15 @@
 PODS:
-  - SKSpinner (0.1.1)
+  - LLARingSpinnerView (0.1.4)
   - SOAPEngine (1.31)
 
 DEPENDENCIES:
-  - SKSpinner (~> 0.1)
+  - LLARingSpinnerView (~> 0.1)
   - SOAPEngine (~> 1.31)
 
 SPEC CHECKSUMS:
-  SKSpinner: 586e377446e149080fd7da5eb192e59e5df16503
+  LLARingSpinnerView: 334c37fd53f25c86651cbb4c57f70b12d571d7a5
   SOAPEngine: eac166d07cb20579db9a476660d51a0d73271869
 
-PODFILE CHECKSUM: 681fcee2d40bc25d80034239ea23c876748cee69
+PODFILE CHECKSUM: 83ddf0497bfedd26a189153f33f7533e8a359cf2
 
 COCOAPODS: 1.2.0.beta.1
