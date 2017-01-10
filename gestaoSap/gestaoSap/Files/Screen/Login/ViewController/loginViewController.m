@@ -107,7 +107,6 @@ static const int COD_EMPRESA = 58 ;
         return;
     }
     
-    
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self login:^(NSDictionary *dict, NSError *error) {
         
@@ -148,24 +147,14 @@ static const int COD_EMPRESA = 58 ;
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void)login:(void(^)(NSDictionary *dict, NSError *error))block
 {
     if (block) {
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
-        //soap.version= VERSION_WCF_1_1;
         soap.requestTimeout = 10;
-        //soap.responseHeader = YES;
+        soap.licenseKey = @"eJJDzkPK9Xx+p5cOH7w0Q+AvPdgK1fzWWuUpMaYCq3r1mwf36Ocw6dn0+CLjRaOiSjfXaFQBWMi+TxCpxVF/FA==";
         
         [soap setIntegerValue:COD_EMPRESA forKey:@"COD_EMPRESA"];
         [soap setValue: self.textEmail.text forKey:@"usr"];

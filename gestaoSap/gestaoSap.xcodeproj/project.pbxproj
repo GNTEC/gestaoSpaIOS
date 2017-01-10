@@ -147,7 +147,6 @@
 		CEE6ED191E11780400237F5A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CEE6ED1C1E11788E00237F5A /* Model */,
 				CEE6ED1A1E11780B00237F5A /* ViewController */,
 			);
 			name = Login;
@@ -160,13 +159,6 @@
 				CEE6ED271E117D8900237F5A /* loginViewController.m */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		CEE6ED1C1E11788E00237F5A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +195,7 @@
 				TargetAttributes = {
 					CEE2EFD21E0BF61000F7EC4B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2S5Q2MH7V4;
+						DevelopmentTeam = P8J583ZWC9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -415,8 +407,9 @@
 			baseConfigurationReference = 39C38F5AEC3158C1E5506336 /* Pods-gestaoSap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2S5Q2MH7V4;
+				DEVELOPMENT_TEAM = P8J583ZWC9;
 				INFOPLIST_FILE = gestaoSap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.inf.gntec.gestaoSap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,8 +421,9 @@
 			baseConfigurationReference = A883B66E906AB9FD858EFFFB /* Pods-gestaoSap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2S5Q2MH7V4;
+				DEVELOPMENT_TEAM = P8J583ZWC9;
 				INFOPLIST_FILE = gestaoSap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.inf.gntec.gestaoSap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
