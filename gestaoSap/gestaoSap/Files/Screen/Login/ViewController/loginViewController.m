@@ -10,7 +10,7 @@
 #import <SOAPEngine64/SOAPEngine.h>
 #import "VariaveisGlobais.h"
 #import <LLARingSpinnerView/LLARingSpinnerView.h>
-#import "agendamentoViewController.h"
+#import "unidadeViewController.h"
 
 static const int COD_EMPRESA = 58 ;
 
@@ -108,18 +108,23 @@ static const int COD_EMPRESA = 58 ;
     }
     
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
-    [self login:^(NSDictionary *dict, NSError *error) {
+    [self getlogin:^(NSDictionary *dict, NSError *error) {
         
         NSString *msgRet = [dict objectForKey:@"MSG_RETORNO"];
         
         if ([msgRet isEqualToString:@"OK"]) {
          
-            UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-            tbc.selectedIndex=0;
-            [self presentViewController:tbc animated:YES completion:nil];
+//            UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+//            tbc.selectedIndex=0;
+//            [self presentViewController:tbc animated:YES completion:nil];
+            
+            [VariaveisGlobais shared]._codEmpresa = COD_EMPRESA;
+            
+            UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];
+            [self presentViewController:vc animated:YES completion:nil];
             
             NSLog(@"%@",msgRet);
-            
+        
             if(spinnerView.isAnimating)
             {
                 [spinnerView stopAnimating];
@@ -148,7 +153,7 @@ static const int COD_EMPRESA = 58 ;
 }
 
 
-- (void)login:(void(^)(NSDictionary *dict, NSError *error))block
+- (void)getlogin:(void(^)(NSDictionary *dict, NSError *error))block
 {
     if (block) {
         SOAPEngine *soap = [[SOAPEngine alloc]init];

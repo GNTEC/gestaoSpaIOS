@@ -51,5 +51,84 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/Unidade/ViewController/unidadeViewController.m"
+            timestampString = "505942236.053495"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-unidades"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/Unidade/ViewController/unidadeViewController.m"
+            timestampString = "505942236.053495"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-unidades"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[unidadeViewController unidades]_block_invoke_2"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/Principal/GestaoSpa/Fontes/IOS/gestaoSap/gestaoSap/Files/Screen/Unidade/ViewController/unidadeViewController.m"
+                  timestampString = "505940840.270451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/Principal/GestaoSpa/Fontes/IOS/gestaoSap/gestaoSap/Files/Screen/Unidade/ViewController/unidadeViewController.m"
+                  timestampString = "505940840.272976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/Principal/GestaoSpa/Fontes/IOS/gestaoSap/gestaoSap/Files/Screen/Unidade/ViewController/unidadeViewController.m"
+                  timestampString = "505940840.276267"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

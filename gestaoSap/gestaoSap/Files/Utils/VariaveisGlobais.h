@@ -12,10 +12,14 @@
 
 {
     NSInteger _codCliente;
+    NSInteger _codEmpresa;
+    NSInteger _codUnidade;
 }
 
 //variavel que vai controlar se devemos pedir mais tempo para tarefa em background ou não
 @property(nonatomic)NSInteger _codCliente;
+@property(nonatomic)NSInteger _codEmpresa;
+@property(nonatomic)NSInteger _codUnidade;
 
 +(VariaveisGlobais*)shared;
 
