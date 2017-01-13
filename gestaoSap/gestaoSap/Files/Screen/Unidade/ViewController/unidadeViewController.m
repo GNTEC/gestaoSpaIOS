@@ -32,8 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -65,14 +63,7 @@
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getUnidades:^(NSDictionary *dict, NSError *error) {
         
-        if (![dict isEqual:nil]) {
-                        
-//            UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];
-//            [self presentViewController:vc animated:YES completion:nil];
-//
-//            NSLog(@"%@",msgRet);
-//            
-//            //[VariaveisGlobais shared]._codUnidade = COD_EMPRESA;
+        if (dict.count > 0) {
             
             NSMutableArray *_pickUnidadeData_1 = [[NSMutableArray alloc] init];
             _pickUnidadeData_1 = [dict objectForKey:@"FILIAL"];
@@ -84,6 +75,7 @@
                 
                 objUnidade.codFilal = [[[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"COD_FILIAL"] integerValue];
                 objUnidade.nomeFilial = [[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"NOME_FILIAL"];
+                objUnidade.enderecoFilial = [[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"ENDERECO"];
                 
                 [self.pickUnidadeData  addObject:objUnidade];
                 
@@ -139,14 +131,18 @@
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    //Here, like the table view you can get the each section of each row if you've multiple sections
-    //NSLog(@"Selected Color: %@. Index of selected color: %i", [arrayColors objectAtIndex:row], row);
+    unidade *stUnidade = [_pickUnidadeData objectAtIndex:row];
     
-    //Now, if you want to navigate then;
-    // Say, OtherViewController is the controller, where you want to navigate:
-    //OtherViewController *objOtherViewController = [OtherViewController new];
-    //[self.navigationController pushViewController:objOtherViewController animated:YES];
+    [VariaveisGlobais shared]._nomeFilial = stUnidade.nomeFilial;
+    [VariaveisGlobais shared]._enderecoFilial = stUnidade.enderecoFilial;
     
+}
+
+- (IBAction)logar:(UIButton *)sender
+{
+    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+    tbc.selectedIndex=0;
+    [self presentViewController:tbc animated:YES completion:nil];
 }
 
 

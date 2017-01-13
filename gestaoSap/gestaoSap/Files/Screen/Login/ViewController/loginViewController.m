@@ -48,8 +48,6 @@ static const int COD_EMPRESA = 58 ;
     [self.textEmail resignFirstResponder];
 }
 
-
-//- (IBAction)start:(UIButton *)sender w
 - (IBAction)logar:(UIButton *)sender
 {
     LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
@@ -113,13 +111,9 @@ static const int COD_EMPRESA = 58 ;
         NSString *msgRet = [dict objectForKey:@"MSG_RETORNO"];
         
         if ([msgRet isEqualToString:@"OK"]) {
-         
-//            UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-//            tbc.selectedIndex=0;
-//            [self presentViewController:tbc animated:YES completion:nil];
             
             [VariaveisGlobais shared]._codEmpresa = COD_EMPRESA;
-            
+             
             UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];
             [self presentViewController:vc animated:YES completion:nil];
             
