@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7507D776B598D5A468FF7FEB /* Pods_gestaoSap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029251EE620A0EB6162B130 /* Pods_gestaoSap.framework */; };
-		CE16C4941E143DB8006F6230 /* agendamentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE16C4931E143DB8006F6230 /* agendamentoViewController.m */; };
 		CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EB1E2542BE009416B5 /* unidadeViewController.m */; };
 		CE4087F01E26BCEE009416B5 /* unidade.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EF1E26BCEE009416B5 /* unidade.m */; };
 		CEE2EFD81E0BF61000F7EC4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFD71E0BF61000F7EC4B /* main.m */; };
@@ -18,14 +17,17 @@
 		CEE2EFE61E0BF61000F7EC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */; };
 		CEE6ED221E1178E500237F5A /* VariaveisGlobais.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */; };
 		CEE6ED281E117D8900237F5A /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED271E117D8900237F5A /* loginViewController.m */; };
+		CEFA8AFC1E291AC100126D06 /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8AFB1E291AC100126D06 /* CustomNavBar.m */; };
+		CEFA8AFF1E2EA50E00126D06 /* agendaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8AFE1E2EA50E00126D06 /* agendaTableViewController.m */; };
+		CEFA8B051E2FCA8400126D06 /* servicoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8B041E2FCA8400126D06 /* servicoTableViewController.m */; };
+		CEFA8B081E2FCAF000126D06 /* servico.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8B071E2FCAF000126D06 /* servico.m */; };
+		CEFA8B0E1E2FE7A100126D06 /* dataAgendamentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8B0D1E2FE7A100126D06 /* dataAgendamentoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0029251EE620A0EB6162B130 /* Pods_gestaoSap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gestaoSap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C38F5AEC3158C1E5506336 /* Pods-gestaoSap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestaoSap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gestaoSap/Pods-gestaoSap.debug.xcconfig"; sourceTree = "<group>"; };
 		A883B66E906AB9FD858EFFFB /* Pods-gestaoSap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestaoSap.release.xcconfig"; path = "Pods/Target Support Files/Pods-gestaoSap/Pods-gestaoSap.release.xcconfig"; sourceTree = "<group>"; };
-		CE16C4921E143DB8006F6230 /* agendamentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = agendamentoViewController.h; path = Files/Screen/Agendamento/ViewController/agendamentoViewController.h; sourceTree = "<group>"; };
-		CE16C4931E143DB8006F6230 /* agendamentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = agendamentoViewController.m; path = Files/Screen/Agendamento/ViewController/agendamentoViewController.m; sourceTree = "<group>"; };
 		CE4087EA1E2542BE009416B5 /* unidadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidadeViewController.h; path = Files/Screen/Unidade/ViewController/unidadeViewController.h; sourceTree = "<group>"; };
 		CE4087EB1E2542BE009416B5 /* unidadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unidadeViewController.m; path = Files/Screen/Unidade/ViewController/unidadeViewController.m; sourceTree = "<group>"; };
 		CE4087EE1E26BCEE009416B5 /* unidade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidade.h; path = Files/Screen/Unidade/Model/unidade.h; sourceTree = "<group>"; };
@@ -42,6 +44,16 @@
 		CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VariaveisGlobais.m; path = Files/Utils/VariaveisGlobais.m; sourceTree = "<group>"; };
 		CEE6ED261E117D8900237F5A /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loginViewController.h; path = Files/Screen/Login/ViewController/loginViewController.h; sourceTree = "<group>"; };
 		CEE6ED271E117D8900237F5A /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = loginViewController.m; path = Files/Screen/Login/ViewController/loginViewController.m; sourceTree = "<group>"; };
+		CEFA8AFA1E291AC100126D06 /* CustomNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavBar.h; path = Files/Utils/CustomNavBar.h; sourceTree = "<group>"; };
+		CEFA8AFB1E291AC100126D06 /* CustomNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavBar.m; path = Files/Utils/CustomNavBar.m; sourceTree = "<group>"; };
+		CEFA8AFD1E2EA50E00126D06 /* agendaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = agendaTableViewController.h; path = Files/Screen/Agendamento/ViewController/agendaTableViewController.h; sourceTree = "<group>"; };
+		CEFA8AFE1E2EA50E00126D06 /* agendaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = agendaTableViewController.m; path = Files/Screen/Agendamento/ViewController/agendaTableViewController.m; sourceTree = "<group>"; };
+		CEFA8B031E2FCA8400126D06 /* servicoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = servicoTableViewController.h; path = Files/Screen/Servico/ViewController/servicoTableViewController.h; sourceTree = "<group>"; };
+		CEFA8B041E2FCA8400126D06 /* servicoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = servicoTableViewController.m; path = Files/Screen/Servico/ViewController/servicoTableViewController.m; sourceTree = "<group>"; };
+		CEFA8B061E2FCAF000126D06 /* servico.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = servico.h; path = Files/Screen/Servico/Model/servico.h; sourceTree = "<group>"; };
+		CEFA8B071E2FCAF000126D06 /* servico.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = servico.m; path = Files/Screen/Servico/Model/servico.m; sourceTree = "<group>"; };
+		CEFA8B0C1E2FE7A100126D06 /* dataAgendamentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataAgendamentoViewController.h; path = Files/Screen/DataAgendamento/ViewController/dataAgendamentoViewController.h; sourceTree = "<group>"; };
+		CEFA8B0D1E2FE7A100126D06 /* dataAgendamentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dataAgendamentoViewController.m; path = Files/Screen/DataAgendamento/ViewController/dataAgendamentoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +96,8 @@
 		CE16C4911E143D4A006F6230 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE16C4921E143DB8006F6230 /* agendamentoViewController.h */,
-				CE16C4931E143DB8006F6230 /* agendamentoViewController.m */,
+				CEFA8AFD1E2EA50E00126D06 /* agendaTableViewController.h */,
+				CEFA8AFE1E2EA50E00126D06 /* agendaTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -164,6 +176,8 @@
 			children = (
 				CEE6ED1F1E1178E500237F5A /* VariaveisGlobais.h */,
 				CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */,
+				CEFA8AFA1E291AC100126D06 /* CustomNavBar.h */,
+				CEFA8AFB1E291AC100126D06 /* CustomNavBar.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -171,6 +185,8 @@
 		CEE6ED181E1176E300237F5A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CEFA8B091E2FE65600126D06 /* DataAgendamento */,
+				CEFA8B001E2FCA0400126D06 /* Servico */,
 				CE4087E81E25427E009416B5 /* Unidade */,
 				CE16C4901E143D3F006F6230 /* Agendamento */,
 				CEE6ED191E11780400237F5A /* Login */,
@@ -191,6 +207,58 @@
 			children = (
 				CEE6ED261E117D8900237F5A /* loginViewController.h */,
 				CEE6ED271E117D8900237F5A /* loginViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CEFA8B001E2FCA0400126D06 /* Servico */ = {
+			isa = PBXGroup;
+			children = (
+				CEFA8B021E2FCA1B00126D06 /* Model */,
+				CEFA8B011E2FCA1000126D06 /* ViewController */,
+			);
+			name = Servico;
+			sourceTree = "<group>";
+		};
+		CEFA8B011E2FCA1000126D06 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEFA8B031E2FCA8400126D06 /* servicoTableViewController.h */,
+				CEFA8B041E2FCA8400126D06 /* servicoTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CEFA8B021E2FCA1B00126D06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEFA8B061E2FCAF000126D06 /* servico.h */,
+				CEFA8B071E2FCAF000126D06 /* servico.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CEFA8B091E2FE65600126D06 /* DataAgendamento */ = {
+			isa = PBXGroup;
+			children = (
+				CEFA8B0B1E2FE66300126D06 /* ViewController */,
+				CEFA8B0A1E2FE65F00126D06 /* Model */,
+			);
+			name = DataAgendamento;
+			sourceTree = "<group>";
+		};
+		CEFA8B0A1E2FE65F00126D06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CEFA8B0B1E2FE66300126D06 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEFA8B0C1E2FE7A100126D06 /* dataAgendamentoViewController.h */,
+				CEFA8B0D1E2FE7A100126D06 /* dataAgendamentoViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -321,9 +389,13 @@
 				CEE2EFDB1E0BF61000F7EC4B /* AppDelegate.m in Sources */,
 				CEE6ED221E1178E500237F5A /* VariaveisGlobais.m in Sources */,
 				CEE6ED281E117D8900237F5A /* loginViewController.m in Sources */,
+				CEFA8B081E2FCAF000126D06 /* servico.m in Sources */,
 				CEE2EFD81E0BF61000F7EC4B /* main.m in Sources */,
-				CE16C4941E143DB8006F6230 /* agendamentoViewController.m in Sources */,
+				CEFA8B051E2FCA8400126D06 /* servicoTableViewController.m in Sources */,
+				CEFA8B0E1E2FE7A100126D06 /* dataAgendamentoViewController.m in Sources */,
 				CE4087F01E26BCEE009416B5 /* unidade.m in Sources */,
+				CEFA8AFF1E2EA50E00126D06 /* agendaTableViewController.m in Sources */,
+				CEFA8AFC1E291AC100126D06 /* CustomNavBar.m in Sources */,
 				CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>JTCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1ED8BE8BD6A53853974A60E1AC8B1019</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>74F1A61ABC3AF50BA57C055370166967</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A690AC1680307D868DA5667C7E230DC7</key>
+		<key>91D0AFD51BF2D04784321D0DCD086326</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0A9DEE8AA4FAFBB405EC938B2C34050</key>
 		<dict>
 			<key>primary</key>
 			<true/>

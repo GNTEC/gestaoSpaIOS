@@ -1,22 +1,29 @@
 //
-//  agendamentoViewController.m
+//  dataAgendamentoViewController.m
 //  gestaoSap
 //
-//  Created by User on 28/12/16.
-//  Copyright © 2016 gntec. All rights reserved.
+//  Created by User on 18/01/17.
+//  Copyright © 2017 gntec. All rights reserved.
 //
 
-#import "agendamentoViewController.h"
+#import "dataAgendamentoViewController.h"
 
-@interface agendamentoViewController ()
+@interface dataAgendamentoViewController ()
 
 @end
 
-@implementation agendamentoViewController
+@implementation dataAgendamentoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    _calendarManager = [JTCalendarManager new];
+    _calendarManager.delegate = self;
+    
+    [_calendarManager setMenuView:_calendarMenuView];
+    [_calendarManager setContentView:_calendarContentView];
+    [_calendarManager setDate:[NSDate date]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,7 +10,7 @@ def common_targets()
     # SWIFT LIB
 pod 'SOAPEngine', '~> 1.31'
 pod 'LLARingSpinnerView', '~> 0.1'
-pod 'AFNetworking', '~> 2.6.3’
+pod 'JTCalendar', '~> 2.0'
 
 end
 

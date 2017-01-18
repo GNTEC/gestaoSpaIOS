@@ -10,7 +10,7 @@
 
 @implementation unidade
 
-@synthesize codFilal,nomeFilial,enderecoFilial;
+@synthesize codFilial,nomeFilial,enderecoFilial;
 
 
 @end

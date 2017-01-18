@@ -14,6 +14,7 @@
 
 @interface unidadeViewController ()
 {
+    
 }
 
 @property (strong, nonatomic) NSMutableArray *pickUnidadeData;
@@ -73,7 +74,7 @@
             {
                 unidade *objUnidade = [[unidade alloc]init];
                 
-                objUnidade.codFilal = [[[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"COD_FILIAL"] integerValue];
+                objUnidade.codFilial = [[[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"COD_FILIAL"] integerValue];
                 objUnidade.nomeFilial = [[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"NOME_FILIAL"];
                 objUnidade.enderecoFilial = [[_pickUnidadeData_1 objectAtIndex:i]objectForKey:@"ENDERECO"];
                 
@@ -133,6 +134,7 @@
     
     unidade *stUnidade = [_pickUnidadeData objectAtIndex:row];
     
+    [VariaveisGlobais shared]._codUnidade = stUnidade.codFilial;
     [VariaveisGlobais shared]._nomeFilial = stUnidade.nomeFilial;
     [VariaveisGlobais shared]._enderecoFilial = stUnidade.enderecoFilial;
     
@@ -140,9 +142,25 @@
 
 - (IBAction)logar:(UIButton *)sender
 {
-    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-    tbc.selectedIndex=0;
-    [self presentViewController:tbc animated:YES completion:nil];
+    
+    if ([VariaveisGlobais shared]._nomeFilial == nil ) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"informação" message:@"Selecione uma unidade !" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    else
+    {
+    
+        UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+        tbc.selectedIndex=0;
+        [self presentViewController:tbc animated:YES completion:nil];
+    }
 }
 
 

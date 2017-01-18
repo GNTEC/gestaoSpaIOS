@@ -16,6 +16,7 @@
     NSInteger _codUnidade;
     NSString *_nomeFilial;
     NSString *_enderecoFilial;
+    NSString *_servico;
 }
 
 //variavel que vai controlar se devemos pedir mais tempo para tarefa em background ou não
@@ -24,6 +25,8 @@
 @property(nonatomic)NSInteger _codUnidade;
 @property(nonatomic,strong) NSString *_nomeFilial;
 @property(nonatomic,strong) NSString *_enderecoFilial;
+@property(nonatomic,strong) NSString *_servico;
+
 
 +(VariaveisGlobais*)shared;
 

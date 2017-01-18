@@ -10,12 +10,12 @@
 
 @interface unidade : NSObject
 {
-    int codFilal;
+    NSInteger codFilial;
     NSString *nomeFilial;
     NSString *enderecoFilial;
 }
 
-@property(nonatomic) NSInteger codFilal;
+@property(nonatomic) NSInteger codFilial;
 @property(nonatomic,retain) NSString *nomeFilial;
 @property(nonatomic,retain) NSString *enderecoFilial;
 

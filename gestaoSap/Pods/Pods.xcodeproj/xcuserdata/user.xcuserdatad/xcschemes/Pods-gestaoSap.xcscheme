@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A690AC1680307D868DA5667C7E230DC7"
+               BlueprintIdentifier = "C0A9DEE8AA4FAFBB405EC938B2C34050"
                BuildableName = "Pods_gestaoSap.framework"
                BlueprintName = "Pods-gestaoSap"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A690AC1680307D868DA5667C7E230DC7"
+            BlueprintIdentifier = "C0A9DEE8AA4FAFBB405EC938B2C34050"
             BuildableName = "Pods_gestaoSap.framework"
             BlueprintName = "Pods-gestaoSap"
             ReferencedContainer = "container:Pods.xcodeproj">
