@@ -14,9 +14,13 @@
     NSInteger _codCliente;
     NSInteger _codEmpresa;
     NSInteger _codUnidade;
-    NSString *_nomeFilial;
-    NSString *_enderecoFilial;
+    NSString  *_nomeFilial;
+    NSString  *_enderecoFilial;
+    NSInteger _codServico;
     NSString *_servico;
+    NSDate   *_dataAgendamento;
+    NSString *_profissional;
+    NSString *_horarioAgendamento;
 }
 
 //variavel que vai controlar se devemos pedir mais tempo para tarefa em background ou não
@@ -25,8 +29,11 @@
 @property(nonatomic)NSInteger _codUnidade;
 @property(nonatomic,strong) NSString *_nomeFilial;
 @property(nonatomic,strong) NSString *_enderecoFilial;
+@property(nonatomic)NSInteger _codServico;
 @property(nonatomic,strong) NSString *_servico;
-
+@property(nonatomic) NSDate *_dataAgendamento;
+@property(nonatomic,strong) NSString *_profissional;
+@property(nonatomic,strong) NSString *_horarioAgendamento;
 
 +(VariaveisGlobais*)shared;
 

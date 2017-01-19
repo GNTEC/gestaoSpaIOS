@@ -1,69 +1,28 @@
 //
-//  agendaTableViewController.m
+//  HorarioTableViewController.m
 //  gestaoSap
 //
-//  Created by User on 17/01/17.
+//  Created by User on 19/01/17.
 //  Copyright © 2017 gntec. All rights reserved.
 //
 
-#import "agendaTableViewController.h"
-#import "VariaveisGlobais.h"
+#import "HorarioTableViewController.h"
 
-@interface agendaTableViewController ()
-{
-    
-    NSInteger arryTable;
-
-}
+@interface HorarioTableViewController ()
 
 @end
 
-@implementation agendaTableViewController
+@implementation HorarioTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
-    self.textServico.text = [VariaveisGlobais shared]._servico;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/MM/yyyy"];
-    NSString *nsstr = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
-    
-    self.textData.text = nsstr;
-    
-    self.textProfissional.text = [VariaveisGlobais shared]._profissional;
-    self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
-    
-    //[self escondeCellProfissional];
-    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
--(void) escondeCellProfissional
-{
-
-    if (self.segProfissional.selectedSegmentIndex == 1)
-    {
-        self.cellProfissional.hidden = true;
-    }
-
-}
-
-- (IBAction)mostraCellProfissional:(id)sender {
- 
-    if (self.segProfissional.selectedSegmentIndex == 0)
-    {
-        self.cellProfissional.hidden = false;
-        
-    }
-    else if (self.segProfissional.selectedSegmentIndex == 1)
-    {
-        self.cellProfissional.hidden = true;
-    }
-
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,11 +32,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
 /*

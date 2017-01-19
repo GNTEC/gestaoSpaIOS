@@ -1,29 +1,29 @@
 //
-//  servicoTableViewController.m
+//  profissionalTableViewController.m
 //  gestaoSap
 //
-//  Created by User on 18/01/17.
+//  Created by User on 19/01/17.
 //  Copyright © 2017 gntec. All rights reserved.
 //
 
-#import "servicoTableViewController.h"
+#import "profissionalTableViewController.h"
 
-@interface servicoTableViewController ()
+@interface profissionalTableViewController ()
 {
-    
+
 }
-@property (strong, nonatomic) NSMutableArray *arrayDataServico;
+@property (strong, nonatomic) NSMutableArray *arrayDataProfissional;
 
 @end
 
-@implementation servicoTableViewController
--(NSMutableArray *)arrayDataServico {
-    if (!_arrayDataServico) {
-        _arrayDataServico = [[NSMutableArray alloc] init];
-    }
-    return _arrayDataServico;
-}
+@implementation profissionalTableViewController
 
+-(NSMutableArray *)arrayDataProfissional {
+    if (!_arrayDataProfissional) {
+        _arrayDataProfissional = [[NSMutableArray alloc] init];
+    }
+    return _arrayDataProfissional;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,40 +46,45 @@
     // Spin it
     [spinnerView startAnimating];
     
-    [self  servicos];
+    [self  profissionais];
     
     if(spinnerView.isAnimating)
     {
         [spinnerView stopAnimating];
         [spinnerView removeFromSuperview];
     }
-    
+
 }
 
--(void)servicos
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)profissionais
 {
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
-    [self getServicos:^(NSDictionary *dict, NSError *error) {
+    [self getProfissionais:^(NSDictionary *dict, NSError *error) {
         
         if (dict.count > 0) {
             
             NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
-            arrayDataServico1 = [dict objectForKey:@"ViewServico"];
+            arrayDataServico1 = [dict objectForKey:@"array"];
             
             
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
-                servico *objServico = [[servico alloc]init];
+                profissional *objProfissional = [[profissional alloc]init];
                 
-                objServico.codServico = [[[arrayDataServico1 objectAtIndex:i]objectForKey:@"COD_SERVICO"] integerValue];
-                objServico.descricaoServico = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"DSC_SERVICO"];
-                objServico.valor = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"VALOR"];
+                objProfissional.codProfissional = [[[arrayDataServico1 objectAtIndex:i]objectForKey:@"COD_PROFISSIONAL"] integerValue];
+                objProfissional.nomeProfissional = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"NOME"];
                 
-                [self.arrayDataServico  addObject:objServico];
+                [self.arrayDataProfissional  addObject:objProfissional];
                 
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableServico reloadData];
+                [self.tableProfissional reloadData];
             });
         }
         else
@@ -95,19 +100,13 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.arrayDataServico count];
+    return [self.arrayDataProfissional count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -115,29 +114,32 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    servico *stServico = [self.arrayDataServico objectAtIndex:indexPath.row];
+    profissional *stProfissional = [self.arrayDataProfissional objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = stServico.descricaoServico;
+    cell.textLabel.text = stProfissional.nomeProfissional;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    servico *stServico = [self.arrayDataServico objectAtIndex:indexPath.row];
-    [VariaveisGlobais shared]._codServico = stServico.codServico;
-    [VariaveisGlobais shared]._servico = stServico.descricaoServico;
+    profissional *stProfissional = [self.arrayDataProfissional objectAtIndex:indexPath.row];
+    [VariaveisGlobais shared]._profissional = stProfissional.nomeProfissional;
     
     UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
     tbc.selectedIndex=0;
     [self presentViewController:tbc animated:YES completion:nil];
-    
 }
 
-
-- (void)getServicos:(void(^)(NSDictionary *dict, NSError *error))block
+- (void)getProfissionais:(void(^)(NSDictionary *dict, NSError *error))block
 {
     if (block) {
+        
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        NSString *strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        
+        
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
         soap.requestTimeout = 10;
@@ -145,18 +147,21 @@
         
         [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
+        [soap setValue:strData forKey:@"DATA_AGENDA"];
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
-              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_SERVICOS"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_PROFISSIONAIS_2"
   completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
       
       block(dict, nil);
       
-      } failWithError:^(NSError *error) {
-          block(nil, error);
-      }];
-            
+  } failWithError:^(NSError *error) {
+      block(nil, error);
+  }];
+        
     }
 }
+
 
 
 @end
