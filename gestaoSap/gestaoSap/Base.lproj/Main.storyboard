@@ -13,7 +13,7 @@
         <!--login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="login" id="BYZ-38-t0r" customClass="loginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" title="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="loginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -633,7 +633,7 @@
         <!--sair-->
         <scene sceneID="SG8-av-Mnf">
             <objects>
-                <viewController title="sair" id="6Kv-G1-m6C" sceneMemberID="viewController">
+                <viewController title="sair" id="6Kv-G1-m6C" customClass="logOutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SNf-7E-lqr"/>
                         <viewControllerLayoutGuide type="bottom" id="j9P-20-gQW"/>
