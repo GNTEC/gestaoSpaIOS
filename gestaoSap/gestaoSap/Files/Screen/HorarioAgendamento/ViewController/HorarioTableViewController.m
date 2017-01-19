@@ -9,19 +9,47 @@
 #import "HorarioTableViewController.h"
 
 @interface HorarioTableViewController ()
-
+{
+}
+@property (strong, nonatomic) NSMutableArray *arrayDataHorario;
 @end
 
 @implementation HorarioTableViewController
+-(NSMutableArray *)arrayDataHorario {
+    if (!_arrayDataHorario) {
+        _arrayDataHorario = [[NSMutableArray alloc] init];
+    }
+    return _arrayDataHorario;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    spinnerView.tintColor = [UIColor blackColor];
+    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Optionally set the current progress
+    spinnerView.lineWidth = 1.5f;
+    
+    // Add it as a subview
+    [self.view addSubview:spinnerView];
+    
+    // Spin it
+    [spinnerView startAnimating];
+    
+    [self  horarios];
+    
+    if(spinnerView.isAnimating)
+    {
+        [spinnerView stopAnimating];
+        [spinnerView removeFromSuperview];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,70 +57,105 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)horarios
+{
+    //CHAMA A FUNÇÃO QUE FAZ O LOGIN
+    [self getHorarios:^(NSDictionary *dict, NSError *error) {
+        
+        if (dict.count > 0) {
+            
+            NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
+            arrayDataServico1 = [dict objectForKey:@"array"];
+            
+            
+            for(int i = 0; i < [arrayDataServico1 count]; ++i)
+            {
+                horario *objHorario = [[horario alloc]init];
+                
+                objHorario.codProfissional = [[[arrayDataServico1 objectAtIndex:i]objectForKey:@"COD_PROFISSIONAL"] integerValue];
+                objHorario.dataIni = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"DT_INI"];
+                objHorario.dataFim = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"DT_FIM"];
+                
+                [self.arrayDataHorario  addObject:objHorario];
+                
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableHorario reloadData];
+            });
+        }
+        else
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Horarios disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+        }
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.arrayDataHorario count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    horario *stHorario = [self.arrayDataHorario objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = stHorario.dataIni;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    horario *stHorario = [self.arrayDataHorario objectAtIndex:indexPath.row];
+    [VariaveisGlobais shared]._horarioAgendamento = stHorario.dataIni;
+    
+    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+    tbc.selectedIndex=0;
+    [self presentViewController:tbc animated:YES completion:nil];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)getHorarios:(void(^)(NSDictionary *dict, NSError *error))block
+{
+    if (block) {
+        
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        NSString *strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+    
+        SOAPEngine *soap = [[SOAPEngine alloc]init];
+        soap.actionNamespaceSlash = YES;
+        soap.requestTimeout = 10;
+        soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
+        
+        [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
+        [soap setValue:strData forKey:@"DATA_AGENDA"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codProfissional forKey:@"COD_PROFISSIONAL"];
+        [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_HORARIO_LIVRE_PROFISSIONAL_2"
+  completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
+      
+      block(dict, nil);
+      
+  } failWithError:^(NSError *error) {
+      block(nil, error);
+  }];
+        
+    }
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -10,4 +10,6 @@
 
 @implementation horario
 
+@synthesize codProfissional,dataIni,dataFim;
+
 @end

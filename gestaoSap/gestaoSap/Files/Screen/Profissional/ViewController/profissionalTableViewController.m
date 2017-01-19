@@ -124,6 +124,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     profissional *stProfissional = [self.arrayDataProfissional objectAtIndex:indexPath.row];
+    [VariaveisGlobais shared]._codProfissional = stProfissional.codProfissional;
     [VariaveisGlobais shared]._profissional = stProfissional.nomeProfissional;
     
     UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];

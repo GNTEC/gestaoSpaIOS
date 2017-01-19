@@ -127,18 +127,10 @@
 		CE0B88B71E313A5800A1BDD5 /* HorarioAgendamento */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B88B81E313A7200A1BDD5 /* New Group */,
-			);
-			name = HorarioAgendamento;
-			sourceTree = "<group>";
-		};
-		CE0B88B81E313A7200A1BDD5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
 				CE0B88B91E313A7B00A1BDD5 /* Model */,
 				CE0B88BA1E313A8100A1BDD5 /* ViewController */,
 			);
-			name = "New Group";
+			name = HorarioAgendamento;
 			sourceTree = "<group>";
 		};
 		CE0B88B91E313A7B00A1BDD5 /* Model */ = {

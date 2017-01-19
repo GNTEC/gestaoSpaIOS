@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SOAPEngine64/SOAPEngine.h>
+#import "VariaveisGlobais.h"
+#import <LLARingSpinnerView/LLARingSpinnerView.h>
+#import "horario.h"
 
 @interface HorarioTableViewController : UITableViewController
+
+@property (strong, nonatomic) IBOutlet UITableView *tableHorario;
+
 
 @end

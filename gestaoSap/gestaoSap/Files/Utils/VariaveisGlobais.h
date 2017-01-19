@@ -19,6 +19,7 @@
     NSInteger _codServico;
     NSString *_servico;
     NSDate   *_dataAgendamento;
+    NSInteger _codProfissional;
     NSString *_profissional;
     NSString *_horarioAgendamento;
 }
@@ -32,6 +33,7 @@
 @property(nonatomic)NSInteger _codServico;
 @property(nonatomic,strong) NSString *_servico;
 @property(nonatomic) NSDate *_dataAgendamento;
+@property(nonatomic)NSInteger _codProfissional;
 @property(nonatomic,strong) NSString *_profissional;
 @property(nonatomic,strong) NSString *_horarioAgendamento;
 
