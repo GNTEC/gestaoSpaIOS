@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## GoogleMaps
+
+Copyright 2016 Google
+
 ## JTCalendar
 
 Copyright (c) 2015 Jonathan Tribouharet

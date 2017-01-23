@@ -1,18 +1,25 @@
 PODS:
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
   - JTCalendar (2.1.9)
   - LLARingSpinnerView (0.1.4)
   - SOAPEngine (1.31)
 
 DEPENDENCIES:
+  - GoogleMaps (~> 2.1)
   - JTCalendar (~> 2.0)
   - LLARingSpinnerView (~> 0.1)
   - SOAPEngine (~> 1.31)
 
 SPEC CHECKSUMS:
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   JTCalendar: beb2f4c1b639bf6880f680b4858227acf83a049c
   LLARingSpinnerView: 334c37fd53f25c86651cbb4c57f70b12d571d7a5
   SOAPEngine: eac166d07cb20579db9a476660d51a0d73271869
 
-PODFILE CHECKSUM: 19f857a6d8c409a6f0ac7ccd2b93d240ff4a8b21
+PODFILE CHECKSUM: 102cbbf08faf831acfc2fbf33cb2db684cfe29b6
 
 COCOAPODS: 1.2.0.beta.1
