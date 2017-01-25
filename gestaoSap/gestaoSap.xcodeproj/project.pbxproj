@@ -16,6 +16,7 @@
 		CE0B88CB1E355DFC00A1BDD5 /* localizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */; };
 		CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EB1E2542BE009416B5 /* unidadeViewController.m */; };
 		CE4087F01E26BCEE009416B5 /* unidade.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EF1E26BCEE009416B5 /* unidade.m */; };
+		CEB12DEB1E38FF7E00FDAC63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */; };
 		CEE2EFD81E0BF61000F7EC4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFD71E0BF61000F7EC4B /* main.m */; };
 		CEE2EFDB1E0BF61000F7EC4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */; };
 		CEE2EFE11E0BF61000F7EC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		CE4087EB1E2542BE009416B5 /* unidadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unidadeViewController.m; path = Files/Screen/Unidade/ViewController/unidadeViewController.m; sourceTree = "<group>"; };
 		CE4087EE1E26BCEE009416B5 /* unidade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidade.h; path = Files/Screen/Unidade/Model/unidade.h; sourceTree = "<group>"; };
 		CE4087EF1E26BCEE009416B5 /* unidade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unidade.m; path = Files/Screen/Unidade/Model/unidade.m; sourceTree = "<group>"; };
+		CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestaoSap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE2EFD71E0BF61000F7EC4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEE2EFD91E0BF61000F7EC4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB12DEB1E38FF7E00FDAC63 /* CoreLocation.framework in Frameworks */,
 				7507D776B598D5A468FF7FEB /* Pods_gestaoSap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +92,7 @@
 		A50C2B57A20EF7BCE0620A40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */,
 				0029251EE620A0EB6162B130 /* Pods_gestaoSap.framework */,
 			);
 			name = Frameworks;

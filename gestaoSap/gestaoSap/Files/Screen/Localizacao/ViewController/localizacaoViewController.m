@@ -7,60 +7,72 @@
 //
 
 #import "localizacaoViewController.h"
+#import "VariaveisGlobais.h"
+#import <CoreLocation/CoreLocation.h>
 @import GoogleMaps;
 
 @interface localizacaoViewController ()
 {
     GMSMapView *mapView_;
-    
-    
+    CLGeocoder *_geocoder;
+    double latitude;
+    double longitude;
 }
+
+@property (nonatomic, strong) CLGeocoder *geocoder;
+
 @end
 
 @implementation localizacaoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self fetchCoordinates];
+}
 
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:10];
+- (void)fetchCoordinates {
     
-    //mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-//    GMSMapView *map2 = [GMSMapView mapWithFrame:CGRectMake(0, 80, 500, 500) camera:camera];
-//    [self.view addSubview:map2];
+    if (!self.geocoder) {
+        self.geocoder = [[CLGeocoder alloc] init];
+    }
     
-    /* Option 3. add a map to a subview already on the XIB */
-    GMSMapView *map3 = [GMSMapView mapWithFrame:self.UIMapa.bounds camera:camera];
-    [self.UIMapa addSubview:map3];
+    NSString *address = [VariaveisGlobais shared]._enderecoFilial;
     
-    mapView_.settings.compassButton = YES;
-    mapView_.myLocationEnabled = YES;
+    [self.geocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        if ([placemarks count] > 0) {
+            CLPlacemark *placemark = [placemarks objectAtIndex:0];
+            CLLocation *location = placemark.location;
+            CLLocationCoordinate2D coordinate = location.coordinate;
+            
+            //NSString *x = [NSString stringWithFormat:@"%f, %f", coordinate.latitude, coordinate.longitude];
+            
+            GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:coordinate.latitude
+                                                                    longitude:coordinate.longitude
+                                                                         zoom:16];
+            
+            /* Option 3. add a map to a subview already on the XIB */
+            GMSMapView *maps = [GMSMapView mapWithFrame:self.UIMapa.bounds camera:camera];
+            [self.UIMapa addSubview:maps];
+            
+            mapView_.settings.compassButton = YES;
+            mapView_.myLocationEnabled = YES;
+            
+            // Creates a marker in the center of the map.
+            GMSMarker *marker = [[GMSMarker alloc] init];
+            marker.position = CLLocationCoordinate2DMake(coordinate.latitude,coordinate.longitude);
+            marker.title = [VariaveisGlobais shared]._nomeFilial;
+            marker.snippet = [VariaveisGlobais shared]._enderecoFilial;
+            marker.map = maps;
 
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = map3;
-    
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
