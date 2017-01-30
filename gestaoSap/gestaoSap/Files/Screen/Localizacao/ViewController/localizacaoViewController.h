@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LLARingSpinnerView/LLARingSpinnerView.h>
 
 @interface localizacaoViewController : UIViewController
 

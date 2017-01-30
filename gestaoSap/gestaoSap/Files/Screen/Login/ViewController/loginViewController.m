@@ -113,6 +113,7 @@ static const int COD_EMPRESA = 58 ;
         if ([msgRet isEqualToString:@"OK"]) {
             
             [VariaveisGlobais shared]._codEmpresa = COD_EMPRESA;
+            [VariaveisGlobais shared]._codCliente = [[dict objectForKey:@"COD_CLIENTE"] integerValue];
              
             UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];
             [self presentViewController:vc animated:YES completion:nil];

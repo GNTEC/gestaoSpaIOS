@@ -15,8 +15,6 @@
 {
     GMSMapView *mapView_;
     CLGeocoder *_geocoder;
-    double latitude;
-    double longitude;
 }
 
 @property (nonatomic, strong) CLGeocoder *geocoder;
@@ -28,7 +26,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    spinnerView.tintColor = [UIColor blackColor];
+    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    
+    // Optionally set the current progress
+    spinnerView.lineWidth = 1.5f;
+    
+    // Add it as a subview
+    [self.view addSubview:spinnerView];
+    
+    // Spin it
+    [spinnerView startAnimating];
+    
     [self fetchCoordinates];
+    
+    if(spinnerView.isAnimating)
+    {
+        [spinnerView stopAnimating];
+        [spinnerView removeFromSuperview];
+    }
 }
 
 - (void)fetchCoordinates {
