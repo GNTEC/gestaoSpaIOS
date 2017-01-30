@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
-            timestampString = "507384533.621091"
+            timestampString = "507474176.355097"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-historicoAgendamentos"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,27 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
-            timestampString = "507384533.621091"
+            timestampString = "507474161.97041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "-getHistoricoAgendamentos:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
-            timestampString = "507384533.621091"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-historicoAgendamentos"
             landmarkType = "7">
          </BreakpointContent>

@@ -62,53 +62,67 @@
 }
 
 
+/*
+- (void)fetchedData
+{
+    
+    //NSError* error;
+    //NSDictionary *document = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    
+    // all titre:video for album_titre:publicite
+    NSArray *albumArray = [document objectForKey:@"album"];
+    NSDictionary *dict = [albumArray objectAtindex:0];
+    NSArray *videos = [dict objectForKey:@"album_videos"];
+    
+    // to fetch Videos inside album_videos
+    // here you will get al the videos inside key titre_video
+    NSMutableArray *titreVideoArray = [[NSMutableArray alloc]init];
+    for(int i=0; i< videos.count; i++){
+        NSDictionary *dict = [videos objectAtindex:i];
+        NSArray *titreVideos = [dict objectForKey:@"titre_video"];
+        [titreVideoArray addObject: titreVideos];
+    }
+}
+
+*/
+
+
 -(void)historicoAgendamentos
 {
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getHistoricoAgendamentos:^(NSDictionary *dict, NSError *error) {
         
-        if (dict.count > 0) {
+        if (dict.count > 0)
+        {
             
-            NSMutableDictionary *arrayAgendamento = [[NSMutableDictionary alloc] init];
-            arrayAgendamento = [dict objectForKey:@"Agendamento"];
-            
-
-            NSDictionary *topLevelJSON = [NSJSONSerialization JSONObjectWithData:dict options:0 error:nil];
-            NSString *lowLevelString = [[topLevelJSON firstObject] objectForKey:@"data"];
-            NSData *lowLevelData = [lowLevelString dataUsingEncoding:NSUTF8StringEncoding];
-            NSDictionary *final = [NSJSONSerialization JSONObjectWithData:lowLevelData options:0 error:nil];
-            
-            
-            
-            NSMutableDictionary *arrayCliente = [[NSMutableDictionary alloc] init];
-            arrayCliente = [arrayAgendamento objectForKey:@"CLIENTE"];
-            
- //           NSMutableArray *arrayProfissinal = [[NSMutableArray alloc] init];
- //           arrayProfissinal = [arrayAgendamento objectAtIndex:2];
-            
- //           NSMutableArray *arrayServico = [[NSMutableArray alloc] init];
- //           arrayServico = [arrayAgendamento objectAtIndex:5];
-            
-            for(int i = 0; i < [arrayAgendamento count]; ++i)
+            NSArray *dataArray = [dict objectForKey:@"Agendamento"];
+      
+            for(int i = 0; i < [dataArray count]; ++i)
             {
-                historicoAgendamento *objHistoricoAgendamento = [[historicoAgendamento alloc]init];
+               historicoAgendamento *objHistoricoAgendamento = [[historicoAgendamento alloc]init];
                 
-                //[{"COD_AGENDAMENTO":2388061,"PROFISSIONAL":{"COD_PROFISSIONAL":16,"NOME":"Marli"},"SERVICO":{"COD_SERVICO":5677,"DSC_SERVICO":"aplicação de enzima","VALOR":80},"CLIENTE":{"COD_CLIENTE":1055,"NOME":"Claudio Matteucci","MSG_RETORNO":""},"DATA":"27/01/2017","HORA":"08:00","STATUS":"PENDENTE"}
+                NSDictionary *dataArrayProfissional = [dataArray objectAtIndex:i];
+                NSArray *profissional = [dataArrayProfissional objectForKey:@"PROFISSIONAL"];
                 
- //               objHistoricoAgendamento.codAgendamento = [[[arrayAgendamento objectAtIndex:i]objectForKey:@"COD_AGENDAMENTO"] integerValue];
+                NSDictionary *dataArrayServico = [dataArray objectAtIndex:i];
+                NSArray *servico = [dataArrayServico objectForKey:@"SERVICO"];
                 
-//                objHistoricoAgendamento.codProfissional = [[[arrayProfissinal objectAtIndex:i]objectForKey:@"COD_PROFISSIONAL"] integerValue];
-//                objHistoricoAgendamento.nomeProfissional = [[arrayProfissinal objectAtIndex:i]objectForKey:@"NOME"];
+                NSDictionary *dataArrayClientes = [dataArray objectAtIndex:i];
+                NSArray *cliente = [dataArrayClientes objectForKey:@"CLIENTE"];
                 
-//                objHistoricoAgendamento.descricaoServico = [[arrayServico objectAtIndex:i]objectForKey:@"DSC_SERVICO"];
-//                objHistoricoAgendamento.valor = [[arrayServico objectAtIndex:i]objectForKey:@"VALOR"];
+                objHistoricoAgendamento.codAgendamento = [[[dataArray objectAtIndex:i]objectForKey:@"COD_AGENDAMENTO"] integerValue];
+                objHistoricoAgendamento.codProfissional = [[profissional valueForKey:@"COD_PROFISSIONAL"] integerValue];
+                objHistoricoAgendamento.nomeProfissional = [profissional valueForKey:@"NOME"];
                 
- //               objHistoricoAgendamento.nomeCliente = [[arrayCliente objectAtIndex:i]objectForKey:@"NOME"];
-                //objHistoricoAgendamento.msgRetorno = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"MSG_RETORNO"];
+                objHistoricoAgendamento.descricaoServico = [servico valueForKey:@"DSC_SERVICO"];
+                objHistoricoAgendamento.valor = [servico valueForKey:@"VALOR"];
                 
- //               objHistoricoAgendamento.dataAgendametoServico = [[arrayAgendamento objectAtIndex:i]objectForKey:@"DATA"];
- //               objHistoricoAgendamento.horaAgendamentoServico = [[arrayAgendamento objectAtIndex:i]objectForKey:@"HORA"];
- //               objHistoricoAgendamento.statusServico = [[arrayAgendamento objectAtIndex:i]objectForKey:@"STATUS"];
+                objHistoricoAgendamento.nomeCliente = [cliente valueForKey:@"NOME"];
+                objHistoricoAgendamento.msgRetorno = [cliente valueForKey:@"MSG_RETORNO"];
+                
+                objHistoricoAgendamento.dataAgendametoServico = [[dataArray objectAtIndex:i]objectForKey:@"DATA"];
+                objHistoricoAgendamento.horaAgendamentoServico = [[dataArray objectAtIndex:i]objectForKey:@"HORA"];
+                objHistoricoAgendamento.statusServico = [[dataArray objectAtIndex:0]objectForKey:@"STATUS"];
                 
                 [self.arrayDataHistoricoServico  addObject:objHistoricoAgendamento];
                 
@@ -169,7 +183,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codCliente forKey:@"COD_CLIENTE"];
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
               soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_AGENDAMENTOS"
-  completeWithDictionary:^(NSInteger statusCode, NSData *dict) {
+  completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
       
       block(dict, nil);
       
