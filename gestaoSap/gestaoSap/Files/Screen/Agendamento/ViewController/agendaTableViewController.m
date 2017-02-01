@@ -23,30 +23,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //[self escondeCellProfissional];
+    [self setupUI];
+}
+
+-(void) setupUI {
+    
+    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
     self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
     self.textServico.text = [VariaveisGlobais shared]._servico;
+    self.textProfissional.text = [VariaveisGlobais shared]._profissional;
+    self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
     
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"dd/MM/yyyy"];
     NSString *nsstr = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
     
     self.textData.text = nsstr;
-    
-    self.textProfissional.text = [VariaveisGlobais shared]._profissional;
-    self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
-    
-    //[self escondeCellProfissional];
-    
 }
 
+-(void) updateUI
+{
+    
+}
 -(void) escondeCellProfissional
 {
-
     if (self.segProfissional.selectedSegmentIndex == 1)
     {
         self.cellProfissional.hidden = true;
     }
-
 }
 
 - (IBAction)mostraCellProfissional:(id)sender {

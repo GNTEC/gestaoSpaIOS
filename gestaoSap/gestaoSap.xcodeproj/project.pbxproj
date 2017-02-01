@@ -15,6 +15,7 @@
 		CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88C41E3145AF00A1BDD5 /* logOutViewController.m */; };
 		CE0B88CB1E355DFC00A1BDD5 /* localizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */; };
 		CE35B8051E3E0D4E003571F5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35B8041E3E0D4E003571F5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */; };
 		CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EB1E2542BE009416B5 /* unidadeViewController.m */; };
 		CE4087F01E26BCEE009416B5 /* unidade.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EF1E26BCEE009416B5 /* unidade.m */; };
 		CE40A4BB1E3BBB8E000C0224 /* historicoAgendamento.m in Sources */ = {isa = PBXBuildFile; fileRef = CE40A4BA1E3BBB8E000C0224 /* historicoAgendamento.m */; };
@@ -54,6 +55,8 @@
 		CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = localizacaoViewController.m; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.m; sourceTree = "<group>"; };
 		CE35B8031E3E0D4E003571F5 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Files/Utils/JSONKit.h; sourceTree = "<group>"; };
 		CE35B8041E3E0D4E003571F5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Files/Utils/JSONKit.m; sourceTree = "<group>"; };
+		CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoTableViewCell.h; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.h; sourceTree = "<group>"; };
+		CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricoTableViewCell.m; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.m; sourceTree = "<group>"; };
 		CE4087EA1E2542BE009416B5 /* unidadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidadeViewController.h; path = Files/Screen/Unidade/ViewController/unidadeViewController.h; sourceTree = "<group>"; };
 		CE4087EB1E2542BE009416B5 /* unidadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unidadeViewController.m; path = Files/Screen/Unidade/ViewController/unidadeViewController.m; sourceTree = "<group>"; };
 		CE4087EE1E26BCEE009416B5 /* unidade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidade.h; path = Files/Screen/Unidade/Model/unidade.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 			children = (
 				CE40A4BC1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.h */,
 				CE40A4BD1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.m */,
+				CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */,
+				CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				CE0B88C01E313ADC00A1BDD5 /* HorarioTableViewController.m in Sources */,
 				CE0B88BD1E313ABC00A1BDD5 /* horario.m in Sources */,
 				CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */,
+				CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */,
 				CE4087F01E26BCEE009416B5 /* unidade.m in Sources */,
 				CEFA8AFF1E2EA50E00126D06 /* agendaTableViewController.m in Sources */,
 				CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */,

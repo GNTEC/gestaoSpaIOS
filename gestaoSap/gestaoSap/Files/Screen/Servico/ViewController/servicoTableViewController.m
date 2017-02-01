@@ -10,7 +10,7 @@
 
 @interface servicoTableViewController ()
 {
-    
+    LLARingSpinnerView *spinnerView;
 }
 @property (strong, nonatomic) NSMutableArray *arrayDataServico;
 
@@ -27,12 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
     
-    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
     spinnerView.tintColor = [UIColor blackColor];
     spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
     //spinnerView.backgroundColor = [UIColor grayColor];
@@ -47,6 +43,11 @@
     [spinnerView startAnimating];
     
     [self  servicos];
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
     
     if(spinnerView.isAnimating)
     {
@@ -125,6 +126,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     servico *stServico = [self.arrayDataServico objectAtIndex:indexPath.row];
+    
     [VariaveisGlobais shared]._codServico = stServico.codServico;
     [VariaveisGlobais shared]._servico = stServico.descricaoServico;
     

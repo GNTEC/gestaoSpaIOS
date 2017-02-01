@@ -6,32 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
-            timestampString = "507474176.355097"
+            filePath = "gestaoSap/Files/Screen/Localizacao/ViewController/localizacaoViewController.m"
+            timestampString = "507647516.009707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "-historicoAgendamentos"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
-            timestampString = "507474161.97041"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-historicoAgendamentos"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-fetchCoordinates"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

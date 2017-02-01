@@ -14,14 +14,21 @@
 
 @interface unidadeViewController ()
 {
-    
+
 }
 
+@property (strong, nonatomic) unidade *stUnidade;
 @property (strong, nonatomic) NSMutableArray *pickUnidadeData;
 
 @end
 
 @implementation unidadeViewController
+
+-(unidade *)stUnidade{
+    
+    NSInteger selectedIndex = [self.pkcUnidade selectedRowInComponent:0];
+    return [_pickUnidadeData objectAtIndex:selectedIndex];
+}
 
 -(NSMutableArray *)pickUnidadeData {
     if (!_pickUnidadeData) {
@@ -130,37 +137,15 @@
     
 }
 
-- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-    unidade *stUnidade = [_pickUnidadeData objectAtIndex:row];
-    
-    [VariaveisGlobais shared]._codUnidade = stUnidade.codFilial;
-    [VariaveisGlobais shared]._nomeFilial = stUnidade.nomeFilial;
-    [VariaveisGlobais shared]._enderecoFilial = stUnidade.enderecoFilial;
-    
-}
-
 - (IBAction)logar:(UIButton *)sender
 {
-    
-    if ([VariaveisGlobais shared]._nomeFilial == nil ) {
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"informação" message:@"Selecione uma unidade !" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:ok];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        return;
-    }
-    else
-    {
-    
-        UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-        tbc.selectedIndex=0;
-        [self presentViewController:tbc animated:YES completion:nil];
-    }
+    [VariaveisGlobais shared]._codUnidade = self.stUnidade.codFilial;
+    [VariaveisGlobais shared]._nomeFilial = self.stUnidade.nomeFilial;
+    [VariaveisGlobais shared]._enderecoFilial = self.stUnidade.enderecoFilial;
+
+    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
+    tbc.selectedIndex=0;
+    [self presentViewController:tbc animated:YES completion:nil];
 }
 
 

@@ -14,5 +14,6 @@
 
 @interface historicoAgendamentoTableViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableHistorico;
 
 @end

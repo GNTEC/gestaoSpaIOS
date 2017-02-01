@@ -7,17 +7,43 @@
 //
 
 #import "historicoAgendamentoTableViewController.h"
-#import "JSONKit.h"
+#import "HistoricoTableViewCell.h"
 
 @interface historicoAgendamentoTableViewController ()
 {
 
 }
+
+@property (assign, nonatomic) BOOL updating;
+@property (strong, nonatomic) LLARingSpinnerView *spinnerView;
 @property (strong, nonatomic) NSMutableArray *arrayDataHistoricoServico;
 
 @end
 
 @implementation historicoAgendamentoTableViewController
+-(LLARingSpinnerView *)spinnerView {
+    if (!_spinnerView) {
+        _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        _spinnerView.tintColor = [UIColor blackColor];
+        // Optionally set the current progress
+        _spinnerView.lineWidth = 1.5f;
+        _spinnerView.hidesWhenStopped = YES;
+    }
+    return _spinnerView;
+}
+
+-(void)setUpdating:(BOOL)updating {
+    _updating = updating;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.updating) {
+            [self.spinnerView startAnimating];
+        } else {
+            [self.spinnerView stopAnimating];
+        }
+    });
+    
+}
+
 -(NSMutableArray *)arrayDataHistoricoServico {
     if (!_arrayDataHistoricoServico) {
         _arrayDataHistoricoServico = [[NSMutableArray alloc] init];
@@ -28,69 +54,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    // Add it as a subview
+    [self.view addSubview:self.spinnerView];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self  historicoAgendamentos];
+
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     
-    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
-    spinnerView.tintColor = [UIColor blackColor];
-    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    //spinnerView.backgroundColor = [UIColor grayColor];
-    
-    // Optionally set the current progress
-    spinnerView.lineWidth = 1.5f;
-    
-    // Add it as a subview
-    [self.view addSubview:spinnerView];
-    
-    // Spin it
-    [spinnerView startAnimating];
-    
-    [self  historicoAgendamentos];
-    
-    if(spinnerView.isAnimating)
-    {
-        [spinnerView stopAnimating];
-        [spinnerView removeFromSuperview];
-    }
 }
-
-
-/*
-- (void)fetchedData
-{
-    
-    //NSError* error;
-    //NSDictionary *document = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    
-    // all titre:video for album_titre:publicite
-    NSArray *albumArray = [document objectForKey:@"album"];
-    NSDictionary *dict = [albumArray objectAtindex:0];
-    NSArray *videos = [dict objectForKey:@"album_videos"];
-    
-    // to fetch Videos inside album_videos
-    // here you will get al the videos inside key titre_video
-    NSMutableArray *titreVideoArray = [[NSMutableArray alloc]init];
-    for(int i=0; i< videos.count; i++){
-        NSDictionary *dict = [videos objectAtindex:i];
-        NSArray *titreVideos = [dict objectForKey:@"titre_video"];
-        [titreVideoArray addObject: titreVideos];
-    }
-}
-
-*/
-
 
 -(void)historicoAgendamentos
 {
+    self.updating = YES;
+    
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getHistoricoAgendamentos:^(NSDictionary *dict, NSError *error) {
+        
+        NSMutableArray *arrayDataHistoricoServico1 = [[NSMutableArray alloc] init];
         
         if (dict.count > 0)
         {
@@ -124,16 +109,18 @@
                 objHistoricoAgendamento.horaAgendamentoServico = [[dataArray objectAtIndex:i]objectForKey:@"HORA"];
                 objHistoricoAgendamento.statusServico = [[dataArray objectAtIndex:0]objectForKey:@"STATUS"];
                 
-                [self.arrayDataHistoricoServico  addObject:objHistoricoAgendamento];
+                [arrayDataHistoricoServico1  addObject:objHistoricoAgendamento];
                 
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                //[self.tableServico reloadData];
+                self.arrayDataHistoricoServico = arrayDataHistoricoServico1;
+                [self.tableHistorico reloadData];
+                self.updating = NO;
             });
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Serviços realozados !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Serviços realizados !" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:ok];
@@ -157,18 +144,30 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return [self.arrayDataHistoricoServico count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    HistoricoTableViewCell *celula = [tableView dequeueReusableCellWithIdentifier:@"cellHistorico"];
     
-    return cell;
+    if(self.arrayDataHistoricoServico.count > 0)
+    {
+        //colocar texto nas celulas
+        historicoAgendamento *stHistoricoAgendamento = [self.arrayDataHistoricoServico objectAtIndex:indexPath.row];
+        
+        celula.labelServico.text = stHistoricoAgendamento.descricaoServico;
+        celula.labelProfissional.text = stHistoricoAgendamento.nomeProfissional;
+        celula.labelData.text = stHistoricoAgendamento.dataAgendametoServico;
+        celula.labelHora.text = stHistoricoAgendamento.horaAgendamentoServico;
+        celula.labelStatus.text = stHistoricoAgendamento.statusServico;
+
+    }
+
+    return celula;
+    
 }
-*/
+
 
 - (void)getHistoricoAgendamentos:(void(^)(NSDictionary *dict, NSError *error))block
 {
