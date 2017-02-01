@@ -48,15 +48,31 @@
     
 }
 
-- (void)viewDidLoad {
+-(void) setupUI {
     
-    [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
     
     self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
     //spinnerView.backgroundColor = [UIColor grayColor];
     // Add it as a subview
     [self.view addSubview:self.spinnerView];
     
+}
+
+-(void) updateUI
+{
+    
+}
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    [self setupUI];
     [self fetchCoordinates];
 }
 

@@ -12,11 +12,35 @@
 {
     LLARingSpinnerView *spinnerView;
 }
+@property (assign, nonatomic) BOOL updating;
+@property (strong, nonatomic) LLARingSpinnerView *spinnerView;
 @property (strong, nonatomic) NSMutableArray *arrayDataServico;
 
 @end
 
 @implementation servicoTableViewController
+-(LLARingSpinnerView *)spinnerView {
+    if (!_spinnerView) {
+        _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        _spinnerView.tintColor = [UIColor blackColor];
+        // Optionally set the current progress
+        _spinnerView.lineWidth = 1.5f;
+        _spinnerView.hidesWhenStopped = YES;
+    }
+    return _spinnerView;
+}
+
+-(void)setUpdating:(BOOL)updating {
+    _updating = updating;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.updating) {
+            [self.spinnerView startAnimating];
+        } else {
+            [self.spinnerView stopAnimating];
+        }
+    });
+}
+
 -(NSMutableArray *)arrayDataServico {
     if (!_arrayDataServico) {
         _arrayDataServico = [[NSMutableArray alloc] init];
@@ -24,26 +48,31 @@
     return _arrayDataServico;
 }
 
+-(void) setupUI {
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    // Add it as a subview
+    [self.view addSubview:self.spinnerView];
+    
+}
+
+-(void) updateUI
+{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
-    spinnerView.tintColor = [UIColor blackColor];
-    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    //spinnerView.backgroundColor = [UIColor grayColor];
-    
-    // Optionally set the current progress
-    spinnerView.lineWidth = 1.5f;
-    
-    // Add it as a subview
-    [self.view addSubview:spinnerView];
-    
-    // Spin it
-    [spinnerView startAnimating];
-    
-    [self  servicos];
-    
+    [self setupUI];
+    [self servicos];
 }
 
 - (void) viewWillAppear:(BOOL)animated

@@ -16,6 +16,7 @@
 		CE0B88CB1E355DFC00A1BDD5 /* localizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */; };
 		CE35B8051E3E0D4E003571F5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35B8041E3E0D4E003571F5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */; };
+		CE3AC06A1E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0691E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m */; };
 		CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EB1E2542BE009416B5 /* unidadeViewController.m */; };
 		CE4087F01E26BCEE009416B5 /* unidade.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EF1E26BCEE009416B5 /* unidade.m */; };
 		CE40A4BB1E3BBB8E000C0224 /* historicoAgendamento.m in Sources */ = {isa = PBXBuildFile; fileRef = CE40A4BA1E3BBB8E000C0224 /* historicoAgendamento.m */; };
@@ -57,6 +58,8 @@
 		CE35B8041E3E0D4E003571F5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Files/Utils/JSONKit.m; sourceTree = "<group>"; };
 		CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoTableViewCell.h; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.h; sourceTree = "<group>"; };
 		CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricoTableViewCell.m; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.m; sourceTree = "<group>"; };
+		CE3AC0681E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoAgendamentoDetalheViewController.h; path = Files/Screen/HistoricoAgendamentoDetalhe/ViewController/HistoricoAgendamentoDetalheViewController.h; sourceTree = "<group>"; };
+		CE3AC0691E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricoAgendamentoDetalheViewController.m; path = Files/Screen/HistoricoAgendamentoDetalhe/ViewController/HistoricoAgendamentoDetalheViewController.m; sourceTree = "<group>"; };
 		CE4087EA1E2542BE009416B5 /* unidadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidadeViewController.h; path = Files/Screen/Unidade/ViewController/unidadeViewController.h; sourceTree = "<group>"; };
 		CE4087EB1E2542BE009416B5 /* unidadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unidadeViewController.m; path = Files/Screen/Unidade/ViewController/unidadeViewController.m; sourceTree = "<group>"; };
 		CE4087EE1E26BCEE009416B5 /* unidade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unidade.h; path = Files/Screen/Unidade/Model/unidade.h; sourceTree = "<group>"; };
@@ -238,6 +241,15 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */ = {
+			isa = PBXGroup;
+			children = (
+				CE3AC0681E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.h */,
+				CE3AC0691E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m */,
+			);
+			name = HistoricoAgendamentoDetalhe;
+			sourceTree = "<group>";
+		};
 		CE4087E81E25427E009416B5 /* Unidade */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +391,7 @@
 		CEE6ED181E1176E300237F5A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */,
 				CE40A4B61E3BBB32000C0224 /* HistorioAgendamento */,
 				CEB12DEC1E39264100FDAC63 /* Promocao */,
 				CE0B88C61E355C7500A1BDD5 /* Localizacao */,
@@ -441,8 +454,8 @@
 		CEFA8B091E2FE65600126D06 /* DataAgendamento */ = {
 			isa = PBXGroup;
 			children = (
-				CEFA8B0B1E2FE66300126D06 /* ViewController */,
 				CEFA8B0A1E2FE65F00126D06 /* Model */,
+				CEFA8B0B1E2FE66300126D06 /* ViewController */,
 			);
 			name = DataAgendamento;
 			sourceTree = "<group>";
@@ -589,6 +602,7 @@
 				CE0B88B31E311DA000A1BDD5 /* profissionalTableViewController.m in Sources */,
 				CEE2EFDB1E0BF61000F7EC4B /* AppDelegate.m in Sources */,
 				CEE6ED221E1178E500237F5A /* VariaveisGlobais.m in Sources */,
+				CE3AC06A1E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m in Sources */,
 				CE0B88CB1E355DFC00A1BDD5 /* localizacaoViewController.m in Sources */,
 				CEE6ED281E117D8900237F5A /* loginViewController.m in Sources */,
 				CEFA8B081E2FCAF000126D06 /* servico.m in Sources */,

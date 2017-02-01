@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestaoSap/Files/Screen/Localizacao/ViewController/localizacaoViewController.m"
-            timestampString = "507647516.009707"
+            timestampString = "507663948.836115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-fetchCoordinates"
             landmarkType = "7">
          </BreakpointContent>

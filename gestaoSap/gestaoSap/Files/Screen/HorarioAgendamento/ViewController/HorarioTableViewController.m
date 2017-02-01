@@ -11,10 +11,35 @@
 @interface HorarioTableViewController ()
 {
 }
+@property (assign, nonatomic) BOOL updating;
+@property (strong, nonatomic) LLARingSpinnerView *spinnerView;
 @property (strong, nonatomic) NSMutableArray *arrayDataHorario;
+
 @end
 
 @implementation HorarioTableViewController
+-(LLARingSpinnerView *)spinnerView {
+    if (!_spinnerView) {
+        _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        _spinnerView.tintColor = [UIColor blackColor];
+        // Optionally set the current progress
+        _spinnerView.lineWidth = 1.5f;
+        _spinnerView.hidesWhenStopped = YES;
+    }
+    return _spinnerView;
+}
+
+-(void)setUpdating:(BOOL)updating {
+    _updating = updating;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.updating) {
+            [self.spinnerView startAnimating];
+        } else {
+            [self.spinnerView stopAnimating];
+        }
+    });
+    
+}
 -(NSMutableArray *)arrayDataHorario {
     if (!_arrayDataHorario) {
         _arrayDataHorario = [[NSMutableArray alloc] init];
@@ -22,35 +47,34 @@
     return _arrayDataHorario;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void) setupUI {
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    // Add it as a subview
+    [self.view addSubview:self.spinnerView];
+    
 }
 
-- (void) viewWillAppear:(BOOL)animated
+-(void) updateUI
 {
     
-    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
-    spinnerView.tintColor = [UIColor blackColor];
-    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    //spinnerView.backgroundColor = [UIColor grayColor];
-    
-    // Optionally set the current progress
-    spinnerView.lineWidth = 1.5f;
-    
-    // Add it as a subview
-    [self.view addSubview:spinnerView];
-    
-    // Spin it
-    [spinnerView startAnimating];
-    
-    [self  horarios];
-    
-    if(spinnerView.isAnimating)
-    {
-        [spinnerView stopAnimating];
-        [spinnerView removeFromSuperview];
-    }
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setupUI];
+    [self horarios];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -59,6 +83,8 @@
 
 -(void)horarios
 {
+    
+    self.updating = YES;
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getHorarios:^(NSDictionary *dict, NSError *error) {
         
@@ -81,6 +107,7 @@
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableHorario reloadData];
+                self.updating = false;
             });
         }
         else
@@ -91,7 +118,7 @@
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
-            
+            self.updating =false;
         }
     }];
 }

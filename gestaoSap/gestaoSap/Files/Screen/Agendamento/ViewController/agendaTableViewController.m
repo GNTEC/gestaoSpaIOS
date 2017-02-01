@@ -29,8 +29,11 @@
 
 -(void) setupUI {
     
-    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
     
     self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
     self.textServico.text = [VariaveisGlobais shared]._servico;
@@ -67,10 +70,7 @@
     {
         self.cellProfissional.hidden = true;
     }
-
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

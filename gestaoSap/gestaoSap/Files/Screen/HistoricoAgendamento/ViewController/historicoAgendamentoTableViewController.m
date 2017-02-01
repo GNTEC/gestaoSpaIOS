@@ -8,6 +8,7 @@
 
 #import "historicoAgendamentoTableViewController.h"
 #import "HistoricoTableViewCell.h"
+#import "HistoricoAgendamentoDetalheViewController.h"
 
 @interface historicoAgendamentoTableViewController ()
 {
@@ -41,7 +42,6 @@
             [self.spinnerView stopAnimating];
         }
     });
-    
 }
 
 -(NSMutableArray *)arrayDataHistoricoServico {
@@ -51,16 +51,31 @@
     return _arrayDataHistoricoServico;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void) setupUI {
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
     
     self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
     //spinnerView.backgroundColor = [UIColor grayColor];
     // Add it as a subview
     [self.view addSubview:self.spinnerView];
     
-    [self  historicoAgendamentos];
+}
 
+-(void) updateUI
+{
+    
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setupUI];
+    [self  historicoAgendamentos];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -131,7 +146,6 @@
     }];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -168,6 +182,17 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    historicoAgendamento *stHistoricoAgendamento = [self.arrayDataHistoricoServico objectAtIndex:indexPath.row];
+    
+    HistoricoAgendamentoDetalheViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HistoricoAgendamentoDetalheViewController"];
+    
+    vc.stHistoricoAgendamento = stHistoricoAgendamento;
+    [self presentViewController:vc animated:YES completion:nil];
+    
+    
+}
 
 - (void)getHistoricoAgendamentos:(void(^)(NSDictionary *dict, NSError *error))block
 {

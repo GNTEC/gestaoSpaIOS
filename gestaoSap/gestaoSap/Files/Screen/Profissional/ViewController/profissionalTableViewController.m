@@ -12,50 +12,67 @@
 {
 
 }
+
+@property (assign, nonatomic) BOOL updating;
+@property (strong, nonatomic) LLARingSpinnerView *spinnerView;
 @property (strong, nonatomic) NSMutableArray *arrayDataProfissional;
 
 @end
 
 @implementation profissionalTableViewController
+-(LLARingSpinnerView *)spinnerView {
+    if (!_spinnerView) {
+        _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        _spinnerView.tintColor = [UIColor blackColor];
+        // Optionally set the current progress
+        _spinnerView.lineWidth = 1.5f;
+        _spinnerView.hidesWhenStopped = YES;
+    }
+    return _spinnerView;
+}
 
+-(void)setUpdating:(BOOL)updating {
+    _updating = updating;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.updating) {
+            [self.spinnerView startAnimating];
+        } else {
+            [self.spinnerView stopAnimating];
+        }
+    });
+}
 -(NSMutableArray *)arrayDataProfissional {
     if (!_arrayDataProfissional) {
         _arrayDataProfissional = [[NSMutableArray alloc] init];
     }
     return _arrayDataProfissional;
 }
+-(void) setupUI {
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    // Add it as a subview
+    [self.view addSubview:self.spinnerView];
+    
+}
+
+-(void) updateUI
+{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupUI];
+    [self profissionais];
 }
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    
-    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
-    spinnerView.tintColor = [UIColor blackColor];
-    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    //spinnerView.backgroundColor = [UIColor grayColor];
-    
-    // Optionally set the current progress
-    spinnerView.lineWidth = 1.5f;
-    
-    // Add it as a subview
-    [self.view addSubview:spinnerView];
-    
-    // Spin it
-    [spinnerView startAnimating];
-    
-    [self  profissionais];
-    
-    if(spinnerView.isAnimating)
-    {
-        [spinnerView stopAnimating];
-        [spinnerView removeFromSuperview];
-    }
-
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,6 +81,7 @@
 
 -(void)profissionais
 {
+    self.updating = true;
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getProfissionais:^(NSDictionary *dict, NSError *error) {
         
@@ -85,6 +103,7 @@
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableProfissional reloadData];
+                self.updating = false;
             });
         }
         else
@@ -95,6 +114,7 @@
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
+            self.updating =false;
             
         }
     }];

@@ -11,35 +11,60 @@
 @interface promocaoViewController ()
 {
 }
+@property (assign, nonatomic) BOOL updating;
+@property (strong, nonatomic) LLARingSpinnerView *spinnerView;
+
 @property (strong, nonatomic) NSString *strPromocao;
 @end
 
 @implementation promocaoViewController
+-(LLARingSpinnerView *)spinnerView {
+    if (!_spinnerView) {
+        _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        _spinnerView.tintColor = [UIColor blackColor];
+        // Optionally set the current progress
+        _spinnerView.lineWidth = 1.5f;
+        _spinnerView.hidesWhenStopped = YES;
+    }
+    return _spinnerView;
+}
+
+-(void)setUpdating:(BOOL)updating {
+    _updating = updating;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.updating) {
+            [self.spinnerView startAnimating];
+        } else {
+            [self.spinnerView stopAnimating];
+        }
+    });
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LLARingSpinnerView *spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
-    spinnerView.tintColor = [UIColor blackColor];
-    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    //spinnerView.backgroundColor = [UIColor grayColor];
-    
-    // Optionally set the current progress
-    spinnerView.lineWidth = 1.5f;
-    
-    // Add it as a subview
-    [self.view addSubview:spinnerView];
-    
-    // Spin it
-    [spinnerView startAnimating];
-    
+    [self setupUI];
     [self promocoes];
+}
+
+-(void) setupUI {
     
-    if(spinnerView.isAnimating)
-    {
-        [spinnerView stopAnimating];
-        [spinnerView removeFromSuperview];
-    }
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
+
+    self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    //spinnerView.backgroundColor = [UIColor grayColor];
+    // Add it as a subview
+    [self.view addSubview:self.spinnerView];
+    
+}
+
+-(void) updateUI
+{
     
 }
 
@@ -50,6 +75,8 @@
 
 -(void)promocoes
 {
+    self.updating = YES;
+    
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getPromocao:^(NSString *strMsgPromocao, NSError *error) {
         
@@ -57,6 +84,7 @@
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.textPromocao.text = strMsgPromocao;
+                self.updating = NO;
             });
         }
         else
