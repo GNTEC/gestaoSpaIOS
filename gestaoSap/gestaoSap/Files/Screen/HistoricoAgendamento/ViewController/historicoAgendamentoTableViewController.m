@@ -18,6 +18,7 @@
 @property (assign, nonatomic) BOOL updating;
 @property (strong, nonatomic) LLARingSpinnerView *spinnerView;
 @property (strong, nonatomic) NSMutableArray *arrayDataHistoricoServico;
+@property (strong, nonatomic) historicoAgendamento *stListaHistoricoAgendamento;
 
 @end
 
@@ -135,6 +136,9 @@
         }
         else
         {
+            
+            self.updating = NO;
+            
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Serviços realizados !" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -142,6 +146,11 @@
             
             [self presentViewController:alertController animated:YES completion:nil];
             
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"agendaTableViewController"];
+                [self presentViewController:vc animated:YES completion:nil];
+                
+            });
         }
     }];
 }
@@ -182,18 +191,6 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    historicoAgendamento *stHistoricoAgendamento = [self.arrayDataHistoricoServico objectAtIndex:indexPath.row];
-    
-    HistoricoAgendamentoDetalheViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HistoricoAgendamentoDetalheViewController"];
-    
-    vc.stHistoricoAgendamento = stHistoricoAgendamento;
-    [self presentViewController:vc animated:YES completion:nil];
-    
-    
-}
-
 - (void)getHistoricoAgendamentos:(void(^)(NSDictionary *dict, NSError *error))block
 {
     if (block) {
@@ -217,6 +214,23 @@
         
     }
 }
+
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    historicoAgendamento *stHistoricoAgendamento = [self.arrayDataHistoricoServico objectAtIndex:[self.tableHistorico indexPathForSelectedRow].row];
+    
+    if ([segue.destinationViewController isKindOfClass:[HistoricoAgendamentoDetalheViewController class]])
+    {
+        HistoricoAgendamentoDetalheViewController *vc = segue.destinationViewController;
+        vc.stHistoricoAgendamento = stHistoricoAgendamento;
+    }
+ 
+}
+
 
 
 @end

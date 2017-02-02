@@ -14,7 +14,6 @@
 		CE0B88C01E313ADC00A1BDD5 /* HorarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88BF1E313ADC00A1BDD5 /* HorarioTableViewController.m */; };
 		CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88C41E3145AF00A1BDD5 /* logOutViewController.m */; };
 		CE0B88CB1E355DFC00A1BDD5 /* localizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */; };
-		CE35B8051E3E0D4E003571F5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35B8041E3E0D4E003571F5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */; };
 		CE3AC06A1E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0691E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m */; };
 		CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EB1E2542BE009416B5 /* unidadeViewController.m */; };
@@ -54,8 +53,6 @@
 		CE0B88C41E3145AF00A1BDD5 /* logOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = logOutViewController.m; path = Files/Screen/LogOut/ViewController/logOutViewController.m; sourceTree = "<group>"; };
 		CE0B88C91E355DFC00A1BDD5 /* localizacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = localizacaoViewController.h; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.h; sourceTree = "<group>"; };
 		CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = localizacaoViewController.m; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.m; sourceTree = "<group>"; };
-		CE35B8031E3E0D4E003571F5 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Files/Utils/JSONKit.h; sourceTree = "<group>"; };
-		CE35B8041E3E0D4E003571F5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Files/Utils/JSONKit.m; sourceTree = "<group>"; };
 		CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoTableViewCell.h; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.h; sourceTree = "<group>"; };
 		CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricoTableViewCell.m; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.m; sourceTree = "<group>"; };
 		CE3AC0681E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoAgendamentoDetalheViewController.h; path = Files/Screen/HistoricoAgendamentoDetalhe/ViewController/HistoricoAgendamentoDetalheViewController.h; sourceTree = "<group>"; };
@@ -378,8 +375,6 @@
 		CEE2EFED1E0BF61C00F7EC4B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CE35B8031E3E0D4E003571F5 /* JSONKit.h */,
-				CE35B8041E3E0D4E003571F5 /* JSONKit.m */,
 				CEE6ED1F1E1178E500237F5A /* VariaveisGlobais.h */,
 				CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */,
 				CEFA8AFA1E291AC100126D06 /* CustomNavBar.h */,
@@ -610,7 +605,6 @@
 				CEFA8B051E2FCA8400126D06 /* servicoTableViewController.m in Sources */,
 				CE40A4BE1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.m in Sources */,
 				CEFA8B0E1E2FE7A100126D06 /* dataAgendamentoViewController.m in Sources */,
-				CE35B8051E3E0D4E003571F5 /* JSONKit.m in Sources */,
 				CE0B88C01E313ADC00A1BDD5 /* HorarioTableViewController.m in Sources */,
 				CE0B88BD1E313ABC00A1BDD5 /* horario.m in Sources */,
 				CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */,

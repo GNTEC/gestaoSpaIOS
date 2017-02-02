@@ -16,9 +16,33 @@
 
 }
 
+@property (assign, nonatomic) BOOL updating;
+@property (strong, nonatomic) LLARingSpinnerView *spinnerView;
+
 @end
 
 @implementation agendaTableViewController
+-(LLARingSpinnerView *)spinnerView {
+    if (!_spinnerView) {
+        _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        _spinnerView.tintColor = [UIColor blackColor];
+        // Optionally set the current progress
+        _spinnerView.lineWidth = 1.5f;
+        _spinnerView.hidesWhenStopped = YES;
+    }
+    return _spinnerView;
+}
+
+-(void)setUpdating:(BOOL)updating {
+    _updating = updating;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.updating) {
+            [self.spinnerView startAnimating];
+        } else {
+            [self.spinnerView stopAnimating];
+        }
+    });
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,9 +66,9 @@
     
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"dd/MM/yyyy"];
-    NSString *nsstr = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+    NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
     
-    self.textData.text = nsstr;
+    self.textData.text = strDataAgendamento;
 }
 
 -(void) updateUI
@@ -72,6 +96,150 @@
     }
 }
 
+-(IBAction)onclickAgendar:(id)sender
+{
+    self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
+    self.textServico.text = [VariaveisGlobais shared]._servico;
+    self.textProfissional.text = [VariaveisGlobais shared]._profissional;
+    self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
+    
+    
+    //VERIFICA SE OS CAMPOS FORAM PREENCHIDOS
+    if([self.textServico.text isEqualToString:@""])
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha uma Data !" preferredStyle:UIAlertControllerStyleAlert];
+    
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+
+    if (self.segProfissional.selectedSegmentIndex == 1)
+    {
+        if([self.textServico.text isEqualToString:@""])
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha um Profissional !" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+            return;
+        }
+    }
+    
+    if([self.textData.text isEqualToString:@""])
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha uma Data !" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
+    if([self.textHora.text isEqualToString:@""])
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha um Horário !" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
+    //CHAMA A FUNÇÃO QUE GRAVA O AGENDAMENTO
+    
+    self.updating = true;
+    [self agendar:^(NSDictionary *dict, NSError *error) {
+        
+        if (dict.count > 0) {
+            
+            NSString *codAgendamento = [dict objectForKey:@"COD_AGENDAMENTO"];
+            if(codAgendamento != 0)
+            {
+                NSString *mensagemRetorno = [dict objectForKey:@"MSG_RETORNO"];
+                
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Informação" message:mensagemRetorno preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                [alertController addAction:ok];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+                self.updating =false;
+            }
+
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self.tableProfissional reloadData];
+//                self.updating = false;
+//            });
+        }
+        else
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Erro ao regalizar o agendamento !" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            self.updating =false;
+            
+        }
+    }];
+    
+    
+}
+
+- (void)agendar:(void(^)(NSDictionary *dict, NSError *error))block
+{
+    if (block) {
+        
+//        <web:COD_EMPRESA>?</web:COD_EMPRESA>
+//        <web:COD_FILIAL>?</web:COD_FILIAL>
+//        <web:COD_AGENDAMENTO>?</web:COD_AGENDAMENTO>
+//        <web:COD_CLIENTE>?</web:COD_CLIENTE>
+//        <web:COD_SERVICO>?</web:COD_SERVICO>
+//        <web:COD_PROFISSIONAL>?</web:COD_PROFISSIONAL>
+//        <!--Optional:-->
+//        <web:DATA>?</web:DATA>
+//        <!--Optional:-->
+//        <web:HORA>?</web:HORA>
+        
+        SOAPEngine *soap = [[SOAPEngine alloc]init];
+        soap.actionNamespaceSlash = YES;
+        soap.requestTimeout = 10;
+        soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
+        
+        [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
+        [soap setIntegerValue:0 forKey:@"COD_AGENDAMENTO"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codCliente forKey:@"COD_CLIENTE"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codProfissional forKey:@"COD_PROFISSIONAL"];
+        [soap setValue:self.textData.text forKey:@"DATA"];
+        [soap setValue:self.textHora.text forKey:@"HORA"];
+    
+        [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/SET_AGENDAMENTO_2"
+  completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
+      
+      block(dict, nil);
+      
+  } failWithError:^(NSError *error) {
+      block(nil, error);
+  }];
+        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -87,58 +255,5 @@
     return 7;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

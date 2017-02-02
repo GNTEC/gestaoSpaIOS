@@ -88,6 +88,9 @@
 
 -(void)servicos
 {
+    
+    self.updating = true;
+    
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getServicos:^(NSDictionary *dict, NSError *error) {
         
@@ -110,6 +113,7 @@
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableServico reloadData];
+                self.updating = false;
             });
         }
         else
@@ -120,6 +124,8 @@
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
+            
+            self.updating = true;
             
         }
     }];

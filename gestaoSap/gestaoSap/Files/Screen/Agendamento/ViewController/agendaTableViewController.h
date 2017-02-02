@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SOAPEngine64/SOAPEngine.h>
+#import "VariaveisGlobais.h"
+#import <LLARingSpinnerView/LLARingSpinnerView.h>
 
 @interface agendaTableViewController : UITableViewController
 
@@ -25,5 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnAgendar;
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *cellProfissional;
+
+
 
 @end

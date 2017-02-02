@@ -176,9 +176,9 @@
       
       block(dict, nil);
       
-  } failWithError:^(NSError *error) {
-      block(nil, error);
-  }];
+      } failWithError:^(NSError *error) {
+          block(nil, error);
+      }];
         
     }
 }

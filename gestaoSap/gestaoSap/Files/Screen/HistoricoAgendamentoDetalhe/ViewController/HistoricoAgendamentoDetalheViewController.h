@@ -33,7 +33,11 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sgnGerenciar;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnOk;
+
+
 @property (strong,nonatomic) historicoAgendamento *stHistoricoAgendamento;
+
 
 
 @end

@@ -62,17 +62,35 @@
 -(void) updateUI
 {
     self.updating = true;
+
+    NSNumberFormatter *n = [[NSNumberFormatter alloc] init];
+    [n setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt_BR"];
+    [n setLocale:locale];
     
     if(self.stHistoricoAgendamento.codAgendamento != 0)
     {
         self.labelCodAgendamento.text = [@(self.stHistoricoAgendamento.codAgendamento) stringValue];
         self.labelProfissional.text = self.stHistoricoAgendamento.nomeProfissional;
         self.labelDescricaoServico.text= self.stHistoricoAgendamento.descricaoServico;
-        self.labelValor.text = [self.stHistoricoAgendamento.valor stringValue];
+    
+        float valor = [self.stHistoricoAgendamento.valor  floatValue];
+        NSString *valorFormatado = [n stringFromNumber:[NSNumber numberWithFloat:valor]];
+        self.labelValor.text = valorFormatado;
+        
         self.labelNomeCliente.text = self.stHistoricoAgendamento.nomeCliente;
         self.labelData.text = self.stHistoricoAgendamento.dataAgendametoServico;
         self.labelHorario.text = self.stHistoricoAgendamento.horaAgendamentoServico;
         self.labelStatus.text = self.stHistoricoAgendamento.statusServico;
+        
+        if([self.labelStatus.text isEqualToString:@"CONFIRMADO"] || [self.labelStatus.text isEqualToString:@"DESMARCADO"])
+        {
+            self.sgnGerenciar.selectedSegmentIndex = 0;
+            self.sgnGerenciar.enabled = false;
+            //self.sgnGerenciar.alpha = 0;
+            self.btnOk.enabled = false;
+            self.btnOk.alpha = 0.5;
+        }
     }
     else
     {
@@ -81,15 +99,13 @@
     }
     
     self.updating = false;
-    
-    
-    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self setupUI];
+    [self updateUI];
 }
 
 - (void)didReceiveMemoryWarning {
