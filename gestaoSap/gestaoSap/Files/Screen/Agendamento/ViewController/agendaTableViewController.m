@@ -7,17 +7,15 @@
 //
 
 #import "agendaTableViewController.h"
-#import "VariaveisGlobais.h"
 
 @interface agendaTableViewController ()
 {
-    
     NSInteger arryTable;
-
 }
 
 @property (assign, nonatomic) BOOL updating;
 @property (strong, nonatomic) LLARingSpinnerView *spinnerView;
+@property (nonatomic) NSInteger codAgendamento;
 
 @end
 
@@ -75,13 +73,6 @@
 {
     
 }
--(void) escondeCellProfissional
-{
-    if (self.segProfissional.selectedSegmentIndex == 1)
-    {
-        self.cellProfissional.hidden = true;
-    }
-}
 
 - (IBAction)mostraCellProfissional:(id)sender {
  
@@ -102,7 +93,6 @@
     self.textServico.text = [VariaveisGlobais shared]._servico;
     self.textProfissional.text = [VariaveisGlobais shared]._profissional;
     self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
-    
     
     //VERIFICA SE OS CAMPOS FORAM PREENCHIDOS
     if([self.textServico.text isEqualToString:@""])
@@ -163,35 +153,24 @@
         
         if (dict.count > 0) {
             
-            NSString *codAgendamento = [dict objectForKey:@"COD_AGENDAMENTO"];
+            NSInteger codAgendamento = [[dict objectForKey:@"COD_AGENDAMENTO"] integerValue];
             if(codAgendamento != 0)
             {
-                NSString *mensagemRetorno = [dict objectForKey:@"MSG_RETORNO"];
-                
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Informação" message:mensagemRetorno preferredStyle:UIAlertControllerStyleAlert];
-                
-                UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-                [alertController addAction:ok];
-                
-                [self presentViewController:alertController animated:YES completion:nil];
-                self.updating =false;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.codAgendamento = codAgendamento;
+                    self.updating = false;
+                });
             }
-
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self.tableProfissional reloadData];
-//                self.updating = false;
-//            });
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Erro ao regalizar o agendamento !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Erro ao realizar o agendamento !" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
             self.updating =false;
-            
         }
     }];
     
@@ -202,16 +181,16 @@
 {
     if (block) {
         
-//        <web:COD_EMPRESA>?</web:COD_EMPRESA>
-//        <web:COD_FILIAL>?</web:COD_FILIAL>
-//        <web:COD_AGENDAMENTO>?</web:COD_AGENDAMENTO>
-//        <web:COD_CLIENTE>?</web:COD_CLIENTE>
-//        <web:COD_SERVICO>?</web:COD_SERVICO>
-//        <web:COD_PROFISSIONAL>?</web:COD_PROFISSIONAL>
-//        <!--Optional:-->
-//        <web:DATA>?</web:DATA>
-//        <!--Optional:-->
-//        <web:HORA>?</web:HORA>
+        NSString *dateStr = self.textHora.text;
+
+        NSDateFormatter *dateFormatter=[NSDateFormatter new];
+        [dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
+        NSDate *date=[dateFormatter dateFromString:dateStr];
+        
+        NSDateFormatter *dfTime = [NSDateFormatter new];
+        [dfTime setDateFormat:@"hh:mm:ss"];
+        NSString *strHora=[dfTime stringFromDate:date];
+        
         
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
@@ -225,7 +204,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codProfissional forKey:@"COD_PROFISSIONAL"];
         [soap setValue:self.textData.text forKey:@"DATA"];
-        [soap setValue:self.textHora.text forKey:@"HORA"];
+        [soap setValue:strHora forKey:@"HORA"];
     
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
               soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/SET_AGENDAMENTO_2"
@@ -233,9 +212,9 @@
       
       block(dict, nil);
       
-  } failWithError:^(NSError *error) {
-      block(nil, error);
-  }];
+      } failWithError:^(NSError *error) {
+          block(nil, error);
+      }];
         
     }
 }
@@ -255,5 +234,17 @@
     return 7;
 }
 
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.destinationViewController isKindOfClass:[resultadoAgendamentoViewController class]])
+    {
+        resultadoAgendamentoViewController *vc = segue.destinationViewController;
+        vc.codAgendamento = self.codAgendamento;
+    }
+}
 
 @end

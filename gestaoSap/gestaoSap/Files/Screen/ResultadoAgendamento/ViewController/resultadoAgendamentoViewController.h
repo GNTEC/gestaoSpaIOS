@@ -1,19 +1,18 @@
 //
-//  HistoricoAgendamentoDetalheViewController.h
+//  resultadoAgendamentoViewController.h
 //  gestaoSap
 //
-//  Created by User on 01/02/17.
+//  Created by User on 03/02/17.
 //  Copyright © 2017 gntec. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "historicoAgendamento.h"
+#import <LLARingSpinnerView/LLARingSpinnerView.h>
 #import <SOAPEngine64/SOAPEngine.h>
 #import "VariaveisGlobais.h"
-#import <LLARingSpinnerView/LLARingSpinnerView.h>
+#import "historicoAgendamento.h"
 
-@interface HistoricoAgendamentoDetalheViewController : UIViewController
-
+@interface resultadoAgendamentoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *labelCodAgendamento;
 
@@ -31,11 +30,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelStatus;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *sgnGerenciar;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnOk;
-
-@property (strong,nonatomic) historicoAgendamento *stHistoricoAgendamento;
-
+@property (nonatomic) NSInteger codAgendamento;
 
 @end

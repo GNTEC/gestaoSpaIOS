@@ -94,7 +94,6 @@
     }
     else
     {
-        
         self.updating = false;
     }
     

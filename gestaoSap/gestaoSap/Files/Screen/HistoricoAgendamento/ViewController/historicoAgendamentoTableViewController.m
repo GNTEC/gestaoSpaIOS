@@ -220,7 +220,6 @@
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     historicoAgendamento *stHistoricoAgendamento = [self.arrayDataHistoricoServico objectAtIndex:[self.tableHistorico indexPathForSelectedRow].row];
     
     if ([segue.destinationViewController isKindOfClass:[HistoricoAgendamentoDetalheViewController class]])
@@ -228,9 +227,6 @@
         HistoricoAgendamentoDetalheViewController *vc = segue.destinationViewController;
         vc.stHistoricoAgendamento = stHistoricoAgendamento;
     }
- 
 }
-
-
 
 @end

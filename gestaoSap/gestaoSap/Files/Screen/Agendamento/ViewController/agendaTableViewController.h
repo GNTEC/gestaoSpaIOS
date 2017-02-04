@@ -10,6 +10,7 @@
 #import <SOAPEngine64/SOAPEngine.h>
 #import "VariaveisGlobais.h"
 #import <LLARingSpinnerView/LLARingSpinnerView.h>
+#import "resultadoAgendamentoViewController.h"
 
 @interface agendaTableViewController : UITableViewController
 

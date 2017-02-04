@@ -23,6 +23,7 @@
 		CEB12DEB1E38FF7E00FDAC63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */; };
 		CEB12DF71E3929D300FDAC63 /* promocao.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DF61E3929D300FDAC63 /* promocao.m */; };
 		CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DF91E3929E800FDAC63 /* promocaoViewController.m */; };
+		CED255041E44EBE000EBDE36 /* resultadoAgendamentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED255031E44EBE000EBDE36 /* resultadoAgendamentoViewController.m */; };
 		CEE2EFD81E0BF61000F7EC4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFD71E0BF61000F7EC4B /* main.m */; };
 		CEE2EFDB1E0BF61000F7EC4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */; };
 		CEE2EFE11E0BF61000F7EC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */; };
@@ -70,6 +71,8 @@
 		CEB12DF61E3929D300FDAC63 /* promocao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = promocao.m; path = Files/Screen/Promocao/Model/promocao.m; sourceTree = "<group>"; };
 		CEB12DF81E3929E800FDAC63 /* promocaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = promocaoViewController.h; path = Files/Screen/Promocao/ViewController/promocaoViewController.h; sourceTree = "<group>"; };
 		CEB12DF91E3929E800FDAC63 /* promocaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = promocaoViewController.m; path = Files/Screen/Promocao/ViewController/promocaoViewController.m; sourceTree = "<group>"; };
+		CED255021E44EBE000EBDE36 /* resultadoAgendamentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resultadoAgendamentoViewController.h; path = Files/Screen/ResultadoAgendamento/ViewController/resultadoAgendamentoViewController.h; sourceTree = "<group>"; };
+		CED255031E44EBE000EBDE36 /* resultadoAgendamentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = resultadoAgendamentoViewController.m; path = Files/Screen/ResultadoAgendamento/ViewController/resultadoAgendamentoViewController.m; sourceTree = "<group>"; };
 		CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestaoSap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE2EFD71E0BF61000F7EC4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEE2EFD91E0BF61000F7EC4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -330,6 +333,31 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CED254FF1E44EB7100EBDE36 /* ResultadoAgendamento */ = {
+			isa = PBXGroup;
+			children = (
+				CED255001E44EB7C00EBDE36 /* Model */,
+				CED255011E44EB8100EBDE36 /* ViewController */,
+			);
+			name = ResultadoAgendamento;
+			sourceTree = "<group>";
+		};
+		CED255001E44EB7C00EBDE36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CED255011E44EB8100EBDE36 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CED255021E44EBE000EBDE36 /* resultadoAgendamentoViewController.h */,
+				CED255031E44EBE000EBDE36 /* resultadoAgendamentoViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		CEE2EFCA1E0BF61000F7EC4B = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +414,7 @@
 		CEE6ED181E1176E300237F5A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CED254FF1E44EB7100EBDE36 /* ResultadoAgendamento */,
 				CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */,
 				CE40A4B61E3BBB32000C0224 /* HistorioAgendamento */,
 				CEB12DEC1E39264100FDAC63 /* Promocao */,
@@ -614,6 +643,7 @@
 				CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */,
 				CE0B88B61E311DDA00A1BDD5 /* profissional.m in Sources */,
 				CE40A4BB1E3BBB8E000C0224 /* historicoAgendamento.m in Sources */,
+				CED255041E44EBE000EBDE36 /* resultadoAgendamentoViewController.m in Sources */,
 				CEB12DF71E3929D300FDAC63 /* promocao.m in Sources */,
 				CEFA8AFC1E291AC100126D06 /* CustomNavBar.m in Sources */,
 				CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */,
