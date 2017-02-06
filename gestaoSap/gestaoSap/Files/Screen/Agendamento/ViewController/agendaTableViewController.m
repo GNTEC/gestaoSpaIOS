@@ -15,11 +15,22 @@
 
 @property (assign, nonatomic) BOOL updating;
 @property (strong, nonatomic) LLARingSpinnerView *spinnerView;
-@property (nonatomic) NSInteger codAgendamento;
+@property (assign, nonatomic) BOOL showProfessional;
 
 @end
 
 @implementation agendaTableViewController
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+}
+
+- (void)setShowProfessional:(BOOL)showProfessional
+{
+    _showProfessional = showProfessional;
+    [self updateUI];
+}
+
 -(LLARingSpinnerView *)spinnerView {
     if (!_spinnerView) {
         _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
@@ -45,8 +56,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //[self escondeCellProfissional];
     [self setupUI];
+    [self updateUI];
 }
 
 -(void) setupUI {
@@ -67,23 +78,16 @@
     NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
     
     self.textData.text = strDataAgendamento;
+    self.showProfessional = YES;
 }
 
 -(void) updateUI
 {
+    [self.tableView reloadData];
     
-}
-
-- (IBAction)mostraCellProfissional:(id)sender {
- 
-    if (self.segProfissional.selectedSegmentIndex == 0)
+    if([VariaveisGlobais shared]._withProfissional == YES)
     {
-        self.cellProfissional.hidden = false;
         
-    }
-    else if (self.segProfissional.selectedSegmentIndex == 1)
-    {
-        self.cellProfissional.hidden = true;
     }
 }
 
@@ -147,24 +151,29 @@
     }
     
     //CHAMA A FUNÇÃO QUE GRAVA O AGENDAMENTO
-    
     self.updating = true;
+    
     [self agendar:^(NSDictionary *dict, NSError *error) {
+        
+        NSString *strMensagemRetorno;
         
         if (dict.count > 0) {
             
             NSInteger codAgendamento = [[dict objectForKey:@"COD_AGENDAMENTO"] integerValue];
+            strMensagemRetorno = [dict objectForKey:@"MSG_RETORNO"];
+
             if(codAgendamento != 0)
             {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    self.codAgendamento = codAgendamento;
-                    self.updating = false;
-                });
+                [VariaveisGlobais shared]._codAgendamento = 0;
+                [VariaveisGlobais shared]._codAgendamento = codAgendamento;
+                
+                [self performSegueWithIdentifier:@"Schedule" sender:self];
             }
+            self.updating = false;
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Erro ao realizar o agendamento !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:strMensagemRetorno preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:ok];
@@ -173,16 +182,19 @@
             self.updating =false;
         }
     }];
-    
-    
 }
 
 - (void)agendar:(void(^)(NSDictionary *dict, NSError *error))block
 {
     if (block) {
         
-        NSString *dateStr = self.textHora.text;
-
+        //DATA
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        
+        //HORA
+        NSString *dateStr = [VariaveisGlobais shared]._horarioAgendamento;
         NSDateFormatter *dateFormatter=[NSDateFormatter new];
         [dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
         NSDate *date=[dateFormatter dateFromString:dateStr];
@@ -190,7 +202,6 @@
         NSDateFormatter *dfTime = [NSDateFormatter new];
         [dfTime setDateFormat:@"hh:mm:ss"];
         NSString *strHora=[dfTime stringFromDate:date];
-        
         
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
@@ -203,7 +214,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codCliente forKey:@"COD_CLIENTE"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codProfissional forKey:@"COD_PROFISSIONAL"];
-        [soap setValue:self.textData.text forKey:@"DATA"];
+        [soap setValue:strDataAgendamento forKey:@"DATA"];
         [soap setValue:strHora forKey:@"HORA"];
     
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
@@ -215,7 +226,6 @@
       } failWithError:^(NSError *error) {
           block(nil, error);
       }];
-        
     }
 }
 
@@ -227,24 +237,113 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 7;
 }
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if ([segue.destinationViewController isKindOfClass:[resultadoAgendamentoViewController class]])
+    if(section == 4)
     {
-        resultadoAgendamentoViewController *vc = segue.destinationViewController;
-        vc.codAgendamento = self.codAgendamento;
+        if (self.showProfessional) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    else
+    {
+        return 1;
     }
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray<NSString*> *identifiers = @[@"cellUnidade", @"cellServico", @"cellData",@"cellEscolha",@"cellProfissional",@"cellHorario",@"cellBotao"];
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"dd/MM/yyyy"];
+    NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+    
+    
+    NSArray<NSString*> *info = @[[VariaveisGlobais shared]._nomeFilial,
+                                 [VariaveisGlobais shared]._servico ? [VariaveisGlobais shared]._servico : @"",
+                                 strDataAgendamento ? strDataAgendamento : @"",
+                                 @"",
+                                 [VariaveisGlobais shared]._profissional ? [VariaveisGlobais shared]._profissional : @"",
+                                 [VariaveisGlobais shared]._horarioAgendamento ? [VariaveisGlobais shared]._horarioAgendamento : @"",
+                                 @""];
+    
+    if (indexPath.section == 3) {
+        
+        ShowProfessionalTableViewCell *cell = (ShowProfessionalTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:[identifiers objectAtIndex:indexPath.section] forIndexPath:indexPath];
+        cell.delegate = self;
+        return cell;
+        
+        
+    } else if (indexPath.section == 6) {
+        
+        ScheduleTableViewCell *cell = (ScheduleTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:[identifiers objectAtIndex:indexPath.section] forIndexPath:indexPath];
+        cell.delegate = self;
+        return cell;
+        
+    } else {
+        InfoTableViewCell *cell = (InfoTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:[identifiers objectAtIndex:indexPath.section] forIndexPath:indexPath];
+        cell.infoLabel.text = [info objectAtIndex:indexPath.section];
+        return cell;
+    }
+}
+
+-(void)didSelect:(NSInteger)value {
+    self.showProfessional = value == 0 ? YES : NO;
+    [VariaveisGlobais shared]._withProfissional = value;
+}
+
+-(void)didPressScheduleButton{
+    [self onclickAgendar:self];
+}
+
+@end
+
+
+@interface ShowProfessionalTableViewCell()
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *showProfessionalSegmentedControl;
+
+@end
+
+@implementation ShowProfessionalTableViewCell
+
+- (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender {
+    [self.delegate didSelect:sender.selectedSegmentIndex];
+}
+
+@end
+
+@interface ScheduleTableViewCell()
+
+@end
+
+@implementation ScheduleTableViewCell
+
+- (IBAction)scheduleButtonTap:(UIButton *)sender {
+    
+    [self.delegate didPressScheduleButton];
+}
+
+@end
+
+@interface InfoTableViewCell()
+
+@end
+
+@implementation InfoTableViewCell
 
 @end

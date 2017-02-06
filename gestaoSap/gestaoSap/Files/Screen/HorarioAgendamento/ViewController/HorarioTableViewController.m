@@ -64,26 +64,70 @@
 
 -(void) updateUI
 {
-    
+    if([VariaveisGlobais shared]._withProfissional == YES)
+    {
+        [self horariosLivres];
+    }
+    else
+    {
+        [self horarios];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupUI];
-    [self horarios];
-    
+    [self updateUI];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)horariosLivres
+{
+    self.updating = YES;
+    //CHAMA A FUNÇÃO QUE FAZ O LOGIN
+    [self getHorariosLivres:^(NSDictionary *dict, NSError *error) {
+        
+        if (dict.count > 0) {
+            
+            NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
+            arrayDataServico1 = [dict objectForKey:@"array"];
+            
+            
+            for(int i = 0; i < [arrayDataServico1 count]; ++i)
+            {
+                horario *objHorario = [[horario alloc]init];
+                
+                objHorario.codProfissional = [[[arrayDataServico1 objectAtIndex:i]objectForKey:@"COD_PROFISSIONAL"] integerValue];
+                objHorario.dataIni = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"DT_INI"];
+                objHorario.dataFim = [[arrayDataServico1 objectAtIndex:i]objectForKey:@"DT_FIM"];
+                
+                [self.arrayDataHorario  addObject:objHorario];
+                
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableHorario reloadData];
+                self.updating = false;
+            });
+        }
+        else
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Horarios disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            self.updating =false;
+        }
+    }];
+}
 
 -(void)horarios
 {
-    
     self.updating = YES;
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getHorarios:^(NSDictionary *dict, NSError *error) {
@@ -182,6 +226,35 @@
           block(nil, error);
       }];
             
+    }
+}
+
+- (void)getHorariosLivres:(void(^)(NSDictionary *dict, NSError *error))block
+{
+    if (block) {
+        
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        NSString *strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        
+        SOAPEngine *soap = [[SOAPEngine alloc]init];
+        soap.actionNamespaceSlash = YES;
+        soap.requestTimeout = 10;
+        soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
+        
+        [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
+        [soap setValue:strData forKey:@"DATA_AGENDA"];
+        [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_HORARIO_LIVRE_2"
+  completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
+      
+      block(dict, nil);
+      
+  } failWithError:^(NSError *error) {
+      block(nil, error);
+  }];
+        
     }
 }
 

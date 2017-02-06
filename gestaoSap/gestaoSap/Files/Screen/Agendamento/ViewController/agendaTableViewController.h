@@ -12,7 +12,12 @@
 #import <LLARingSpinnerView/LLARingSpinnerView.h>
 #import "resultadoAgendamentoViewController.h"
 
-@interface agendaTableViewController : UITableViewController
+@protocol ScheduleTableViewCellDelegate
+-(void)didSelect:(NSInteger)value;
+-(void)didPressScheduleButton;
+@end
+
+@interface agendaTableViewController : UITableViewController <ScheduleTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *textUnidade;
 
@@ -30,6 +35,19 @@
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *cellProfissional;
 
+@end
 
+
+@interface ShowProfessionalTableViewCell: UITableViewCell
+@property (weak, nonatomic) UIViewController<ScheduleTableViewCellDelegate> *delegate;
+@end
+
+@interface ScheduleTableViewCell: UITableViewCell
+@property (weak,nonatomic) UIViewController<ScheduleTableViewCellDelegate> *delegate;
+@end
+
+@interface InfoTableViewCell: UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end

@@ -30,6 +30,4 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelStatus;
 
-@property (nonatomic) NSInteger codAgendamento;
-
 @end

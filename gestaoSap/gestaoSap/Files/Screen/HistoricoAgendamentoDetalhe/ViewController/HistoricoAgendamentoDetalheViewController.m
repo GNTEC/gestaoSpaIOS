@@ -16,6 +16,7 @@
 
 @property (assign, nonatomic) BOOL updating;
 @property (strong, nonatomic) LLARingSpinnerView *spinnerView;
+@property (nonatomic) NSInteger statusAgendamento;
 
 @end
 
@@ -112,14 +113,95 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)onClick:(UIButton *)sender
+{
+    //        <web:COD_EMPRESA>?</web:COD_EMPRESA>
+    //        <web:COD_FILIAL>?</web:COD_FILIAL>
+    //        <web:COD_AGENDAMENTO>?</web:COD_AGENDAMENTO>
+    //        <web:Status>?</web:Status>
+    
+    //    }else if(selecaoSpinner.equals("Cancelar")){
+    //        status = 0;
+    //        setStatusAgendamento();
+    //
+    //    }else if(selecaoSpinner.equals("Confirmar")){
+    //        status = 1;
+    //        setStatusAgendamento();
+    //
+    //    }else if(selecaoSpinner.equals("Alterar")){
+    //        status = 2;
+    
+    
+    self.updating = true;
+    
+    if(self.sgnGerenciar.selectedSegmentIndex == 0)
+    {
+        self.statusAgendamento = 1;
+    }
+    else if (self.sgnGerenciar.selectedSegmentIndex == 1)
+    {
+        self.statusAgendamento = 2;
+    }
+    
+    else if (self.sgnGerenciar.selectedSegmentIndex == 2)
+    {
+        self.statusAgendamento = 0;
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    //CHAMA A FUNÇÃO QUE FAZ O LOGIN
+    [self changeStatusAgendamento:^(NSString *strMsgPromocao, NSError *error) {
+        
+        if (![strMsgPromocao isEqual:nil]) {
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"OK" message:strMsgPromocao preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            self.updating = false;
+            
+            [self performSegueWithIdentifier:@"updateStatus" sender:self];
+        }
+        else
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Erro ao na Aleração do Status !" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            self.updating = false;
+        }
+    }];
 }
-*/
+
+- (void)changeStatusAgendamento:(void(^)(NSString *dict, NSError *error))block
+{
+    if (block) {
+        
+        SOAPEngine *soap = [[SOAPEngine alloc]init];
+        soap.actionNamespaceSlash = YES;
+        soap.requestTimeout = 10;
+        soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
+        
+        [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
+        [soap setIntegerValue:[self.labelCodAgendamento.text intValue]  forKey:@"COD_AGENDAMENTO"];
+        [soap setIntegerValue:self.statusAgendamento forKey:@"Status"];
+        [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/SET_AGENDAMENTO_STATUS_2"
+  completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
+      
+          NSString *strMensagem = [soap stringValue];
+      
+          block(strMensagem, nil);
+      
+  } failWithError:^(NSError *error) {
+      block(nil, error);
+  }];
+        
+    }
+}
 
 @end

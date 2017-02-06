@@ -22,6 +22,9 @@
     NSInteger _codProfissional;
     NSString *_profissional;
     NSString *_horarioAgendamento;
+    NSInteger _codAgendamento;
+    BOOL _withProfissional;
+
 }
 
 //variavel que vai controlar se devemos pedir mais tempo para tarefa em background ou não
@@ -36,6 +39,8 @@
 @property(nonatomic)NSInteger _codProfissional;
 @property(nonatomic,strong) NSString *_profissional;
 @property(nonatomic,strong) NSString *_horarioAgendamento;
+@property(nonatomic)NSInteger _codAgendamento;
+@property (assign, nonatomic) BOOL _withProfissional;
 
 +(VariaveisGlobais*)shared;
 

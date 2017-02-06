@@ -277,13 +277,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		CE40A4B61E3BBB32000C0224 /* HistorioAgendamento */ = {
+		CE40A4B61E3BBB32000C0224 /* HistoricoAgendamento */ = {
 			isa = PBXGroup;
 			children = (
 				CE40A4B71E3BBB45000C0224 /* Model */,
 				CE40A4B81E3BBB4A000C0224 /* ViewController */,
 			);
-			name = HistorioAgendamento;
+			name = HistoricoAgendamento;
 			sourceTree = "<group>";
 		};
 		CE40A4B71E3BBB45000C0224 /* Model */ = {
@@ -416,7 +416,7 @@
 			children = (
 				CED254FF1E44EB7100EBDE36 /* ResultadoAgendamento */,
 				CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */,
-				CE40A4B61E3BBB32000C0224 /* HistorioAgendamento */,
+				CE40A4B61E3BBB32000C0224 /* HistoricoAgendamento */,
 				CEB12DEC1E39264100FDAC63 /* Promocao */,
 				CE0B88C61E355C7500A1BDD5 /* Localizacao */,
 				CE0B88C11E31456B00A1BDD5 /* LogOut */,

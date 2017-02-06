@@ -171,7 +171,6 @@
     
 }
 
-
 - (void)getServicos:(void(^)(NSDictionary *dict, NSError *error))block
 {
     if (block) {

@@ -76,12 +76,17 @@
     [super viewDidLoad];
     
     [self setupUI];
-    [self  historicoAgendamentos];
+    [self historicoAgendamentos];
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self setupUI];
+    [self historicoAgendamentos];
 }
 
 -(void)historicoAgendamentos
@@ -123,7 +128,7 @@
                 
                 objHistoricoAgendamento.dataAgendametoServico = [[dataArray objectAtIndex:i]objectForKey:@"DATA"];
                 objHistoricoAgendamento.horaAgendamentoServico = [[dataArray objectAtIndex:i]objectForKey:@"HORA"];
-                objHistoricoAgendamento.statusServico = [[dataArray objectAtIndex:0]objectForKey:@"STATUS"];
+                objHistoricoAgendamento.statusServico = [[dataArray objectAtIndex:i]objectForKey:@"STATUS"];
                 
                 [arrayDataHistoricoServico1  addObject:objHistoricoAgendamento];
                 
