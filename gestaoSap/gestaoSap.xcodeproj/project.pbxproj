@@ -31,6 +31,7 @@
 		CEE2EFE61E0BF61000F7EC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */; };
 		CEE6ED221E1178E500237F5A /* VariaveisGlobais.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */; };
 		CEE6ED281E117D8900237F5A /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED271E117D8900237F5A /* loginViewController.m */; };
+		CEE7674A1E4A07DB009FAE25 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE767491E4A07DB009FAE25 /* TabBarController.m */; };
 		CEFA8AFC1E291AC100126D06 /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8AFB1E291AC100126D06 /* CustomNavBar.m */; };
 		CEFA8AFF1E2EA50E00126D06 /* agendaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8AFE1E2EA50E00126D06 /* agendaTableViewController.m */; };
 		CEFA8B051E2FCA8400126D06 /* servicoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA8B041E2FCA8400126D06 /* servicoTableViewController.m */; };
@@ -85,6 +86,8 @@
 		CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VariaveisGlobais.m; path = Files/Utils/VariaveisGlobais.m; sourceTree = "<group>"; };
 		CEE6ED261E117D8900237F5A /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loginViewController.h; path = Files/Screen/Login/ViewController/loginViewController.h; sourceTree = "<group>"; };
 		CEE6ED271E117D8900237F5A /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = loginViewController.m; path = Files/Screen/Login/ViewController/loginViewController.m; sourceTree = "<group>"; };
+		CEE767481E4A07DB009FAE25 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarController.h; path = Files/Utils/TabBarController.h; sourceTree = "<group>"; };
+		CEE767491E4A07DB009FAE25 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarController.m; path = Files/Utils/TabBarController.m; sourceTree = "<group>"; };
 		CEFA8AFA1E291AC100126D06 /* CustomNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavBar.h; path = Files/Utils/CustomNavBar.h; sourceTree = "<group>"; };
 		CEFA8AFB1E291AC100126D06 /* CustomNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavBar.m; path = Files/Utils/CustomNavBar.m; sourceTree = "<group>"; };
 		CEFA8AFD1E2EA50E00126D06 /* agendaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = agendaTableViewController.h; path = Files/Screen/Agendamento/ViewController/agendaTableViewController.h; sourceTree = "<group>"; };
@@ -407,6 +410,8 @@
 				CEE6ED201E1178E500237F5A /* VariaveisGlobais.m */,
 				CEFA8AFA1E291AC100126D06 /* CustomNavBar.h */,
 				CEFA8AFB1E291AC100126D06 /* CustomNavBar.m */,
+				CEE767481E4A07DB009FAE25 /* TabBarController.h */,
+				CEE767491E4A07DB009FAE25 /* TabBarController.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -643,6 +648,7 @@
 				CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */,
 				CE0B88B61E311DDA00A1BDD5 /* profissional.m in Sources */,
 				CE40A4BB1E3BBB8E000C0224 /* historicoAgendamento.m in Sources */,
+				CEE7674A1E4A07DB009FAE25 /* TabBarController.m in Sources */,
 				CED255041E44EBE000EBDE36 /* resultadoAgendamentoViewController.m in Sources */,
 				CEB12DF71E3929D300FDAC63 /* promocao.m in Sources */,
 				CEFA8AFC1E291AC100126D06 /* CustomNavBar.m in Sources */,

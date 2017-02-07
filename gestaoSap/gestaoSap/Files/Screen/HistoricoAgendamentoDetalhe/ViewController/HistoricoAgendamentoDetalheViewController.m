@@ -155,13 +155,17 @@
             
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"OK" message:strMsgPromocao preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * _Nonnull action) {
+                                    [self performSegueWithIdentifier:@"back" sender:self];
+                                }];
+            
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
-            
-            [self performSegueWithIdentifier:@"updateStatus" sender:self];
+
         }
         else
         {

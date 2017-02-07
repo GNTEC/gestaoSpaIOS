@@ -23,6 +23,11 @@
 @end
 
 @implementation historicoAgendamentoTableViewController
+
+-(IBAction)backToHistory:(UIStoryboardSegue *)sender {
+ 
+    
+}
 -(LLARingSpinnerView *)spinnerView {
     if (!_spinnerView) {
         _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];

@@ -22,6 +22,7 @@
 @implementation agendaTableViewController
 
 -(void)viewDidAppear:(BOOL)animated {
+    [self updateUI];
     
 }
 
@@ -79,6 +80,11 @@
     
     self.textData.text = strDataAgendamento;
     self.showProfessional = YES;
+    
+    self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    
+    //self.spinnerView.center = self.view.center;
+    [self.view addSubview:self.spinnerView];
 }
 
 -(void) updateUI
