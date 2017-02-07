@@ -78,7 +78,7 @@
     [super viewDidLoad];
     
     [self setupUI];
-    [self updateUI]
+    [self updateUI];
     
 }
 
