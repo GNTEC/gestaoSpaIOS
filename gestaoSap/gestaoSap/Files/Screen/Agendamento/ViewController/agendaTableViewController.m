@@ -89,12 +89,7 @@
 
 -(void) updateUI
 {
-    [self.tableView reloadData];
-    
-    if([VariaveisGlobais shared]._withProfissional == YES)
-    {
-        
-    }
+
 }
 
 -(IBAction)onclickAgendar:(id)sender

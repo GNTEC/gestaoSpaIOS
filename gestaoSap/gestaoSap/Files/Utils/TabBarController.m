@@ -14,13 +14,10 @@
     if (item == tabBar.items[0]) {
         
     } else {
-        [VariaveisGlobais shared]._nomeFilial = @"";
         [VariaveisGlobais shared]._servico = @"";
         [VariaveisGlobais shared]._profissional = @"";
         [VariaveisGlobais shared]._horarioAgendamento = @"";
         [VariaveisGlobais shared]._dataAgendamento = nil;
-        
-        
     }
 }
 

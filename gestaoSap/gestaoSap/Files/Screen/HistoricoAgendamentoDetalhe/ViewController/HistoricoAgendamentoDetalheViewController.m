@@ -155,7 +155,6 @@
             
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"OK" message:strMsgPromocao preferredStyle:UIAlertControllerStyleAlert];
             
-            
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction * _Nonnull action) {
                                     [self performSegueWithIdentifier:@"back" sender:self];
@@ -165,7 +164,6 @@
             
             [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
-
         }
         else
         {

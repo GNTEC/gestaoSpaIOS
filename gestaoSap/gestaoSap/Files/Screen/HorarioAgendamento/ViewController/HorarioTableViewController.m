@@ -78,7 +78,8 @@
     [super viewDidLoad];
     
     [self setupUI];
-    [self updateUI];
+    [self updateUI]
+    
 }
 
 - (void)didReceiveMemoryWarning {
