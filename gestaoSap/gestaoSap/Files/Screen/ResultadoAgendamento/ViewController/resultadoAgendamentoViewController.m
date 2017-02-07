@@ -91,12 +91,14 @@
         {
             self.updating = NO;
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Erro no Agendamento do Serviço !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERRO" message:@"Houve uma erro a no Agendamento do Serviço !" preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self performSegueWithIdentifier:@"back" sender:self];
+                                                       }];
+            
             [alertController addAction:ok];
-            
-            [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
         }
     }];

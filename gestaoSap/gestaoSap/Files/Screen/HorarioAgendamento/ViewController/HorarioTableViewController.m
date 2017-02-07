@@ -116,13 +116,17 @@
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Horarios disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERRO" message:@"Não Existe Horarios Disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self performSegueWithIdentifier:@"back" sender:self];
+                                                       }];
+            
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
-            self.updating =false;
+            self.updating = false;
         }
     }];
 }

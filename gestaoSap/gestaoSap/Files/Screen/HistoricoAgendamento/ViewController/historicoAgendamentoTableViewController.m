@@ -149,18 +149,12 @@
             
             self.updating = NO;
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Serviços realizados !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não Existe Histórico de Serviços" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:ok];
             
             [self presentViewController:alertController animated:YES completion:nil];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"agendaTableViewController"];
-                [self presentViewController:vc animated:YES completion:nil];
-                
-            });
         }
     }];
 }

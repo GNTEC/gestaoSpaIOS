@@ -20,6 +20,10 @@
 @end
 
 @implementation agendaTableViewController
+-(IBAction)backToHistory:(UIStoryboardSegue *)sender {
+    
+    
+}
 
 -(void)viewDidAppear:(BOOL)animated {
     [self updateUI];
