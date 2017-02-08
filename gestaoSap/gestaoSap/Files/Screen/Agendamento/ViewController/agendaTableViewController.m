@@ -20,14 +20,13 @@
 @end
 
 @implementation agendaTableViewController
--(IBAction)backToHistory:(UIStoryboardSegue *)sender {
-    
+-(IBAction)backToSchedule:(UIStoryboardSegue *)sender {
+    [self updateUI];
     
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [self updateUI];
-    
 }
 
 - (void)setShowProfessional:(BOOL)showProfessional
@@ -73,16 +72,6 @@
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = NO;
     
-    self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
-    self.textServico.text = [VariaveisGlobais shared]._servico;
-    self.textProfissional.text = [VariaveisGlobais shared]._profissional;
-    self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
-    
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/MM/yyyy"];
-    NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
-    
-    self.textData.text = strDataAgendamento;
     self.showProfessional = YES;
     
     self.spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
@@ -93,16 +82,21 @@
 
 -(void) updateUI
 {
-
-}
-
--(IBAction)onclickAgendar:(id)sender
-{
-    self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
+    //self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
     self.textServico.text = [VariaveisGlobais shared]._servico;
     self.textProfissional.text = [VariaveisGlobais shared]._profissional;
     self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
+
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"dd/MM/yyyy"];
+    NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
     
+    self.textData.text = strDataAgendamento;
+    [self.tableView reloadData];
+}
+
+-(IBAction)onclickAgendar:(id)sender
+{    
     //VERIFICA SE OS CAMPOS FORAM PREENCHIDOS
     if([self.textServico.text isEqualToString:@""])
     {

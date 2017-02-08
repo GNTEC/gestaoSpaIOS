@@ -166,7 +166,7 @@
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:ok];
             
-            [self presentViewController:alertController animated:YES completion:nil];
+            [self performSegueWithIdentifier:@"back" sender:self];
             self.updating =false;
         }
     }];
@@ -199,9 +199,7 @@
     horario *stHorario = [self.arrayDataHorario objectAtIndex:indexPath.row];
     [VariaveisGlobais shared]._horarioAgendamento = stHorario.dataIni;
     
-    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-    tbc.selectedIndex=0;
-    [self presentViewController:tbc animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"back" sender:self];
 }
 
 - (void)getHorarios:(void(^)(NSDictionary *dict, NSError *error))block

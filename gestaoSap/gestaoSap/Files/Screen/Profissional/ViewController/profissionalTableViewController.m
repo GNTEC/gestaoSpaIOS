@@ -47,6 +47,7 @@
     }
     return _arrayDataProfissional;
 }
+
 -(void) setupUI {
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1];
@@ -117,9 +118,7 @@
             
             [alertController addAction:ok];
             
-            [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
-            
         }
     }];
 }
@@ -151,9 +150,7 @@
     [VariaveisGlobais shared]._codProfissional = stProfissional.codProfissional;
     [VariaveisGlobais shared]._profissional = stProfissional.nomeProfissional;
     
-    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-    tbc.selectedIndex=0;
-    [self presentViewController:tbc animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"back" sender:self];
 }
 
 - (void)getProfissionais:(void(^)(NSDictionary *dict, NSError *error))block

@@ -19,6 +19,7 @@
 @end
 
 @implementation servicoTableViewController
+
 -(LLARingSpinnerView *)spinnerView {
     if (!_spinnerView) {
         _spinnerView = [[LLARingSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
@@ -127,7 +128,6 @@
             
             [alertController addAction:ok];
             
-            [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
             
         }
@@ -168,9 +168,7 @@
     [VariaveisGlobais shared]._codServico = stServico.codServico;
     [VariaveisGlobais shared]._servico = stServico.descricaoServico;
     
-    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-    tbc.selectedIndex=0;
-    [self presentViewController:tbc animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"back" sender:self];
     
 }
 

@@ -115,12 +115,7 @@
         }
     }
     
-
-    UITabBarController *tbc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBar"];
-    tbc.selectedIndex=0;
-    [self presentViewController:tbc animated:YES completion:nil];
-    
-    
+    [self performSegueWithIdentifier:@"back" sender:self];
 }
 
 #pragma mark - CalendarManager delegate - Page mangement
