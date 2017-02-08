@@ -169,7 +169,6 @@
     [VariaveisGlobais shared]._servico = stServico.descricaoServico;
     
     [self performSegueWithIdentifier:@"back" sender:self];
-    
 }
 
 - (void)getServicos:(void(^)(NSDictionary *dict, NSError *error))block

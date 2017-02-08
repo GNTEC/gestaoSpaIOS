@@ -382,7 +382,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="G5e-qn-j2P" id="Fc5-dU-d6D"/>
-                                    <segue destination="BMi-5u-wDF" kind="show" identifier="back" id="tkX-Pp-cte"/>
+                                    <segue destination="BMi-5u-wDF" kind="show" identifier="" id="tkX-Pp-cte"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellData" rowHeight="50" id="o19-Hc-nkN" customClass="InfoTableViewCell">
@@ -419,7 +419,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="IKx-6e-HqV" id="RG3-f6-4eF"/>
-                                    <segue destination="AjZ-bM-ixg" kind="show" identifier="back" id="N17-BV-i8v"/>
+                                    <segue destination="AjZ-bM-ixg" kind="show" identifier="" id="N17-BV-i8v"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellEscolha" rowHeight="100" id="yPT-8p-s3V" customClass="ShowProfessionalTableViewCell">
@@ -497,7 +497,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="n1g-16-zCn" id="ErA-1D-eCI"/>
-                                    <segue destination="VlM-74-WeE" kind="show" identifier="back" id="1WM-aH-j9d"/>
+                                    <segue destination="VlM-74-WeE" kind="show" id="A6S-ug-BZz"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellHorario" rowHeight="50" id="jHo-JY-7BD" customClass="InfoTableViewCell">
@@ -534,7 +534,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="O2e-wi-vk7" id="sr1-Gt-j9d"/>
-                                    <segue destination="tmu-7s-i7t" kind="show" identifier="back" id="88x-ti-sID"/>
+                                    <segue destination="tmu-7s-i7t" kind="show" identifier="" id="88x-ti-sID"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBotao" rowHeight="60" id="Bex-fp-rm6" customClass="ScheduleTableViewCell">
@@ -697,7 +697,7 @@
                                     <outlet property="labelProfissional" destination="M1u-Zp-0qB" id="1j0-nn-LUc"/>
                                     <outlet property="labelServico" destination="ycP-iI-9fl" id="YGE-2p-coG"/>
                                     <outlet property="labelStatus" destination="uwv-YZ-kqI" id="UW6-2s-0yF"/>
-                                    <segue destination="Lbj-OH-eLZ" kind="show" id="nJn-oQ-xmh"/>
+                                    <segue destination="Lbj-OH-eLZ" kind="show" id="thK-fi-dID"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -923,7 +923,7 @@
                         <outlet property="labelStatus" destination="eGK-zo-gTo" id="LmW-Yo-Dd6"/>
                         <outlet property="labelValor" destination="4Zl-4D-S3Q" id="gnX-ab-7Sw"/>
                         <outlet property="sgnGerenciar" destination="6wH-D6-MLz" id="GiZ-bY-xgu"/>
-                        <segue destination="a92-aY-9vf" kind="unwind" identifier="back" unwindAction="backToSchedule:" id="dJz-OT-ZPS"/>
+                        <segue destination="a92-aY-9vf" kind="unwind" identifier="back" unwindAction="backToHistory:" id="pqY-Z1-tSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHp-mh-bBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1058,9 +1058,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Profissional" id="IEJ-HL-BfV"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="tableProfissional" destination="5m2-hd-LGf" id="5cd-ST-q0e"/>
-                        <segue destination="4dg-Ob-XLE" kind="unwind" unwindAction="backToSchedule:" id="Iub-SF-DGT"/>
+                        <segue destination="4dg-Ob-XLE" kind="unwind" identifier="back" unwindAction="backToSchedule:" id="axM-BM-3yX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jm9-Dd-QE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1101,9 +1103,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Horário Agendamento" id="Ucn-bb-hev"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="tableHorario" destination="n7L-hm-b0n" id="X0f-MF-9a9"/>
-                        <segue destination="ny2-X0-PEU" kind="unwind" unwindAction="backToSchedule:" id="JZz-qK-2LQ"/>
+                        <segue destination="ny2-X0-PEU" kind="unwind" identifier="back" unwindAction="backToSchedule:" id="JZz-qK-2LQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGC-zr-VRK" userLabel="First Responder" sceneMemberID="firstResponder"/>

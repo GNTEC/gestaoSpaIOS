@@ -22,7 +22,6 @@
 @implementation agendaTableViewController
 -(IBAction)backToSchedule:(UIStoryboardSegue *)sender {
     [self updateUI];
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {

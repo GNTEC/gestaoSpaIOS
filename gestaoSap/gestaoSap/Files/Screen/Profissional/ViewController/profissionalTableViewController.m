@@ -150,6 +150,7 @@
     [VariaveisGlobais shared]._codProfissional = stProfissional.codProfissional;
     [VariaveisGlobais shared]._profissional = stProfissional.nomeProfissional;
     
+//    [self dismissViewControllerAnimated:YES completion:nil];
     [self performSegueWithIdentifier:@"back" sender:self];
 }
 
