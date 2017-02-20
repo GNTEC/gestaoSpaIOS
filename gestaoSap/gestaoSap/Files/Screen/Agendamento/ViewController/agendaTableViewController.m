@@ -238,7 +238,6 @@
             strDataAgendamento = [VariaveisGlobais shared]._dataAgendamento1;
         }
         
-        
         //HORA
         NSString *dateStr = [VariaveisGlobais shared]._horarioAgendamento;
         NSDateFormatter *dateFormatter=[NSDateFormatter new];
@@ -315,6 +314,8 @@
             self.textHora.text = [dict allValues][4];
             
             [self updateUI];
+            
+            self.updating = NO;
         }
         else
         {
@@ -328,13 +329,10 @@
                                                        }];
             
             [alertController addAction:ok];
-            self.updating = false;
+            self.updating = NO;
         }
     }];
-    
-    self.updating = false;
 }
-
 
 - (void)getAgendamentos:(void(^)(NSDictionary *dict, NSError *error))block
 {
