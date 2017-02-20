@@ -71,6 +71,8 @@
     
     if(self.stHistoricoAgendamento.codAgendamento != 0)
     {
+        [VariaveisGlobais shared]._codAgendamento = self.stHistoricoAgendamento.codAgendamento;
+        
         self.labelCodAgendamento.text = [@(self.stHistoricoAgendamento.codAgendamento) stringValue];
         self.labelProfissional.text = self.stHistoricoAgendamento.nomeProfissional;
         self.labelDescricaoServico.text= self.stHistoricoAgendamento.descricaoServico;
@@ -84,14 +86,14 @@
         self.labelHorario.text = self.stHistoricoAgendamento.horaAgendamentoServico;
         self.labelStatus.text = self.stHistoricoAgendamento.statusServico;
         
-        if([self.labelStatus.text isEqualToString:@"CONFIRMADO"] || [self.labelStatus.text isEqualToString:@"DESMARCADO"])
-        {
-            self.sgnGerenciar.selectedSegmentIndex = 0;
-            self.sgnGerenciar.enabled = false;
-            //self.sgnGerenciar.alpha = 0;
-            self.btnOk.enabled = false;
-            self.btnOk.alpha = 0.5;
-        }
+//        if([self.labelStatus.text isEqualToString:@"CONFIRMADO"] || [self.labelStatus.text isEqualToString:@"DESMARCADO"])
+//        {
+//            self.sgnGerenciar.selectedSegmentIndex = 0;
+//            self.sgnGerenciar.enabled = false;
+//            //self.sgnGerenciar.alpha = 0;
+//            self.btnOk.enabled = false;
+//            self.btnOk.alpha = 0.5;
+//        }
     }
     else
     {
@@ -115,23 +117,6 @@
 
 - (IBAction)onClick:(UIButton *)sender
 {
-    //        <web:COD_EMPRESA>?</web:COD_EMPRESA>
-    //        <web:COD_FILIAL>?</web:COD_FILIAL>
-    //        <web:COD_AGENDAMENTO>?</web:COD_AGENDAMENTO>
-    //        <web:Status>?</web:Status>
-    
-    //    }else if(selecaoSpinner.equals("Cancelar")){
-    //        status = 0;
-    //        setStatusAgendamento();
-    //
-    //    }else if(selecaoSpinner.equals("Confirmar")){
-    //        status = 1;
-    //        setStatusAgendamento();
-    //
-    //    }else if(selecaoSpinner.equals("Alterar")){
-    //        status = 2;
-    
-    
     self.updating = true;
     
     if(self.sgnGerenciar.selectedSegmentIndex == 0)
@@ -141,6 +126,12 @@
     else if (self.sgnGerenciar.selectedSegmentIndex == 1)
     {
         self.statusAgendamento = 2;
+        
+        self.updating = false;
+        [VariaveisGlobais shared]._statusAgendamento = 2;
+        [self performSegueWithIdentifier:@"backToShedule" sender:nil];
+        
+        return;
     }
     
     else if (self.sgnGerenciar.selectedSegmentIndex == 2)
@@ -149,11 +140,11 @@
     }
 
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
-    [self changeStatusAgendamento:^(NSString *strMsgPromocao, NSError *error) {
+    [self changeStatusAgendamento:^(NSString *strMsgAlterStatus, NSError *error) {
         
-        if (![strMsgPromocao isEqual:nil]) {
+        if (![strMsgAlterStatus isEqual:nil]) {
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"OK" message:strMsgPromocao preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"OK" message:strMsgAlterStatus preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction * _Nonnull action) {

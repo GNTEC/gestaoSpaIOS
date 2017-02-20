@@ -19,11 +19,13 @@
     NSInteger _codServico;
     NSString *_servico;
     NSDate   *_dataAgendamento;
+    NSString *_dataAgendamento1;
     NSInteger _codProfissional;
     NSString *_profissional;
     NSString *_horarioAgendamento;
     NSInteger _codAgendamento;
     BOOL _withProfissional;
+    NSInteger _statusAgendamento;
 
 }
 
@@ -36,11 +38,13 @@
 @property(nonatomic)NSInteger _codServico;
 @property(nonatomic,strong) NSString *_servico;
 @property(nonatomic) NSDate *_dataAgendamento;
+@property(nonatomic,strong) NSString *_dataAgendamento1;
 @property(nonatomic)NSInteger _codProfissional;
 @property(nonatomic,strong) NSString *_profissional;
 @property(nonatomic,strong) NSString *_horarioAgendamento;
 @property(nonatomic)NSInteger _codAgendamento;
 @property (assign, nonatomic) BOOL _withProfissional;
+@property(nonatomic)NSInteger _statusAgendamento;
 
 +(VariaveisGlobais*)shared;
 

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,10 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="rodape" translatesAutoresizingMaskIntoConstraints="NO" id="qaE-DN-TdW">
-                                <rect key="frame" x="16" y="611" width="343" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="Uac-Ey-s3n"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
                             </imageView>
                             <view contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="jRD-Q0-eXO">
                                 <rect key="frame" x="16" y="301" width="343" height="130.5"/>
@@ -68,7 +64,7 @@ O Buddha Spa é a maior rede de Spa Urbano do país, atualmento com 25 unidades 
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUk-ca-kES">
-                                <rect key="frame" x="154.5" y="278" width="56" height="14.5"/>
+                                <rect key="frame" x="155" y="278" width="56" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,18 +72,18 @@ O Buddha Spa é a maior rede de Spa Urbano do país, atualmento com 25 unidades 
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qaE-DN-TdW" secondAttribute="trailing" id="BjS-gW-sLD"/>
                             <constraint firstItem="8ET-xF-YRI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="1" id="Cmp-uJ-qJb"/>
-                            <constraint firstItem="qaE-DN-TdW" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="HvK-aQ-zMo"/>
                             <constraint firstItem="jRD-Q0-eXO" firstAttribute="top" secondItem="YUk-ca-kES" secondAttribute="bottom" constant="8" id="JAB-bC-wGE"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qaE-DN-TdW" secondAttribute="bottom" id="JKq-Li-0Jc"/>
                             <constraint firstItem="YUk-ca-kES" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-5" id="Nhw-63-rFi"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qaE-DN-TdW" secondAttribute="bottom" id="Rkc-kn-pmQ"/>
                             <constraint firstItem="fDQ-Vw-ra7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S0h-XW-TEt"/>
                             <constraint firstItem="YUk-ca-kES" firstAttribute="top" secondItem="8ET-xF-YRI" secondAttribute="bottom" constant="12" id="UIk-3U-RX1"/>
                             <constraint firstItem="jRD-Q0-eXO" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="VIa-2g-zI9"/>
-                            <constraint firstItem="qaE-DN-TdW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="X0K-9g-UC7"/>
                             <constraint firstItem="jRD-Q0-eXO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="lDZ-1Q-Jml"/>
                             <constraint firstItem="8ET-xF-YRI" firstAttribute="top" secondItem="fDQ-Vw-ra7" secondAttribute="bottom" constant="27" id="lcA-f1-4JJ"/>
                             <constraint firstItem="fDQ-Vw-ra7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="68" id="r7p-SC-2Ax"/>
+                            <constraint firstItem="qaE-DN-TdW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="sa8-ly-AnE"/>
                         </constraints>
                     </view>
                 </viewController>

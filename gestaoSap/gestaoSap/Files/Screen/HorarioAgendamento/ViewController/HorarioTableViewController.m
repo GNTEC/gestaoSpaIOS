@@ -92,12 +92,11 @@
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getHorariosLivres:^(NSDictionary *dict, NSError *error) {
         
-        if (dict.count > 0) {
-            
-            NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
-            arrayDataServico1 = [dict objectForKey:@"array"];
-            
-            
+        NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
+        arrayDataServico1 = [dict objectForKey:@"array"];
+        
+        if (arrayDataServico1.count != 0)
+        {
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
                 horario *objHorario = [[horario alloc]init];
@@ -137,12 +136,12 @@
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getHorarios:^(NSDictionary *dict, NSError *error) {
         
-        if (dict.count > 0) {
+        NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
+        arrayDataServico1 = [dict objectForKey:@"array"];
             
-            NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
-            arrayDataServico1 = [dict objectForKey:@"array"];
-            
-            
+        if (arrayDataServico1.count != 0)
+        {
+        
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
                 horario *objHorario = [[horario alloc]init];
@@ -161,13 +160,17 @@
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Não existe Horarios disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERRO" message:@"Não Existe Horários disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self performSegueWithIdentifier:@"back" sender:self];
+                                                       }];
+            
             [alertController addAction:ok];
             
-            [self performSegueWithIdentifier:@"back" sender:self];
-            self.updating =false;
+            [self presentViewController:alertController animated:YES completion:nil];
+            self.updating = false;
         }
     }];
 }

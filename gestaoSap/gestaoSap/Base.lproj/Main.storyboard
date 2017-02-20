@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -122,7 +121,7 @@
             <objects>
                 <navigationController id="n7X-ft-FnO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Agendamento" image="icoAgendamento" id="9al-qD-Sx7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="N12-c8-2R8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N12-c8-2R8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -382,7 +381,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="G5e-qn-j2P" id="Fc5-dU-d6D"/>
-                                    <segue destination="BMi-5u-wDF" kind="show" identifier="" id="tkX-Pp-cte"/>
+                                    <segue destination="BMi-5u-wDF" kind="show" identifier="segueServico" id="tkX-Pp-cte"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellData" rowHeight="50" id="o19-Hc-nkN" customClass="InfoTableViewCell">
@@ -419,7 +418,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="IKx-6e-HqV" id="RG3-f6-4eF"/>
-                                    <segue destination="AjZ-bM-ixg" kind="show" identifier="" id="N17-BV-i8v"/>
+                                    <segue destination="AjZ-bM-ixg" kind="show" identifier="segueData" id="N17-BV-i8v"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellEscolha" rowHeight="100" id="yPT-8p-s3V" customClass="ShowProfessionalTableViewCell">
@@ -497,7 +496,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="n1g-16-zCn" id="ErA-1D-eCI"/>
-                                    <segue destination="VlM-74-WeE" kind="show" id="A6S-ug-BZz"/>
+                                    <segue destination="VlM-74-WeE" kind="show" identifier="segueProfissional" id="A6S-ug-BZz"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellHorario" rowHeight="50" id="jHo-JY-7BD" customClass="InfoTableViewCell">
@@ -924,6 +923,7 @@
                         <outlet property="labelValor" destination="4Zl-4D-S3Q" id="gnX-ab-7Sw"/>
                         <outlet property="sgnGerenciar" destination="6wH-D6-MLz" id="GiZ-bY-xgu"/>
                         <segue destination="a92-aY-9vf" kind="unwind" identifier="back" unwindAction="backToHistory:" id="pqY-Z1-tSv"/>
+                        <segue destination="a92-aY-9vf" kind="unwind" identifier="backToShedule" unwindAction="backToSchedule:" id="Nyp-qx-Nlp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHp-mh-bBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1228,13 +1228,13 @@
                                 <rect key="frame" x="123" y="221" width="130" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuH-Ji-maR">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="62"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a unidade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWA-rb-tQW">
-                                        <rect key="frame" x="0.0" y="80.5" width="130" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="81" width="130" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1300,7 +1300,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yg4-vv-Wu1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="localização" image="icoLocalizacao" id="bTa-H0-fYH"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6Ox-fN-bfs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Ox-fN-bfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1377,7 +1377,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVr-6Q-3R6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Promocões" image="icoPromocao" id="Zkl-DY-HdB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hZL-Ss-UDy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hZL-Ss-UDy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1396,7 +1396,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8S-lr-EAE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="histórico" image="icohistorico" id="Hg6-KX-C3n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8hK-sO-eOt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8hK-sO-eOt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

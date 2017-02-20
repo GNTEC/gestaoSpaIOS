@@ -21,7 +21,15 @@
 
 @implementation agendaTableViewController
 -(IBAction)backToSchedule:(UIStoryboardSegue *)sender {
-    [self updateUI];
+    
+    if([VariaveisGlobais shared]._codAgendamento != 0 && [VariaveisGlobais shared]._statusAgendamento == 2)
+    {
+        [self getAgendamento];
+    }
+    else
+    {
+        [self updateUI];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -79,27 +87,57 @@
     [self.view addSubview:self.spinnerView];
 }
 
+-(void)limparTela
+{
+    [VariaveisGlobais shared]._profissional = nil;
+    [VariaveisGlobais shared]._horarioAgendamento = nil;
+    [VariaveisGlobais shared]._dataAgendamento = nil;
+}
+
+-(void)limparHorarioAgendamento
+{
+    [VariaveisGlobais shared]._horarioAgendamento = nil;
+}
+
 -(void) updateUI
 {
     //self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
-    self.textServico.text = [VariaveisGlobais shared]._servico;
-    self.textProfissional.text = [VariaveisGlobais shared]._profissional;
-    self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
-
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/MM/yyyy"];
-    NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+    if([VariaveisGlobais shared]._servico != nil)
+    {
+        self.textServico.text = [VariaveisGlobais shared]._servico;
+    }
     
-    self.textData.text = strDataAgendamento;
+    if([VariaveisGlobais shared]._profissional != nil)
+    {
+        self.textProfissional.text = [VariaveisGlobais shared]._profissional;
+    }
+    
+    if([VariaveisGlobais shared]._horarioAgendamento != nil)
+    {
+        self.textHora.text = [VariaveisGlobais shared]._horarioAgendamento;
+    }
+
+    if([VariaveisGlobais shared]._dataAgendamento != nil)
+    {
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        self.textData.text = strDataAgendamento;
+    }
+    else
+    {
+        self.textData.text = [VariaveisGlobais shared]._dataAgendamento1;
+    }
+    
     [self.tableView reloadData];
 }
 
 -(IBAction)onclickAgendar:(id)sender
 {    
     //VERIFICA SE OS CAMPOS FORAM PREENCHIDOS
-    if([self.textServico.text isEqualToString:@""])
+    if([VariaveisGlobais shared]._servico == nil)
     {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha uma Data !" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha um Serviço !" preferredStyle:UIAlertControllerStyleAlert];
     
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
@@ -108,10 +146,22 @@
         
         return;
     }
-
-    if (self.segProfissional.selectedSegmentIndex == 1)
+    
+    if([VariaveisGlobais shared]._dataAgendamento == nil)
     {
-        if([self.textServico.text isEqualToString:@""])
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha uma Data !" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
+    if ([VariaveisGlobais shared]._withProfissional == 1)
+    {
+        if([VariaveisGlobais shared]._profissional == nil)
         {
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha um Profissional !" preferredStyle:UIAlertControllerStyleAlert];
             
@@ -124,19 +174,7 @@
         }
     }
     
-    if([self.textData.text isEqualToString:@""])
-    {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha uma Data !" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:ok];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        return;
-    }
-    
-    if([self.textHora.text isEqualToString:@""])
+    if([VariaveisGlobais shared]._horarioAgendamento == nil)
     {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Por favor escolha um Horário !" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -164,6 +202,7 @@
             {
                 [VariaveisGlobais shared]._codAgendamento = 0;
                 [VariaveisGlobais shared]._codAgendamento = codAgendamento;
+                [VariaveisGlobais shared]._statusAgendamento = 0;
                 
                 [self performSegueWithIdentifier:@"Schedule" sender:self];
             }
@@ -186,10 +225,19 @@
 {
     if (block) {
         
-        //DATA
-        NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"dd/MM/yyyy"];
-        NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        NSString *strDataAgendamento;
+        
+        if([VariaveisGlobais shared]._dataAgendamento != nil)
+        {
+            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"dd/MM/yyyy"];
+            strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        }
+        else
+        {
+            strDataAgendamento = [VariaveisGlobais shared]._dataAgendamento1;
+        }
+        
         
         //HORA
         NSString *dateStr = [VariaveisGlobais shared]._horarioAgendamento;
@@ -206,9 +254,17 @@
         soap.requestTimeout = 10;
         soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
         
+        //VERIFICA SE O AGENDAMENTO VAI SER ALTERADO
+        NSInteger codAgendamento= 0;
+        
+        if ([VariaveisGlobais shared]._codAgendamento != 0)
+        {
+            codAgendamento = [VariaveisGlobais shared]._codAgendamento;
+        }
+
         [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
-        [soap setIntegerValue:0 forKey:@"COD_AGENDAMENTO"];
+        [soap setIntegerValue:codAgendamento forKey:@"COD_AGENDAMENTO"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codCliente forKey:@"COD_CLIENTE"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codProfissional forKey:@"COD_PROFISSIONAL"];
@@ -226,6 +282,83 @@
       }];
     }
 }
+
+-(void)getAgendamento
+{
+    self.updating = true;
+    
+    NSNumberFormatter *n = [[NSNumberFormatter alloc] init];
+    [n setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt_BR"];
+    [n setLocale:locale];
+    
+    //CHAMA A FUNÇÃO QUE FAZ O LOGIN
+    [self getAgendamentos:^(NSDictionary *dict, NSError *error) {
+        
+        if (dict.count > 0)
+        {
+            NSArray *profissional = [dict allValues][2];
+            NSArray *servico = [dict allValues][5];
+            
+            [VariaveisGlobais shared]._codServico = [[servico valueForKey:@"COD_SERVICO"] integerValue];
+            [VariaveisGlobais shared]._servico = [servico valueForKey:@"DSC_SERVICO"];
+            self.textServico.text = [VariaveisGlobais shared]._servico;
+            
+            [VariaveisGlobais shared]._dataAgendamento1 = [dict allValues][1];
+            self.textData.text = [dict allValues][1];
+
+            [VariaveisGlobais shared]._codProfissional = [[profissional valueForKey:@"COD_PROFISSIONAL"] integerValue];
+            [VariaveisGlobais shared]._profissional = [profissional valueForKey:@"NOME"];
+            self.textProfissional.text = [profissional valueForKey:@"NOME"];
+            
+            [VariaveisGlobais shared]._horarioAgendamento = [dict allValues][4];
+            self.textHora.text = [dict allValues][4];
+            
+            [self updateUI];
+        }
+        else
+        {
+            self.updating = NO;
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERRO" message:@"Agendamento não encontrado !" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self performSegueWithIdentifier:@"back" sender:self];
+                                                       }];
+            
+            [alertController addAction:ok];
+            self.updating = false;
+        }
+    }];
+    
+    self.updating = false;
+}
+
+
+- (void)getAgendamentos:(void(^)(NSDictionary *dict, NSError *error))block
+{
+    if (block) {
+        SOAPEngine *soap = [[SOAPEngine alloc]init];
+        soap.actionNamespaceSlash = YES;
+        soap.requestTimeout = 10;
+        soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
+        
+        [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
+        [soap setIntegerValue:[VariaveisGlobais shared]._codAgendamento forKey:@"COD_AGENDAMENTO"];
+        [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_AGENDAMENTO"
+  completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
+      
+      block(dict, nil);
+      
+  } failWithError:^(NSError *error) {
+      block(nil, error);
+  }];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -266,10 +399,18 @@
     
     NSArray<NSString*> *identifiers = @[@"cellUnidade", @"cellServico", @"cellData",@"cellEscolha",@"cellProfissional",@"cellHorario",@"cellBotao"];
     
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/MM/yyyy"];
-    NSString *strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+    NSString *strDataAgendamento;
     
+    if([VariaveisGlobais shared]._dataAgendamento != nil)
+    {
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yyyy"];
+        strDataAgendamento = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+    }
+    else
+    {
+        strDataAgendamento = [VariaveisGlobais shared]._dataAgendamento1;
+    }
     
     NSArray<NSString*> *info = @[[VariaveisGlobais shared]._nomeFilial,
                                  [VariaveisGlobais shared]._servico ? [VariaveisGlobais shared]._servico : @"",
@@ -301,15 +442,45 @@
 
 -(void)didSelect:(NSInteger)value {
     self.showProfessional = value == 0 ? YES : NO;
-    [VariaveisGlobais shared]._withProfissional = value;
+    
+    [self limparHorarioAgendamento];
+    
+    if(value == YES)
+    {
+        [VariaveisGlobais shared]._withProfissional = 0;
+    }
+    else
+    {
+        [VariaveisGlobais shared]._withProfissional = 1;
+        self.textProfissional.text = @"";
+        [VariaveisGlobais shared]._profissional = nil;
+    }
 }
-
 -(void)didPressScheduleButton{
     [self onclickAgendar:self];
 }
 
-@end
+#pragma mark - Navigation
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"segueServico"])
+    {
+        if([VariaveisGlobais shared]._servico != nil)
+        {
+            [self limparTela];
+            [VariaveisGlobais shared]._statusAgendamento = 0;
+        }
+    }
+    
+    if([segue.identifier isEqualToString:@"segueProfissional"] || [segue.identifier isEqualToString:@"segueData"] )
+    {
+        [self limparHorarioAgendamento];
+        [VariaveisGlobais shared]._statusAgendamento = 0;
+    }
+}
+
+@end
 
 @interface ShowProfessionalTableViewCell()
 
@@ -345,3 +516,4 @@
 @implementation InfoTableViewCell
 
 @end
+

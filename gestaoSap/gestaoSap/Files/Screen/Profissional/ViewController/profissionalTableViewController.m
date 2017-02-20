@@ -86,12 +86,11 @@
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getProfissionais:^(NSDictionary *dict, NSError *error) {
         
-        if (dict.count > 0) {
+        NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
+        arrayDataServico1 = [dict objectForKey:@"array"];
             
-            NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
-            arrayDataServico1 = [dict objectForKey:@"array"];
-            
-            
+        if(arrayDataServico1.count != 0)
+        {
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
                 profissional *objProfissional = [[profissional alloc]init];
@@ -118,6 +117,7 @@
             
             [alertController addAction:ok];
             
+            [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
         }
     }];
@@ -133,7 +133,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
@@ -184,7 +183,5 @@
         
     }
 }
-
-
 
 @end

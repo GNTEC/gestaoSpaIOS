@@ -95,12 +95,11 @@
     //CHAMA A FUNÇÃO QUE FAZ O LOGIN
     [self getServicos:^(NSDictionary *dict, NSError *error) {
         
-        if (dict.count > 0) {
+        NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
+        arrayDataServico1 = [dict objectForKey:@"ViewServico"];
             
-            NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
-            arrayDataServico1 = [dict objectForKey:@"ViewServico"];
-            
-            
+        if (arrayDataServico1.count != 0)
+        {
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
                 servico *objServico = [[servico alloc]init];
@@ -128,8 +127,8 @@
             
             [alertController addAction:ok];
             
+            [self presentViewController:alertController animated:YES completion:nil];
             self.updating = false;
-            
         }
     }];
 }
