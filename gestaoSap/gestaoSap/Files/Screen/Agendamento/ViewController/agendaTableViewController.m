@@ -132,6 +132,12 @@
     [self.tableView reloadData];
 }
 
+-(IBAction)onclicChangeUnit:(id)sender
+{
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 -(IBAction)onclickAgendar:(id)sender
 {    
     //VERIFICA SE OS CAMPOS FORAM PREENCHIDOS
@@ -366,7 +372,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 7;
+    return 8;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -395,7 +401,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSArray<NSString*> *identifiers = @[@"cellUnidade", @"cellServico", @"cellData",@"cellEscolha",@"cellProfissional",@"cellHorario",@"cellBotao"];
+    NSArray<NSString*> *identifiers = @[@"cellUnidade", @"cellServico", @"cellData",@"cellEscolha",@"cellProfissional",@"cellHorario",@"cellBotao",@"cellTrocaUnidade"];
     
     NSString *strDataAgendamento;
     
@@ -416,6 +422,7 @@
                                  @"",
                                  [VariaveisGlobais shared]._profissional ? [VariaveisGlobais shared]._profissional : @"",
                                  [VariaveisGlobais shared]._horarioAgendamento ? [VariaveisGlobais shared]._horarioAgendamento : @"",
+                                 @"",
                                  @""];
     
     if (indexPath.section == 3) {
@@ -426,6 +433,12 @@
         
         
     } else if (indexPath.section == 6) {
+        
+        ScheduleTableViewCell *cell = (ScheduleTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:[identifiers objectAtIndex:indexPath.section] forIndexPath:indexPath];
+        cell.delegate = self;
+        return cell;
+        
+    } else if (indexPath.section == 7) {
         
         ScheduleTableViewCell *cell = (ScheduleTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:[identifiers objectAtIndex:indexPath.section] forIndexPath:indexPath];
         cell.delegate = self;
@@ -456,6 +469,10 @@
 }
 -(void)didPressScheduleButton{
     [self onclickAgendar:self];
+}
+
+-(void)didPressChangeUnitButton{
+    [self onclicChangeUnit:self];
 }
 
 #pragma mark - Navigation
@@ -505,6 +522,11 @@
     [self.delegate didPressScheduleButton];
 }
 
+-(IBAction)changeUnitButtonTap:(id)sender
+{
+    [self.delegate didPressChangeUnitButton];
+}
+
 @end
 
 @interface InfoTableViewCell()
@@ -514,4 +536,6 @@
 @implementation InfoTableViewCell
 
 @end
+
+
 

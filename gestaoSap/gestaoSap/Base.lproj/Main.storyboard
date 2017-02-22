@@ -564,6 +564,40 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTrocaUnidade" id="edQ-zH-qQq" customClass="ScheduleTableViewCell">
+                                <rect key="frame" x="0.0" y="438" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="edQ-zH-qQq" id="Ds6-44-xQF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCy-Mq-nC6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="trocar unidade">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeUnitButtonTap:" destination="edQ-zH-qQq" eventType="touchUpInside" id="kqF-M5-G5P"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="yCy-Mq-nC6" secondAttribute="bottom" id="DKS-g4-B18"/>
+                                        <constraint firstAttribute="trailing" secondItem="yCy-Mq-nC6" secondAttribute="trailing" id="aYn-g2-fnI"/>
+                                        <constraint firstItem="yCy-Mq-nC6" firstAttribute="leading" secondItem="Ds6-44-xQF" secondAttribute="leading" id="l5M-Pd-bJ2"/>
+                                        <constraint firstItem="yCy-Mq-nC6" firstAttribute="top" secondItem="Ds6-44-xQF" secondAttribute="top" id="unv-Eo-ov7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -1223,7 +1257,7 @@
                                     <outlet property="delegate" destination="dtc-P1-Ydf" id="mdj-9P-19g"/>
                                 </connections>
                             </pickerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="O7L-8V-F7H">
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="O7L-8V-F7H">
                                 <rect key="frame" x="123" y="221" width="130" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuH-Ji-maR">
@@ -1264,6 +1298,7 @@
                             <constraint firstItem="BMN-w9-kmE" firstAttribute="centerX" secondItem="5wk-t1-fSx" secondAttribute="centerX" id="yET-Ra-jgX"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" enabled="NO" id="loa-Mf-Uov"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
