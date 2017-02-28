@@ -15,7 +15,6 @@
 @protocol ScheduleTableViewCellDelegate
 -(void)didSelect:(NSInteger)value;
 -(void)didPressScheduleButton;
--(void)didPressChangeUnitButton;
 @end
 
 @interface agendaTableViewController : UITableViewController <ScheduleTableViewCellDelegate>

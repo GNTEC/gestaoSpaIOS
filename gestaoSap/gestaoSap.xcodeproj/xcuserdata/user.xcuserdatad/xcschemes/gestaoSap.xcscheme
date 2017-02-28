@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEE2EFD21E0BF61000F7EC4B"
-               BuildableName = "gestaoSap.app"
-               BlueprintName = "gestaoSap"
+               BuildableName = "gestaoSpa.app"
+               BlueprintName = "gestaoSpa"
                ReferencedContainer = "container:gestaoSap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEE2EFD21E0BF61000F7EC4B"
-            BuildableName = "gestaoSap.app"
-            BlueprintName = "gestaoSap"
+            BuildableName = "gestaoSpa.app"
+            BlueprintName = "gestaoSpa"
             ReferencedContainer = "container:gestaoSap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEE2EFD21E0BF61000F7EC4B"
-            BuildableName = "gestaoSap.app"
-            BlueprintName = "gestaoSap"
+            BuildableName = "gestaoSpa.app"
+            BlueprintName = "gestaoSpa"
             ReferencedContainer = "container:gestaoSap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEE2EFD21E0BF61000F7EC4B"
-            BuildableName = "gestaoSap.app"
-            BlueprintName = "gestaoSap"
+            BuildableName = "gestaoSpa.app"
+            BlueprintName = "gestaoSpa"
             ReferencedContainer = "container:gestaoSap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

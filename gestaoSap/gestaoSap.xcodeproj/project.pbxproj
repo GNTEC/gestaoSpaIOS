@@ -14,6 +14,7 @@
 		CE0B88C01E313ADC00A1BDD5 /* HorarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88BF1E313ADC00A1BDD5 /* HorarioTableViewController.m */; };
 		CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88C41E3145AF00A1BDD5 /* logOutViewController.m */; };
 		CE0B88CB1E355DFC00A1BDD5 /* localizacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */; };
+		CE3900741E65086600B00758 /* maisTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3900731E65086600B00758 /* maisTableViewController.m */; };
 		CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */; };
 		CE3AC06A1E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC0691E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.m */; };
 		CE4087EC1E2542BE009416B5 /* unidadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EB1E2542BE009416B5 /* unidadeViewController.m */; };
@@ -55,6 +56,8 @@
 		CE0B88C41E3145AF00A1BDD5 /* logOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = logOutViewController.m; path = Files/Screen/LogOut/ViewController/logOutViewController.m; sourceTree = "<group>"; };
 		CE0B88C91E355DFC00A1BDD5 /* localizacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = localizacaoViewController.h; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.h; sourceTree = "<group>"; };
 		CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = localizacaoViewController.m; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.m; sourceTree = "<group>"; };
+		CE3900721E65086600B00758 /* maisTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maisTableViewController.h; path = Files/Screen/Mais/ViewController/maisTableViewController.h; sourceTree = "<group>"; };
+		CE3900731E65086600B00758 /* maisTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = maisTableViewController.m; path = Files/Screen/Mais/ViewController/maisTableViewController.m; sourceTree = "<group>"; };
 		CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoTableViewCell.h; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.h; sourceTree = "<group>"; };
 		CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricoTableViewCell.m; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.m; sourceTree = "<group>"; };
 		CE3AC0681E425FC300CC64D4 /* HistoricoAgendamentoDetalheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoAgendamentoDetalheViewController.h; path = Files/Screen/HistoricoAgendamentoDetalhe/ViewController/HistoricoAgendamentoDetalheViewController.h; sourceTree = "<group>"; };
@@ -74,7 +77,7 @@
 		CEB12DF91E3929E800FDAC63 /* promocaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = promocaoViewController.m; path = Files/Screen/Promocao/ViewController/promocaoViewController.m; sourceTree = "<group>"; };
 		CED255021E44EBE000EBDE36 /* resultadoAgendamentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resultadoAgendamentoViewController.h; path = Files/Screen/ResultadoAgendamento/ViewController/resultadoAgendamentoViewController.h; sourceTree = "<group>"; };
 		CED255031E44EBE000EBDE36 /* resultadoAgendamentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = resultadoAgendamentoViewController.m; path = Files/Screen/ResultadoAgendamento/ViewController/resultadoAgendamentoViewController.m; sourceTree = "<group>"; };
-		CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestaoSap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE2EFD31E0BF61000F7EC4B /* gestaoSpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestaoSpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE2EFD71E0BF61000F7EC4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEE2EFD91E0BF61000F7EC4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -244,6 +247,23 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		CE2379751E605EBA0083A71B /* Mais */ = {
+			isa = PBXGroup;
+			children = (
+				CE2379761E605EC80083A71B /* ViewController */,
+			);
+			name = Mais;
+			sourceTree = "<group>";
+		};
+		CE2379761E605EC80083A71B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE3900721E65086600B00758 /* maisTableViewController.h */,
+				CE3900731E65086600B00758 /* maisTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,7 +394,7 @@
 		CEE2EFD41E0BF61000F7EC4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */,
+				CEE2EFD31E0BF61000F7EC4B /* gestaoSpa.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -419,6 +439,7 @@
 		CEE6ED181E1176E300237F5A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CE2379751E605EBA0083A71B /* Mais */,
 				CED254FF1E44EB7100EBDE36 /* ResultadoAgendamento */,
 				CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */,
 				CE40A4B61E3BBB32000C0224 /* HistoricoAgendamento */,
@@ -508,9 +529,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEE2EFD21E0BF61000F7EC4B /* gestaoSap */ = {
+		CEE2EFD21E0BF61000F7EC4B /* gestaoSpa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSap" */;
+			buildConfigurationList = CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSpa" */;
 			buildPhases = (
 				64A0BBAC04DE089AEAC0D0D4 /* [CP] Check Pods Manifest.lock */,
 				CEE2EFCF1E0BF61000F7EC4B /* Sources */,
@@ -523,9 +544,9 @@
 			);
 			dependencies = (
 			);
-			name = gestaoSap;
+			name = gestaoSpa;
 			productName = gestaoSap;
-			productReference = CEE2EFD31E0BF61000F7EC4B /* gestaoSap.app */;
+			productReference = CEE2EFD31E0BF61000F7EC4B /* gestaoSpa.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -539,8 +560,8 @@
 				TargetAttributes = {
 					CEE2EFD21E0BF61000F7EC4B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = P8J583ZWC9;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = LK6M6GLJ39;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -557,7 +578,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEE2EFD21E0BF61000F7EC4B /* gestaoSap */,
+				CEE2EFD21E0BF61000F7EC4B /* gestaoSpa */,
 			);
 		};
 /* End PBXProject section */
@@ -641,6 +662,7 @@
 				CEFA8B0E1E2FE7A100126D06 /* dataAgendamentoViewController.m in Sources */,
 				CE0B88C01E313ADC00A1BDD5 /* HorarioTableViewController.m in Sources */,
 				CE0B88BD1E313ABC00A1BDD5 /* horario.m in Sources */,
+				CE3900741E65086600B00758 /* maisTableViewController.m in Sources */,
 				CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */,
 				CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */,
 				CE4087F01E26BCEE009416B5 /* unidade.m in Sources */,
@@ -699,6 +721,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -718,7 +741,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -746,6 +769,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -759,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -771,13 +795,17 @@
 			baseConfigurationReference = 39C38F5AEC3158C1E5506336 /* Pods-gestaoSap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P8J583ZWC9;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = LK6M6GLJ39;
 				INFOPLIST_FILE = gestaoSap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.inf.gntec.gestaoSap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "50f02a2a-34e9-49db-96ae-c4324eace8d8";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: br.inf.gntec.gestaoSap";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -786,13 +814,17 @@
 			baseConfigurationReference = A883B66E906AB9FD858EFFFB /* Pods-gestaoSap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P8J583ZWC9;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = LK6M6GLJ39;
 				INFOPLIST_FILE = gestaoSap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.inf.gntec.gestaoSap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "50f02a2a-34e9-49db-96ae-c4324eace8d8";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: br.inf.gntec.gestaoSap";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -808,7 +840,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSap" */ = {
+		CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSpa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEE2EFEB1E0BF61000F7EC4B /* Debug */,

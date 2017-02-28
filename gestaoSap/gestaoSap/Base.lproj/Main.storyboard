@@ -564,40 +564,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTrocaUnidade" id="edQ-zH-qQq" customClass="ScheduleTableViewCell">
-                                <rect key="frame" x="0.0" y="438" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="edQ-zH-qQq" id="Ds6-44-xQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCy-Mq-nC6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <state key="normal">
-                                                <attributedString key="attributedTitle">
-                                                    <fragment content="trocar unidade">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            <integer key="NSUnderline" value="1"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                            </state>
-                                            <connections>
-                                                <action selector="changeUnitButtonTap:" destination="edQ-zH-qQq" eventType="touchUpInside" id="kqF-M5-G5P"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="yCy-Mq-nC6" secondAttribute="bottom" id="DKS-g4-B18"/>
-                                        <constraint firstAttribute="trailing" secondItem="yCy-Mq-nC6" secondAttribute="trailing" id="aYn-g2-fnI"/>
-                                        <constraint firstItem="yCy-Mq-nC6" firstAttribute="leading" secondItem="Ds6-44-xQF" secondAttribute="leading" id="l5M-Pd-bJ2"/>
-                                        <constraint firstItem="yCy-Mq-nC6" firstAttribute="top" secondItem="Ds6-44-xQF" secondAttribute="top" id="unv-Eo-ov7"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -1183,27 +1149,6 @@
             </objects>
             <point key="canvasLocation" x="1237.5999999999999" y="1563.8680659670167"/>
         </scene>
-        <!--sair-->
-        <scene sceneID="SG8-av-Mnf">
-            <objects>
-                <viewController title="sair" id="6Kv-G1-m6C" customClass="logOutViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SNf-7E-lqr"/>
-                        <viewControllerLayoutGuide type="bottom" id="j9P-20-gQW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="90X-Hw-Sui">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="sair" image="icoSair" id="3yz-lf-7Iz"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv1-0h-r8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2679" y="804"/>
-        </scene>
         <!--unidade-->
         <scene sceneID="gfH-t7-S5s">
             <objects>
@@ -1323,7 +1268,7 @@
                         <segue destination="v8S-lr-EAE" kind="relationship" relationship="viewControllers" id="Yof-ec-10h"/>
                         <segue destination="Yg4-vv-Wu1" kind="relationship" relationship="viewControllers" id="bV0-US-cTz"/>
                         <segue destination="sVr-6Q-3R6" kind="relationship" relationship="viewControllers" id="1KJ-d8-nIc"/>
-                        <segue destination="6Kv-G1-m6C" kind="relationship" relationship="viewControllers" id="zlr-10-ksx"/>
+                        <segue destination="vM6-Fx-Niy" kind="relationship" relationship="viewControllers" id="zlr-10-ksx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jxw-Qv-zRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1349,7 +1294,7 @@
             </objects>
             <point key="canvasLocation" x="1252" y="805"/>
         </scene>
-        <!--Promoções-->
+        <!--Promoção-->
         <scene sceneID="yxh-bI-1DZ">
             <objects>
                 <viewController id="yMT-B8-ytD" customClass="promocaoViewController" sceneMemberID="viewController">
@@ -1398,7 +1343,7 @@
                             <constraint firstItem="Z6f-YT-7xj" firstAttribute="top" secondItem="cYf-uc-rAA" secondAttribute="bottom" constant="150" id="j6B-jh-dRb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Promoções" id="bNF-ed-vE6"/>
+                    <navigationItem key="navigationItem" title="Promoção" id="coK-RM-0gS"/>
                     <connections>
                         <outlet property="textPromocao" destination="h2t-wg-APL" id="u6R-8J-cfj"/>
                     </connections>
@@ -1406,6 +1351,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXu-Lk-6QE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1951" y="1561"/>
+        </scene>
+        <!--Mais-->
+        <scene sceneID="C1N-a7-koz">
+            <objects>
+                <tableViewController id="vIF-oe-Tyd" customClass="maisTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N9J-gO-Ava">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="asT-tL-FMh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="12L-tL-6E7" imageView="mov-9d-hzQ" style="IBUITableViewCellStyleDefault" id="vIN-cw-RmF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vIN-cw-RmF" id="W3q-q7-jJ5">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Trocar Unidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="12L-tL-6E7">
+                                                    <rect key="frame" x="55" y="0.0" width="285" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconeUnidade" id="mov-9d-hzQ">
+                                                    <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="qw0-PZ-YGu" imageView="Z43-Ug-EhC" style="IBUITableViewCellStyleDefault" id="s6Q-qq-Gz0">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s6Q-qq-Gz0" id="F09-0C-3GY">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qw0-PZ-YGu">
+                                                    <rect key="frame" x="55" y="0.0" width="285" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="icoSair" id="Z43-Ug-EhC">
+                                                    <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vIF-oe-Tyd" id="ilz-bE-Fxx"/>
+                            <outlet property="delegate" destination="vIF-oe-Tyd" id="beZ-g1-xmC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mais" id="aId-CX-7Pi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFM-tR-vL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673" y="1559"/>
         </scene>
         <!--Promocões-->
         <scene sceneID="CQB-fA-Jd8">
@@ -1445,6 +1457,25 @@
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="801.94902548725645"/>
         </scene>
+        <!--Mais-->
+        <scene sceneID="sFN-wp-Q0M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vM6-Fx-Niy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mais" image="iconeMais" id="3yz-lf-7Iz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iWh-1j-PzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vIF-oe-Tyd" kind="relationship" relationship="rootViewController" id="kD6-af-TTM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLR-Js-ddu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2677.5999999999999" y="803.74812593703155"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icoAgendamento" width="25" height="25"/>
@@ -1452,6 +1483,8 @@
         <image name="icoPromocao" width="25" height="25"/>
         <image name="icoSair" width="25" height="25"/>
         <image name="icohistorico" width="25" height="25"/>
+        <image name="iconeMais" width="25" height="25"/>
+        <image name="iconeUnidade" width="25" height="25"/>
         <image name="logo" width="121" height="121"/>
         <image name="rodape" width="375" height="56"/>
     </resources>

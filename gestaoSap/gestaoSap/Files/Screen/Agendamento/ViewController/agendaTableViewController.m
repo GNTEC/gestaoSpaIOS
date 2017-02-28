@@ -366,13 +366,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 8;
+    return 7;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -401,7 +402,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSArray<NSString*> *identifiers = @[@"cellUnidade", @"cellServico", @"cellData",@"cellEscolha",@"cellProfissional",@"cellHorario",@"cellBotao",@"cellTrocaUnidade"];
+    NSArray<NSString*> *identifiers = @[@"cellUnidade", @"cellServico", @"cellData",@"cellEscolha",@"cellProfissional",@"cellHorario",@"cellBotao"];
     
     NSString *strDataAgendamento;
     
@@ -471,10 +472,6 @@
     [self onclickAgendar:self];
 }
 
--(void)didPressChangeUnitButton{
-    [self onclicChangeUnit:self];
-}
-
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -520,11 +517,6 @@
 - (IBAction)scheduleButtonTap:(UIButton *)sender {
     
     [self.delegate didPressScheduleButton];
-}
-
--(IBAction)changeUnitButtonTap:(id)sender
-{
-    [self.delegate didPressChangeUnitButton];
 }
 
 @end

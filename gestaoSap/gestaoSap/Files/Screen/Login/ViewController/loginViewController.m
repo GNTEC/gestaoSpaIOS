@@ -129,6 +129,11 @@ static const int COD_EMPRESA = 58 ;
         
         else
         {
+            if(msgRet == nil)
+            {
+                msgRet = @"Login não cadastrado";
+            }
+            
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:msgRet preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
