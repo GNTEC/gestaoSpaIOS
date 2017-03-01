@@ -202,7 +202,7 @@
         if (dict.count > 0) {
             
             NSInteger codAgendamento = [[dict objectForKey:@"COD_AGENDAMENTO"] integerValue];
-            strMensagemRetorno = [dict objectForKey:@"MSG_RETORNO"];
+            //strMensagemRetorno = [dict objectForKey:@"MSG_RETORNO"];
 
             if(codAgendamento != 0)
             {
@@ -216,7 +216,7 @@
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:strMensagemRetorno preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Erro" message:@"Horário não disponível" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:ok];
@@ -302,22 +302,37 @@
         
         if (dict.count > 0)
         {
-            NSArray *profissional = [dict allValues][2];
-            NSArray *servico = [dict allValues][5];
+            NSMutableArray *profissional = [[NSMutableArray alloc] init];
+            profissional = [dict objectForKey:@"PROFISSIONAL"];
+            
+            NSMutableArray *servico = [[NSMutableArray alloc] init];
+            servico = [dict objectForKey:@"SERVICO"];
+            
+            NSMutableArray *status = [[NSMutableArray alloc] init];
+            status = [dict objectForKey:@"STATUS"];
+            
+            NSMutableArray *hora = [[NSMutableArray alloc] init];
+            hora = [dict objectForKey:@"HORA"];
+            
+            NSMutableArray *data = [[NSMutableArray alloc] init];
+            data = [dict objectForKey:@"DATA"];
+            
+            NSMutableArray *codAgendamento = [[NSMutableArray alloc] init];
+            codAgendamento = [dict objectForKey:@"COD_AGENDAMENTO"];
             
             [VariaveisGlobais shared]._codServico = [[servico valueForKey:@"COD_SERVICO"] integerValue];
             [VariaveisGlobais shared]._servico = [servico valueForKey:@"DSC_SERVICO"];
             self.textServico.text = [VariaveisGlobais shared]._servico;
             
-            [VariaveisGlobais shared]._dataAgendamento1 = [dict allValues][1];
-            self.textData.text = [dict allValues][1];
+            [VariaveisGlobais shared]._dataAgendamento1 = data.description;
+            self.textData.text = data.description;
 
             [VariaveisGlobais shared]._codProfissional = [[profissional valueForKey:@"COD_PROFISSIONAL"] integerValue];
             [VariaveisGlobais shared]._profissional = [profissional valueForKey:@"NOME"];
             self.textProfissional.text = [profissional valueForKey:@"NOME"];
             
-            [VariaveisGlobais shared]._horarioAgendamento = [dict allValues][4];
-            self.textHora.text = [dict allValues][4];
+            [VariaveisGlobais shared]._horarioAgendamento = hora.description;
+            self.textHora.text = hora.description;
             
             [self updateUI];
             

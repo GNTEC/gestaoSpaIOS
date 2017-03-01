@@ -70,11 +70,28 @@
         
         if (dict.count > 0)
         {
-            NSArray *profissional = [dict allValues][2];
-            NSArray *servico = [dict allValues][5];
-            NSArray *cliente = [dict allValues][6];
+            NSMutableArray *cliente = [[NSMutableArray alloc] init];
+            cliente = [dict objectForKey:@"CLIENTE"];
             
-            self.labelCodAgendamento.text = [dict allValues][3];
+            NSMutableArray *profissional = [[NSMutableArray alloc] init];
+            profissional = [dict objectForKey:@"PROFISSIONAL"];
+            
+            NSMutableArray *servico = [[NSMutableArray alloc] init];
+            servico = [dict objectForKey:@"SERVICO"];
+            
+            NSMutableArray *status = [[NSMutableArray alloc] init];
+            status = [dict objectForKey:@"STATUS"];
+            
+            NSMutableArray *hora = [[NSMutableArray alloc] init];
+            hora = [dict objectForKey:@"HORA"];
+            
+            NSMutableArray *data = [[NSMutableArray alloc] init];
+            data = [dict objectForKey:@"DATA"];
+            
+            NSMutableArray *codAgendamento = [[NSMutableArray alloc] init];
+            codAgendamento = [dict objectForKey:@"COD_AGENDAMENTO"];
+            
+            self.labelCodAgendamento.text = codAgendamento.description;
             self.labelProfissional.text = [profissional valueForKey:@"NOME"];
             self.labelDescricaoServico.text = [servico valueForKey:@"DSC_SERVICO"];
             
@@ -83,9 +100,9 @@
             self.labelValor.text = valorFormatado;
             
             self.labelNomeCliente.text = [cliente valueForKey:@"NOME"];
-            self.labelData.text = [dict allValues][1];
-            self.labelHorario.text = [dict allValues][4];
-            self.labelStatus.text = [dict allValues][0];
+            self.labelData.text = data.description;
+            self.labelHorario.text = hora.description;
+            self.labelStatus.text = status.description;
         }
         else
         {
@@ -129,7 +146,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codAgendamento forKey:@"COD_AGENDAMENTO"];
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
-              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_AGENDAMENTO"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_AGENDAMENTO_2"
   completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
 
       block(dict, nil);
