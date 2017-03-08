@@ -197,8 +197,6 @@
     
     [self agendar:^(NSDictionary *dict, NSError *error) {
         
-        NSString *strMensagemRetorno;
-        
         if (dict.count > 0) {
             
             NSInteger codAgendamento = [[dict objectForKey:@"COD_AGENDAMENTO"] integerValue];

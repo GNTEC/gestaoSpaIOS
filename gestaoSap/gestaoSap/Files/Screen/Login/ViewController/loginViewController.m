@@ -18,7 +18,9 @@ static const int COD_EMPRESA = 58 ;
 {
 
 }
+
 @property (nonatomic, strong) SOAPEngine *soap;
+@property (strong, nonatomic)MFMailComposeViewController *mailer;
 
 @end
 
@@ -65,7 +67,7 @@ static const int COD_EMPRESA = 58 ;
     [spinnerView startAnimating];
     
     //Verifica se a os campos foram preenchidos
-    if([_textEmail.text  isEqual: @""])
+    if([self.textEmail.text  isEqual: @""])
     {
         // Stop animation
         if(spinnerView.isAnimating)
@@ -85,9 +87,8 @@ static const int COD_EMPRESA = 58 ;
     }
     
     //Verifica se a os campos foram preenchidos
-    if([_textSenha.text  isEqual: @""])
+    if([self.textSenha.text  isEqual: @""])
     {
-        
         // Stop animation
         if(spinnerView.isAnimating)
         {
@@ -141,8 +142,6 @@ static const int COD_EMPRESA = 58 ;
             
             [self presentViewController:alertController animated:YES completion:nil];
             
-             NSLog(@"%@",msgRet);
-            
             if(spinnerView.isAnimating)
             {
                 [spinnerView stopAnimating];
@@ -170,11 +169,71 @@ static const int COD_EMPRESA = 58 ;
       
       block(dict, nil);
       
-  } failWithError:^(NSError *error) {
-      block(nil, error);
-  }];
+      } failWithError:^(NSError *error) {
+          block(nil, error);
+      }];
         
     }
+}
+
+-(IBAction)onclickCadastrese:(id)sender
+{
+//    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CadastreseViewController"];
+//    [self presentViewController:vc animated:YES completion:nil];
+    
+    
+    if([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+        mailCont.mailComposeDelegate = self;
+        [mailCont setToRecipients:@[@"pierre@dgm.com.br"]];
+        [mailCont setSubject:@"Novo Cadastro"];
+        [mailCont setMessageBody:[@"Em Breve entraremos em contato com você " stringByAppendingString:@"   Equipe SPA"] isHTML:NO];
+        [self presentViewController:mailCont animated:YES completion:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    //handle any error
+    
+    
+    if (result == MFMailComposeResultSent) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Informativo" message:@"EMail enviado com sucesso !" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+    }
+    
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+//    
+//    switch (result) {
+//        case MFMailComposeResultSent:
+//
+//
+//            
+//            NSLog(@"You sent the email.");
+//            break;
+//        case MFMailComposeResultSaved:
+//            NSLog(@"You saved a draft of this email");
+//            break;
+//        case MFMailComposeResultCancelled:
+//            NSLog(@"You cancelled sending this email.");
+//            break;
+//        case MFMailComposeResultFailed:
+//            NSLog(@"Mail failed:  An error occurred when trying to compose this email");
+//            break;
+//        default:
+//            NSLog(@"An error occurred when trying to compose this email");
+//            break;
+//    }
+    
+
+    
+    
 }
 
 @end

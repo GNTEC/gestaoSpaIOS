@@ -21,6 +21,9 @@
 		CE4087F01E26BCEE009416B5 /* unidade.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4087EF1E26BCEE009416B5 /* unidade.m */; };
 		CE40A4BB1E3BBB8E000C0224 /* historicoAgendamento.m in Sources */ = {isa = PBXBuildFile; fileRef = CE40A4BA1E3BBB8E000C0224 /* historicoAgendamento.m */; };
 		CE40A4BE1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE40A4BD1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.m */; };
+		CE804F421E703FF0009F8DCE /* CadastreseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE804F411E703FF0009F8DCE /* CadastreseViewController.m */; };
+		CE804F441E709873009F8DCE /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE804F431E709872009F8DCE /* Welcome.storyboard */; };
+		CE804F491E7098D7009F8DCE /* welcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE804F481E7098D7009F8DCE /* welcomeViewController.m */; };
 		CEB12DEB1E38FF7E00FDAC63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */; };
 		CEB12DF71E3929D300FDAC63 /* promocao.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DF61E3929D300FDAC63 /* promocao.m */; };
 		CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DF91E3929E800FDAC63 /* promocaoViewController.m */; };
@@ -70,6 +73,11 @@
 		CE40A4BA1E3BBB8E000C0224 /* historicoAgendamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = historicoAgendamento.m; path = Files/Screen/HistoricoAgendamento/Model/historicoAgendamento.m; sourceTree = "<group>"; };
 		CE40A4BC1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = historicoAgendamentoTableViewController.h; path = Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.h; sourceTree = "<group>"; };
 		CE40A4BD1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = historicoAgendamentoTableViewController.m; path = Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m; sourceTree = "<group>"; };
+		CE804F401E703FF0009F8DCE /* CadastreseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CadastreseViewController.h; path = "Files/Screen/Cadastre-se/ViewController/CadastreseViewController.h"; sourceTree = "<group>"; };
+		CE804F411E703FF0009F8DCE /* CadastreseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CadastreseViewController.m; path = "Files/Screen/Cadastre-se/ViewController/CadastreseViewController.m"; sourceTree = "<group>"; };
+		CE804F431E709872009F8DCE /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Welcome.storyboard; path = Files/Screen/StoryBoard/Welcome.storyboard; sourceTree = "<group>"; };
+		CE804F471E7098D7009F8DCE /* welcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = welcomeViewController.h; path = Files/Screen/Welcome/ViewController/welcomeViewController.h; sourceTree = "<group>"; };
+		CE804F481E7098D7009F8DCE /* welcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = welcomeViewController.m; path = Files/Screen/Welcome/ViewController/welcomeViewController.m; sourceTree = "<group>"; };
 		CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CEB12DF51E3929D300FDAC63 /* promocao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = promocao.h; path = Files/Screen/Promocao/Model/promocao.h; sourceTree = "<group>"; };
 		CEB12DF61E3929D300FDAC63 /* promocao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = promocao.m; path = Files/Screen/Promocao/Model/promocao.m; sourceTree = "<group>"; };
@@ -264,6 +272,16 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		CE319CAF1E6F830D0018FA34 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */,
+				CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */,
+				CE804F431E709872009F8DCE /* Welcome.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +343,40 @@
 				CE40A4BD1E3BBBB8000C0224 /* historicoAgendamentoTableViewController.m */,
 				CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */,
 				CE3AC0651E42449100CC64D4 /* HistoricoTableViewCell.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CE804F3E1E703FC8009F8DCE /* Cadastre-se */ = {
+			isa = PBXGroup;
+			children = (
+				CE804F3F1E703FD2009F8DCE /* ViewController */,
+			);
+			name = "Cadastre-se";
+			sourceTree = "<group>";
+		};
+		CE804F3F1E703FD2009F8DCE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE804F401E703FF0009F8DCE /* CadastreseViewController.h */,
+				CE804F411E703FF0009F8DCE /* CadastreseViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CE804F451E70988B009F8DCE /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				CE804F461E709895009F8DCE /* ViewController */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		CE804F461E709895009F8DCE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE804F471E7098D7009F8DCE /* welcomeViewController.h */,
+				CE804F481E7098D7009F8DCE /* welcomeViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -402,13 +454,12 @@
 		CEE2EFD51E0BF61000F7EC4B /* gestaoSap */ = {
 			isa = PBXGroup;
 			children = (
+				CE319CAF1E6F830D0018FA34 /* Storyboard */,
 				CEE6ED181E1176E300237F5A /* Screen */,
 				CEE2EFED1E0BF61C00F7EC4B /* Utils */,
 				CEE2EFD91E0BF61000F7EC4B /* AppDelegate.h */,
 				CEE2EFDA1E0BF61000F7EC4B /* AppDelegate.m */,
-				CEE2EFDF1E0BF61000F7EC4B /* Main.storyboard */,
 				CEE2EFE21E0BF61000F7EC4B /* Assets.xcassets */,
-				CEE2EFE41E0BF61000F7EC4B /* LaunchScreen.storyboard */,
 				CEE2EFE71E0BF61000F7EC4B /* Info.plist */,
 				CEE2EFD61E0BF61000F7EC4B /* Supporting Files */,
 			);
@@ -439,6 +490,8 @@
 		CEE6ED181E1176E300237F5A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CE804F451E70988B009F8DCE /* Welcome */,
+				CE804F3E1E703FC8009F8DCE /* Cadastre-se */,
 				CE2379751E605EBA0083A71B /* Mais */,
 				CED254FF1E44EB7100EBDE36 /* ResultadoAgendamento */,
 				CE3AC0671E425F6900CC64D4 /* HistoricoAgendamentoDetalhe */,
@@ -589,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE2EFE61E0BF61000F7EC4B /* LaunchScreen.storyboard in Resources */,
+				CE804F441E709873009F8DCE /* Welcome.storyboard in Resources */,
 				CEE2EFE31E0BF61000F7EC4B /* Assets.xcassets in Resources */,
 				CEE2EFE11E0BF61000F7EC4B /* Main.storyboard in Resources */,
 			);
@@ -666,10 +720,12 @@
 				CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */,
 				CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */,
 				CE4087F01E26BCEE009416B5 /* unidade.m in Sources */,
+				CE804F491E7098D7009F8DCE /* welcomeViewController.m in Sources */,
 				CEFA8AFF1E2EA50E00126D06 /* agendaTableViewController.m in Sources */,
 				CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */,
 				CE0B88B61E311DDA00A1BDD5 /* profissional.m in Sources */,
 				CE40A4BB1E3BBB8E000C0224 /* historicoAgendamento.m in Sources */,
+				CE804F421E703FF0009F8DCE /* CadastreseViewController.m in Sources */,
 				CEE7674A1E4A07DB009FAE25 /* TabBarController.m in Sources */,
 				CED255041E44EBE000EBDE36 /* resultadoAgendamentoViewController.m in Sources */,
 				CEB12DF71E3929D300FDAC63 /* promocao.m in Sources */,

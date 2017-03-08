@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "welcomeViewController.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -15,11 +16,17 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [GMSServices provideAPIKey:@"AIzaSyCUwfkhaeQKEdal7xrzlAwMr6D5WMz79tU"];
-        
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Welcome" bundle:nil];
+    welcomeViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
+    
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -49,6 +56,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+//- (UIStoryboard *)grabStoryboard {
+//    
+//    UIStoryboard *storyboard;
+//    
+//    // detect the height of our screen
+//    int height = [UIScreen mainScreen].bounds.size.height;
+//    
+//    if (height == 480) {
+//        storyboard = [UIStoryboard storyboardWithName:@"Welcome" bundle:nil];
+//        // NSLog(@"Device has a 3.5inch Display.");
+//    } else {
+//        storyboard = [UIStoryboard storyboardWithName:@"Welcome" bundle:nil];
+//        // NSLog(@"Device has a 4inch Display.");
+//    }
+//    
+//    return storyboard;
+//}
 
 
 @end
