@@ -24,6 +24,7 @@
 		CE804F421E703FF0009F8DCE /* CadastreseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE804F411E703FF0009F8DCE /* CadastreseViewController.m */; };
 		CE804F441E709873009F8DCE /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE804F431E709872009F8DCE /* Welcome.storyboard */; };
 		CE804F491E7098D7009F8DCE /* welcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE804F481E7098D7009F8DCE /* welcomeViewController.m */; };
+		CE804F4C1E70D696009F8DCE /* welcomefinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE804F4B1E70D696009F8DCE /* welcomefinishViewController.m */; };
 		CEB12DEB1E38FF7E00FDAC63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */; };
 		CEB12DF71E3929D300FDAC63 /* promocao.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DF61E3929D300FDAC63 /* promocao.m */; };
 		CEB12DFA1E3929E800FDAC63 /* promocaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DF91E3929E800FDAC63 /* promocaoViewController.m */; };
@@ -78,6 +79,8 @@
 		CE804F431E709872009F8DCE /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Welcome.storyboard; path = Files/Screen/StoryBoard/Welcome.storyboard; sourceTree = "<group>"; };
 		CE804F471E7098D7009F8DCE /* welcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = welcomeViewController.h; path = Files/Screen/Welcome/ViewController/welcomeViewController.h; sourceTree = "<group>"; };
 		CE804F481E7098D7009F8DCE /* welcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = welcomeViewController.m; path = Files/Screen/Welcome/ViewController/welcomeViewController.m; sourceTree = "<group>"; };
+		CE804F4A1E70D696009F8DCE /* welcomefinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = welcomefinishViewController.h; path = Files/Screen/Welcome/ViewController/welcomefinishViewController.h; sourceTree = "<group>"; };
+		CE804F4B1E70D696009F8DCE /* welcomefinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = welcomefinishViewController.m; path = Files/Screen/Welcome/ViewController/welcomefinishViewController.m; sourceTree = "<group>"; };
 		CEB12DEA1E38FF7E00FDAC63 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CEB12DF51E3929D300FDAC63 /* promocao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = promocao.h; path = Files/Screen/Promocao/Model/promocao.h; sourceTree = "<group>"; };
 		CEB12DF61E3929D300FDAC63 /* promocao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = promocao.m; path = Files/Screen/Promocao/Model/promocao.m; sourceTree = "<group>"; };
@@ -377,6 +380,8 @@
 			children = (
 				CE804F471E7098D7009F8DCE /* welcomeViewController.h */,
 				CE804F481E7098D7009F8DCE /* welcomeViewController.m */,
+				CE804F4A1E70D696009F8DCE /* welcomefinishViewController.h */,
+				CE804F4B1E70D696009F8DCE /* welcomefinishViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				CE0B88BD1E313ABC00A1BDD5 /* horario.m in Sources */,
 				CE3900741E65086600B00758 /* maisTableViewController.m in Sources */,
 				CE0B88C51E3145AF00A1BDD5 /* logOutViewController.m in Sources */,
+				CE804F4C1E70D696009F8DCE /* welcomefinishViewController.m in Sources */,
 				CE3AC0661E42449100CC64D4 /* HistoricoTableViewCell.m in Sources */,
 				CE4087F01E26BCEE009416B5 /* unidade.m in Sources */,
 				CE804F491E7098D7009F8DCE /* welcomeViewController.m in Sources */,
