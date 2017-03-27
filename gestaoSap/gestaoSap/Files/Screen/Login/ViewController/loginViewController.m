@@ -115,7 +115,10 @@ static const int COD_EMPRESA = 58 ;
             
             [VariaveisGlobais shared]._codEmpresa = COD_EMPRESA;
             [VariaveisGlobais shared]._codCliente = [[dict objectForKey:@"COD_CLIENTE"] integerValue];
-             
+            
+            [[NSUserDefaults standardUserDefaults] setObject:@(COD_EMPRESA) forKey:@"UserLoginIdSession"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
             UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];
             [self presentViewController:vc animated:YES completion:nil];
             
@@ -178,10 +181,6 @@ static const int COD_EMPRESA = 58 ;
 
 -(IBAction)onclickCadastrese:(id)sender
 {
-//    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CadastreseViewController"];
-//    [self presentViewController:vc animated:YES completion:nil];
-    
-    
     if([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
         mailCont.mailComposeDelegate = self;
@@ -208,32 +207,6 @@ static const int COD_EMPRESA = 58 ;
     }
     
     [controller dismissViewControllerAnimated:YES completion:nil];
-    
-//    
-//    switch (result) {
-//        case MFMailComposeResultSent:
-//
-//
-//            
-//            NSLog(@"You sent the email.");
-//            break;
-//        case MFMailComposeResultSaved:
-//            NSLog(@"You saved a draft of this email");
-//            break;
-//        case MFMailComposeResultCancelled:
-//            NSLog(@"You cancelled sending this email.");
-//            break;
-//        case MFMailComposeResultFailed:
-//            NSLog(@"Mail failed:  An error occurred when trying to compose this email");
-//            break;
-//        default:
-//            NSLog(@"An error occurred when trying to compose this email");
-//            break;
-//    }
-    
-
-    
-    
 }
 
 @end

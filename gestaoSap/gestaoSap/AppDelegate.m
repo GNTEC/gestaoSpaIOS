@@ -20,12 +20,18 @@
 
     [GMSServices provideAPIKey:@"AIzaSyCUwfkhaeQKEdal7xrzlAwMr6D5WMz79tU"];
     
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Welcome" bundle:nil];
-    welcomeViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
+    //recupera a variavel
+    NSString *session = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserLoginIdSession"];
     
-    self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
+    if(session == nil)
+    {
+        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Welcome" bundle:nil];
+        welcomeViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
+        
+        self.window.rootViewController = vc;
+        [self.window makeKeyAndVisible];
+    }
     
     return YES;
 }

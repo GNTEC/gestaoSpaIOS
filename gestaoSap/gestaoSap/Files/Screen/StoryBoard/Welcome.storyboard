@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,16 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQz-WP-7bX">
-                                <rect key="frame" x="34" y="447" width="316" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RQz-WP-7bX">
+                                <rect key="frame" x="34" y="469" width="307" height="151"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">	1</string>
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -78,7 +78,7 @@
                                         <string key="content">.	</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -131,7 +131,7 @@
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -182,7 +182,7 @@
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -232,7 +232,7 @@
                                         <string key="content">.	</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -285,7 +285,7 @@
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -334,9 +334,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xoc-rU-eXk">
-                                <rect key="frame" x="90" y="24" width="191" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xoc-rU-eXk">
+                                <rect key="frame" x="90" y="24" width="195" height="64"/>
                                 <attributedString key="attributedText">
                                     <fragment content="PARA ">
                                         <attributes>
@@ -344,7 +343,7 @@
                                             <font key="NSFont" size="30" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="6"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -393,7 +392,7 @@
                                             <font key="NSFont" size="25" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="3"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -439,20 +438,32 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df1-9H-o8b">
-                                <rect key="frame" x="307" y="630" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df1-9H-o8b">
+                                <rect key="frame" x="291" y="637" width="55" height="30"/>
                                 <state key="normal" title="Proxima"/>
                                 <connections>
                                     <segue destination="yh1-af-c0p" kind="show" id="c4Y-Iz-HiC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telaLogin" translatesAutoresizingMaskIntoConstraints="NO" id="9SS-Rx-SqE">
-                                <rect key="frame" x="92" y="117" width="193" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="telaLogin" translatesAutoresizingMaskIntoConstraints="NO" id="9SS-Rx-SqE">
+                                <rect key="frame" x="91" y="117" width="193" height="327"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9SS-Rx-SqE" firstAttribute="leading" secondItem="SAA-iz-bmb" secondAttribute="leadingMargin" constant="75" id="6mr-oA-M2p"/>
+                            <constraint firstItem="Xoc-rU-eXk" firstAttribute="leading" secondItem="SAA-iz-bmb" secondAttribute="leadingMargin" constant="74" id="DPe-Hv-pPF"/>
+                            <constraint firstItem="Xoc-rU-eXk" firstAttribute="top" secondItem="xFX-rc-RFY" secondAttribute="bottom" constant="4" id="Daa-Uz-GqL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="df1-9H-o8b" secondAttribute="trailing" constant="13" id="EKg-oO-V1D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RQz-WP-7bX" secondAttribute="trailing" constant="18" id="QBR-wq-SPb"/>
+                            <constraint firstItem="RQz-WP-7bX" firstAttribute="leading" secondItem="SAA-iz-bmb" secondAttribute="leadingMargin" constant="18" id="bTZ-4l-Vma"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9SS-Rx-SqE" secondAttribute="trailing" constant="75" id="ek5-dB-vlT"/>
+                            <constraint firstItem="RQz-WP-7bX" firstAttribute="top" secondItem="9SS-Rx-SqE" secondAttribute="bottom" constant="25" id="h3F-iA-PPS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xoc-rU-eXk" secondAttribute="trailing" constant="74" id="hkf-lE-q6q"/>
+                            <constraint firstItem="df1-9H-o8b" firstAttribute="top" secondItem="RQz-WP-7bX" secondAttribute="bottom" constant="17" id="nR2-4R-sfb"/>
+                            <constraint firstItem="G2N-1O-mJz" firstAttribute="top" secondItem="df1-9H-o8b" secondAttribute="bottom" id="tJw-QB-Sds"/>
+                            <constraint firstItem="9SS-Rx-SqE" firstAttribute="top" secondItem="Xoc-rU-eXk" secondAttribute="bottom" constant="29" id="zb2-P0-MgB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1L-Kv-gbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -471,20 +482,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telaAgendamento" translatesAutoresizingMaskIntoConstraints="NO" id="lIt-ew-8Hb">
-                                <rect key="frame" x="93" y="115" width="193" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="telaAgendamento" translatesAutoresizingMaskIntoConstraints="NO" id="lIt-ew-8Hb">
+                                <rect key="frame" x="91" y="117" width="193" height="341"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47J-H9-a24">
-                                <rect key="frame" x="35" y="448" width="316" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="47J-H9-a24">
+                                <rect key="frame" x="26" y="483" width="323" height="143"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">	1.	</string>
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -537,7 +546,7 @@
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -588,7 +597,7 @@
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -642,7 +651,7 @@
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -693,7 +702,7 @@
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -747,7 +756,7 @@
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -798,7 +807,7 @@
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -851,7 +860,7 @@ CQ
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -905,7 +914,7 @@ CQ
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -956,7 +965,7 @@ CQ
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -1009,7 +1018,7 @@ CQ
                                         <attributes>
                                             <color key="NSColor" red="0.26667000000000002" green="0.66274999999999995" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -1061,7 +1070,7 @@ CQ
                                             <font key="NSFont" size="18" name="TrebuchetMS"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" paragraphSpacing="4.2999999999999998" headIndent="27" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="1">
                                                         <options/>
@@ -1110,9 +1119,8 @@ CQ
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqt-x9-2fN">
-                                <rect key="frame" x="91" y="27" width="191" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pqt-x9-2fN">
+                                <rect key="frame" x="90" y="24" width="195" height="64"/>
                                 <attributedString key="attributedText">
                                     <fragment content="PARA ">
                                         <attributes>
@@ -1120,7 +1128,7 @@ CQ
                                             <font key="NSFont" size="30" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="6"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -1169,7 +1177,7 @@ CQ
                                             <font key="NSFont" size="25" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="3"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -1215,17 +1223,15 @@ CQ
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuF-cD-8w7">
-                                <rect key="frame" x="308" y="632" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuF-cD-8w7">
+                                <rect key="frame" x="294" y="637" width="55" height="30"/>
                                 <state key="normal" title="Proxima"/>
                                 <connections>
                                     <segue destination="old-4i-BMe" kind="show" id="f80-4X-zRz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-tf-1vl">
-                                <rect key="frame" x="12" y="632" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-tf-1vl">
+                                <rect key="frame" x="26" y="632" width="39" height="35"/>
                                 <state key="normal" title="voltar"/>
                                 <connections>
                                     <segue destination="NFn-UF-8ru" kind="show" id="HoM-Bh-daz"/>
@@ -1233,6 +1239,23 @@ CQ
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lIt-ew-8Hb" firstAttribute="top" secondItem="Pqt-x9-2fN" secondAttribute="bottom" constant="29" id="1wV-EL-625"/>
+                            <constraint firstItem="2JV-tf-1vl" firstAttribute="leading" secondItem="e90-Pc-lbE" secondAttribute="leadingMargin" constant="10" id="4m1-hx-C7a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pqt-x9-2fN" secondAttribute="trailing" constant="74" id="7bA-M2-BPs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YuF-cD-8w7" secondAttribute="trailing" constant="10" id="91y-QY-cmh"/>
+                            <constraint firstItem="lIt-ew-8Hb" firstAttribute="leading" secondItem="e90-Pc-lbE" secondAttribute="leadingMargin" constant="75" id="MJD-ZO-htK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lIt-ew-8Hb" secondAttribute="trailing" constant="75" id="Omv-0b-8AC"/>
+                            <constraint firstItem="YuF-cD-8w7" firstAttribute="top" secondItem="47J-H9-a24" secondAttribute="bottom" constant="11" id="Q13-y2-5GL"/>
+                            <constraint firstItem="Pqt-x9-2fN" firstAttribute="leading" secondItem="e90-Pc-lbE" secondAttribute="leadingMargin" constant="74" id="Vwh-ct-bEs"/>
+                            <constraint firstItem="47J-H9-a24" firstAttribute="top" secondItem="lIt-ew-8Hb" secondAttribute="bottom" constant="25" id="YVY-yJ-Wis"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="47J-H9-a24" secondAttribute="trailing" constant="10" id="YjW-6R-goh"/>
+                            <constraint firstItem="Pqt-x9-2fN" firstAttribute="top" secondItem="fC7-nS-DTf" secondAttribute="bottom" constant="4" id="ZxG-eR-bmF"/>
+                            <constraint firstItem="47J-H9-a24" firstAttribute="leading" secondItem="e90-Pc-lbE" secondAttribute="leadingMargin" constant="10" id="g3y-AL-qzU"/>
+                            <constraint firstItem="2JV-tf-1vl" firstAttribute="top" secondItem="47J-H9-a24" secondAttribute="bottom" constant="6" id="sDn-Ql-xHN"/>
+                            <constraint firstItem="R4J-OR-wSm" firstAttribute="top" secondItem="2JV-tf-1vl" secondAttribute="bottom" id="wXo-eF-D8s"/>
+                            <constraint firstItem="R4J-OR-wSm" firstAttribute="top" secondItem="YuF-cD-8w7" secondAttribute="bottom" id="xpQ-GR-8Hc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWg-Ez-g8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1247,17 +1270,15 @@ CQ
                         <viewControllerLayoutGuide type="top" id="i8d-dr-jdu"/>
                         <viewControllerLayoutGuide type="bottom" id="xnj-tP-jXO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tlf-LK-S5g">
+                    <view key="view" contentMode="scaleAspectFit" id="tlf-LK-S5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telaHistorico" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-3t-UBP">
-                                <rect key="frame" x="92" y="111" width="193" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="telaHistorico" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-3t-UBP">
+                                <rect key="frame" x="91" y="117" width="193" height="320"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA4-ag-HxQ">
-                                <rect key="frame" x="62" y="23" width="274" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pA4-ag-HxQ">
+                                <rect key="frame" x="51" y="24" width="273" height="64"/>
                                 <attributedString key="attributedText">
                                     <fragment content="HISTÓRICO">
                                         <attributes>
@@ -1265,7 +1286,8 @@ CQ
                                             <font key="NSFont" size="30" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="6"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <font key="NSOriginalFont" size="30" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -1314,7 +1336,8 @@ CQ
                                             <font key="NSFont" size="25" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="3"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <font key="NSOriginalFont" size="25" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -1360,25 +1383,22 @@ CQ
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xja-Zs-BeR">
-                                <rect key="frame" x="307" y="630" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xja-Zs-BeR">
+                                <rect key="frame" x="294" y="637" width="55" height="30"/>
                                 <state key="normal" title="Proxima"/>
                                 <connections>
                                     <segue destination="CMY-iO-lJu" kind="show" id="mti-Xg-Jnh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54z-vo-2bx">
-                                <rect key="frame" x="11" y="630" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54z-vo-2bx">
+                                <rect key="frame" x="26" y="637" width="39" height="30"/>
                                 <state key="normal" title="voltar"/>
                                 <connections>
                                     <segue destination="yh1-af-c0p" kind="show" id="Y4T-WJ-pPg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-MG-Tog">
-                                <rect key="frame" x="21" y="441" width="346" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-MG-Tog">
+                                <rect key="frame" x="26" y="462" width="323" height="150"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">	1.</string>
@@ -2438,6 +2458,23 @@ CQ
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rRA-MG-Tog" firstAttribute="top" secondItem="lkf-3t-UBP" secondAttribute="bottom" constant="25" id="1ZY-jJ-u1u"/>
+                            <constraint firstItem="lkf-3t-UBP" firstAttribute="top" secondItem="pA4-ag-HxQ" secondAttribute="bottom" constant="29" id="3lB-Y4-mFZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xja-Zs-BeR" secondAttribute="trailing" constant="10" id="HYM-W5-jNX"/>
+                            <constraint firstItem="54z-vo-2bx" firstAttribute="leading" secondItem="tlf-LK-S5g" secondAttribute="leadingMargin" constant="10" id="IAe-qo-kqd"/>
+                            <constraint firstItem="54z-vo-2bx" firstAttribute="top" secondItem="rRA-MG-Tog" secondAttribute="bottom" constant="25" id="PGj-qC-cuU"/>
+                            <constraint firstItem="rRA-MG-Tog" firstAttribute="leading" secondItem="tlf-LK-S5g" secondAttribute="leadingMargin" constant="10" id="TpC-2a-nGv"/>
+                            <constraint firstItem="Xja-Zs-BeR" firstAttribute="top" secondItem="rRA-MG-Tog" secondAttribute="bottom" constant="25" id="VU5-g6-FMY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pA4-ag-HxQ" secondAttribute="trailing" constant="35" id="XI9-ML-oHd"/>
+                            <constraint firstItem="pA4-ag-HxQ" firstAttribute="top" secondItem="i8d-dr-jdu" secondAttribute="bottom" constant="4" id="b89-xg-aMJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rRA-MG-Tog" secondAttribute="trailing" constant="10" id="dP8-fb-SJ0"/>
+                            <constraint firstItem="pA4-ag-HxQ" firstAttribute="leading" secondItem="tlf-LK-S5g" secondAttribute="leadingMargin" constant="35" id="gZF-9B-peY"/>
+                            <constraint firstItem="lkf-3t-UBP" firstAttribute="leading" secondItem="tlf-LK-S5g" secondAttribute="leadingMargin" constant="75" id="leQ-zH-6g7"/>
+                            <constraint firstItem="xnj-tP-jXO" firstAttribute="top" secondItem="54z-vo-2bx" secondAttribute="bottom" id="lef-2s-GU1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lkf-3t-UBP" secondAttribute="trailing" constant="75" id="piF-Zk-Sic"/>
+                            <constraint firstItem="xnj-tP-jXO" firstAttribute="top" secondItem="Xja-Zs-BeR" secondAttribute="bottom" id="rxS-gl-t8f"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhX-cd-SPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2456,18 +2493,17 @@ CQ
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-jv-xck">
-                                <rect key="frame" x="10" y="126" width="348" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-jv-xck">
+                                <rect key="frame" x="10" y="94.5" width="355" height="87.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="FICAM DISPONÍVEIS AS PROMOÇÕES ATUAIS DO ESTABELECIMENTO.">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.69020000000000004" blue="0.94118000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="TrebuchetMS-Bold"/>
+                                            <font key="NSFont" size="25" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
                                             <font key="NSOriginalFont" size="30" name="TrebuchetMS-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -2513,17 +2549,17 @@ CQ
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxp-ys-qJ3">
-                                <rect key="frame" x="52" y="50" width="274" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pxp-ys-qJ3">
+                                <rect key="frame" x="66" y="24" width="243" height="52.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="AQUI">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.69020000000000004" blue="0.94118000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="67" name="TrebuchetMS-Bold"/>
+                                            <font key="NSFont" size="45" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="6"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <font key="NSOriginalFont" size="40" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -2569,28 +2605,42 @@ CQ
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-I6-jQC">
-                                <rect key="frame" x="303" y="634" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-I6-jQC">
+                                <rect key="frame" x="294" y="637" width="55" height="30"/>
                                 <state key="normal" title="Proxima"/>
                                 <connections>
                                     <segue destination="EMo-UP-Nj0" kind="show" id="z3M-zp-R9R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25i-El-QBZ">
-                                <rect key="frame" x="7" y="634" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25i-El-QBZ">
+                                <rect key="frame" x="26" y="637" width="39" height="30"/>
                                 <state key="normal" title="voltar"/>
                                 <connections>
                                     <segue destination="old-4i-BMe" kind="show" id="W9b-eB-MQz"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telaPromocao" translatesAutoresizingMaskIntoConstraints="NO" id="UbM-Sy-Vz0">
-                                <rect key="frame" x="89" y="262" width="193" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="telaPromocao" translatesAutoresizingMaskIntoConstraints="NO" id="UbM-Sy-Vz0">
+                                <rect key="frame" x="91" y="219" width="193" height="363"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pxp-ys-qJ3" firstAttribute="top" secondItem="ZY0-DP-iNz" secondAttribute="bottom" constant="4" id="8gX-wa-v7A"/>
+                            <constraint firstItem="UbM-Sy-Vz0" firstAttribute="top" secondItem="QCG-jv-xck" secondAttribute="bottom" constant="37" id="CDV-Ie-gMQ"/>
+                            <constraint firstItem="Pxp-ys-qJ3" firstAttribute="leading" secondItem="Dla-cq-LEm" secondAttribute="leadingMargin" constant="50" id="HkQ-yG-KVD"/>
+                            <constraint firstItem="UXs-I6-jQC" firstAttribute="top" secondItem="UbM-Sy-Vz0" secondAttribute="bottom" constant="55" id="IIT-JL-DoS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UbM-Sy-Vz0" secondAttribute="trailing" constant="75" id="Nog-mX-4Fb"/>
+                            <constraint firstItem="QCG-jv-xck" firstAttribute="top" secondItem="Pxp-ys-qJ3" secondAttribute="bottom" constant="18" id="OhI-T3-uip"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UXs-I6-jQC" secondAttribute="trailing" constant="10" id="TFh-a5-261"/>
+                            <constraint firstItem="ed1-RF-8Z2" firstAttribute="top" secondItem="25i-El-QBZ" secondAttribute="bottom" id="UBx-4k-4yc"/>
+                            <constraint firstItem="25i-El-QBZ" firstAttribute="leading" secondItem="Dla-cq-LEm" secondAttribute="leadingMargin" constant="10" id="W2F-S8-ENH"/>
+                            <constraint firstItem="25i-El-QBZ" firstAttribute="top" secondItem="UbM-Sy-Vz0" secondAttribute="bottom" constant="55" id="ZOl-Zi-4er"/>
+                            <constraint firstItem="UbM-Sy-Vz0" firstAttribute="leading" secondItem="Dla-cq-LEm" secondAttribute="leadingMargin" constant="75" id="fFH-aj-z1S"/>
+                            <constraint firstItem="ed1-RF-8Z2" firstAttribute="top" secondItem="UXs-I6-jQC" secondAttribute="bottom" id="m5d-hT-veF"/>
+                            <constraint firstItem="QCG-jv-xck" firstAttribute="leading" secondItem="Dla-cq-LEm" secondAttribute="leading" constant="10" id="obd-De-RiI"/>
+                            <constraint firstAttribute="trailing" secondItem="QCG-jv-xck" secondAttribute="trailing" constant="10" id="vN1-qR-zFD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pxp-ys-qJ3" secondAttribute="trailing" constant="50" id="zA6-bu-0l7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MU-WS-5H6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2609,21 +2659,20 @@ CQ
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telaLocalizacao" translatesAutoresizingMaskIntoConstraints="NO" id="XM0-R3-eie">
-                                <rect key="frame" x="100" y="264" width="193" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="telaLocalizacao" translatesAutoresizingMaskIntoConstraints="NO" id="XM0-R3-eie">
+                                <rect key="frame" x="91" y="231" width="193" height="357"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0F-N7-XhT">
-                                <rect key="frame" x="63" y="52" width="274" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m0F-N7-XhT">
+                                <rect key="frame" x="66" y="24" width="243" height="52.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SAIBA">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.69020000000000004" blue="0.94118000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="67" name="TrebuchetMS-Bold"/>
+                                            <font key="NSFont" size="45" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="6"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <font key="NSOriginalFont" size="45" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -2669,34 +2718,31 @@ CQ
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny4-Do-TJI">
-                                <rect key="frame" x="279" y="636" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny4-Do-TJI">
+                                <rect key="frame" x="265" y="637" width="84" height="30"/>
                                 <state key="normal" title="Ok Entendi !"/>
                                 <connections>
                                     <action selector="logar:" destination="EMo-UP-Nj0" eventType="touchUpInside" id="ACp-n6-tmX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1e-dd-A4P">
-                                <rect key="frame" x="18" y="636" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1e-dd-A4P">
+                                <rect key="frame" x="26" y="637" width="39" height="30"/>
                                 <state key="normal" title="voltar"/>
                                 <connections>
                                     <segue destination="CMY-iO-lJu" kind="show" id="nzQ-Rb-OFp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-7Q-1RC">
-                                <rect key="frame" x="17" y="126" width="349" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-7Q-1RC">
+                                <rect key="frame" x="16" y="94.5" width="343" height="58.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="A LOCALIZAÇÃO EXATA DO ESTABELECIMENTO.">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.69020000000000004" blue="0.94118000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="TrebuchetMS-Bold"/>
+                                            <font key="NSFont" size="25" name="TrebuchetMS-Bold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="30" name="TrebuchetMS-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <font key="NSOriginalFont" size="25" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="72" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="28">
                                                         <options/>
@@ -2744,6 +2790,23 @@ CQ
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ny4-Do-TJI" secondAttribute="trailing" constant="10" id="6sq-UY-3B3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m0F-N7-XhT" secondAttribute="trailing" constant="50" id="8hW-pV-gnS"/>
+                            <constraint firstItem="XM0-R3-eie" firstAttribute="top" secondItem="4ZX-7Q-1RC" secondAttribute="bottom" constant="78" id="G2l-Wf-2ld"/>
+                            <constraint firstItem="ny4-Do-TJI" firstAttribute="top" secondItem="XM0-R3-eie" secondAttribute="bottom" constant="49" id="bVr-oe-NPl"/>
+                            <constraint firstItem="L30-ZB-CUT" firstAttribute="top" secondItem="ny4-Do-TJI" secondAttribute="bottom" id="cIH-qd-VNz"/>
+                            <constraint firstItem="m0F-N7-XhT" firstAttribute="top" secondItem="rYi-Rr-d78" secondAttribute="bottom" constant="4" id="d5l-m4-N5R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ZX-7Q-1RC" secondAttribute="trailing" id="dw7-rG-yCN"/>
+                            <constraint firstItem="m0F-N7-XhT" firstAttribute="leading" secondItem="Qv6-g7-NY5" secondAttribute="leadingMargin" constant="50" id="ebD-qb-Owl"/>
+                            <constraint firstItem="XM0-R3-eie" firstAttribute="leading" secondItem="Qv6-g7-NY5" secondAttribute="leadingMargin" constant="75" id="hXl-Mt-vfT"/>
+                            <constraint firstItem="L30-ZB-CUT" firstAttribute="top" secondItem="e1e-dd-A4P" secondAttribute="bottom" id="kTt-LV-8ij"/>
+                            <constraint firstItem="e1e-dd-A4P" firstAttribute="leading" secondItem="Qv6-g7-NY5" secondAttribute="leadingMargin" constant="10" id="oSl-JH-aXu"/>
+                            <constraint firstItem="e1e-dd-A4P" firstAttribute="top" secondItem="XM0-R3-eie" secondAttribute="bottom" constant="49" id="pfM-Ld-C9f"/>
+                            <constraint firstItem="4ZX-7Q-1RC" firstAttribute="leading" secondItem="Qv6-g7-NY5" secondAttribute="leadingMargin" id="qfy-dv-B5m"/>
+                            <constraint firstItem="4ZX-7Q-1RC" firstAttribute="top" secondItem="m0F-N7-XhT" secondAttribute="bottom" constant="18" id="tAL-WV-lgi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XM0-R3-eie" secondAttribute="trailing" constant="75" id="vI0-1y-YiE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonFinishWelCome" destination="ny4-Do-TJI" id="rSD-bi-IoD"/>
