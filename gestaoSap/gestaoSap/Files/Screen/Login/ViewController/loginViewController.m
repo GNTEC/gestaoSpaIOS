@@ -12,7 +12,7 @@
 #import <LLARingSpinnerView/LLARingSpinnerView.h>
 #import "unidadeViewController.h"
 
-static const int COD_EMPRESA = 58 ;
+static const int COD_EMPRESA = 769 ;
 
 @interface loginViewController ()
 {
@@ -20,7 +20,7 @@ static const int COD_EMPRESA = 58 ;
 }
 
 @property (nonatomic, strong) SOAPEngine *soap;
-@property (strong, nonatomic)MFMailComposeViewController *mailer;
+@property (strong, nonatomic) MFMailComposeViewController *mailer;
 
 @end
 

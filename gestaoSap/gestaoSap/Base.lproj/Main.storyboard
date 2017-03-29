@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="W92-GM-Dh9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="W92-GM-Dh9">
                                 <rect key="frame" x="112" y="49" width="151" height="125"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-nO-72T">
@@ -151,16 +151,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0pV-Me-sTE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0pV-Me-sTE">
                                 <rect key="frame" x="112" y="49" width="151" height="125"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhh-Qv-GGn">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhh-Qv-GGn">
                                 <rect key="frame" x="17" y="186" width="341" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.43529411764705883" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-Sb-sS5">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-Sb-sS5">
                                 <rect key="frame" x="17" y="229" width="341" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -204,7 +204,7 @@
                                     <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NN7-d0-duo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi8-6O-kvb">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi8-6O-kvb">
                                 <rect key="frame" x="15" y="453" width="345" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -449,7 +449,7 @@
             </objects>
             <point key="canvasLocation" x="-1044" y="1562"/>
         </scene>
-        <!--SPA Dona Beleza-->
+        <!--SPA Stetic Class-->
         <scene sceneID="REg-9C-7bW">
             <objects>
                 <tableViewController storyboardIdentifier="agendaTableViewController" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SND-Le-qb3" customClass="agendaTableViewController" sceneMemberID="viewController">
@@ -720,7 +720,7 @@
                             <outlet property="delegate" destination="SND-Le-qb3" id="C9N-Ny-6Xd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SPA Dona Beleza" id="96T-yM-ZsV">
+                    <navigationItem key="navigationItem" title="SPA Stetic Class" id="96T-yM-ZsV">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ccF-no-YuD"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1310,15 +1310,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-w9-kmE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-w9-kmE">
                                 <rect key="frame" x="112" y="49" width="151" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="60m-oy-6Jc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="bgZ-SS-9yX"/>
+                                    <constraint firstAttribute="width" constant="151" id="PPm-XR-gOh"/>
+                                    <constraint firstAttribute="height" constant="125" id="Pzw-Ta-DaR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhp-mh-q0q">
-                                <rect key="frame" x="16" y="187" width="343" height="30"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="HIGIENÓPOLIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhp-mh-q0q">
+                                <rect key="frame" x="16" y="272" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1352,16 +1352,16 @@
                                 </connections>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="O7L-8V-F7H">
-                                <rect key="frame" x="123" y="225" width="130" height="138"/>
+                                <rect key="frame" x="123" y="310" width="130" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuH-Ji-maR">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="59.5"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuH-Ji-maR">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a unidade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWA-rb-tQW">
-                                        <rect key="frame" x="0.0" y="78.5" width="130" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="36" width="130" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1373,23 +1373,22 @@
                         <constraints>
                             <constraint firstItem="mhp-mh-q0q" firstAttribute="leading" secondItem="5wk-t1-fSx" secondAttribute="leadingMargin" id="00I-Nz-otS"/>
                             <constraint firstItem="O7L-8V-F7H" firstAttribute="centerX" secondItem="5wk-t1-fSx" secondAttribute="centerX" id="1EV-od-lXv"/>
-                            <constraint firstItem="BMN-w9-kmE" firstAttribute="top" secondItem="2mF-aN-pXa" secondAttribute="bottom" constant="29" id="1ku-li-RU6"/>
                             <constraint firstItem="Hs8-oT-Tnu" firstAttribute="top" secondItem="ToS-sq-eNs" secondAttribute="bottom" id="26w-aQ-xV4"/>
                             <constraint firstItem="K4n-0Q-0Zb" firstAttribute="leading" secondItem="5wk-t1-fSx" secondAttribute="leadingMargin" id="7gs-C8-O7H"/>
-                            <constraint firstItem="BMN-w9-kmE" firstAttribute="top" secondItem="2mF-aN-pXa" secondAttribute="bottom" constant="29" id="B6w-Y3-A4u"/>
-                            <constraint firstItem="mhp-mh-q0q" firstAttribute="top" secondItem="BMN-w9-kmE" secondAttribute="bottom" constant="13" id="F6v-kj-rsA"/>
+                            <constraint firstItem="mhp-mh-q0q" firstAttribute="top" secondItem="BMN-w9-kmE" secondAttribute="bottom" constant="98" id="E6q-h5-t3g"/>
                             <constraint firstItem="K4n-0Q-0Zb" firstAttribute="top" secondItem="O7L-8V-F7H" secondAttribute="bottom" constant="8" id="Gg8-NN-6zi"/>
                             <constraint firstItem="ToS-sq-eNs" firstAttribute="leading" secondItem="5wk-t1-fSx" secondAttribute="leading" id="Gh5-PD-Bli"/>
                             <constraint firstAttribute="trailing" secondItem="ToS-sq-eNs" secondAttribute="trailing" id="QRd-4I-iYU"/>
-                            <constraint firstItem="mhp-mh-q0q" firstAttribute="top" secondItem="BMN-w9-kmE" secondAttribute="bottom" constant="13" id="S8D-h1-Lmm"/>
                             <constraint firstItem="O7L-8V-F7H" firstAttribute="top" secondItem="mhp-mh-q0q" secondAttribute="bottom" constant="8" id="Wqw-S2-ipu"/>
+                            <constraint firstItem="BMN-w9-kmE" firstAttribute="top" secondItem="2mF-aN-pXa" secondAttribute="bottom" constant="29" id="Ypk-Ev-7HH"/>
                             <constraint firstItem="EYM-Bn-VTq" firstAttribute="top" secondItem="K4n-0Q-0Zb" secondAttribute="bottom" constant="31" id="eKa-9a-pxT"/>
                             <constraint firstItem="mhp-mh-q0q" firstAttribute="trailing" secondItem="5wk-t1-fSx" secondAttribute="trailingMargin" id="o3k-XT-eh5"/>
                             <constraint firstItem="EYM-Bn-VTq" firstAttribute="leading" secondItem="5wk-t1-fSx" secondAttribute="leading" constant="15" id="ohi-UQ-aWi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BMN-w9-kmE" secondAttribute="trailing" constant="96" id="qHE-FB-128"/>
+                            <constraint firstItem="BMN-w9-kmE" firstAttribute="leading" secondItem="5wk-t1-fSx" secondAttribute="leadingMargin" constant="96" id="t3M-yd-ivW"/>
                             <constraint firstAttribute="trailing" secondItem="EYM-Bn-VTq" secondAttribute="trailing" constant="15" id="vTp-g5-Wqk"/>
                             <constraint firstItem="K4n-0Q-0Zb" firstAttribute="trailing" secondItem="5wk-t1-fSx" secondAttribute="trailingMargin" id="vih-nw-N0C"/>
                             <constraint firstItem="ToS-sq-eNs" firstAttribute="top" secondItem="EYM-Bn-VTq" secondAttribute="bottom" constant="19" id="xtW-co-z4i"/>
-                            <constraint firstItem="BMN-w9-kmE" firstAttribute="centerX" secondItem="5wk-t1-fSx" secondAttribute="centerX" id="yET-Ra-jgX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" id="loa-Mf-Uov"/>
@@ -1612,7 +1611,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vM6-Fx-Niy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mais" image="iconeMais" id="3yz-lf-7Iz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iWh-1j-PzQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iWh-1j-PzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
