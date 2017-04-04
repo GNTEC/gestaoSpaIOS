@@ -12,7 +12,7 @@
 #import <LLARingSpinnerView/LLARingSpinnerView.h>
 #import "unidadeViewController.h"
 
-static const int COD_EMPRESA = 769 ;
+static const int COD_EMPRESA = 769;
 
 @interface loginViewController ()
 {
@@ -161,7 +161,7 @@ static const int COD_EMPRESA = 769 ;
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
         soap.requestTimeout = 10;
-        soap.licenseKey = @"3hJP454la9UT4vl+7+imMyYa+BywnzS+SIsGTHAoE2lmyDY0vExuMYV8594krLhAl9/F69zo3LJTB6Wr0ZRuHQ==";
+        soap.licenseKey = @"whRGNkHH719j5474Q0yqdui4sXxBFFxlGXsyjt6510NzrXIUx2TYRaDdNeWb2j0W/l6cD/xiB2NHyq8tzUjyXQ==";
         
         [soap setIntegerValue:COD_EMPRESA forKey:@"COD_EMPRESA"];
         [soap setValue: self.textEmail.text forKey:@"usr"];

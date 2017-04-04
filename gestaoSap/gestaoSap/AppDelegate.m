@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [GMSServices provideAPIKey:@"AIzaSyCUwfkhaeQKEdal7xrzlAwMr6D5WMz79tU"];
+    //API DO GOGLE MAPAS
+    [GMSServices provideAPIKey:@"AIzaSyDndv18lWGzeaRMxHB3mnwg0FwPPjENpQ4"];
     
     //recupera a variavel
     NSString *session = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserLoginIdSession"];
