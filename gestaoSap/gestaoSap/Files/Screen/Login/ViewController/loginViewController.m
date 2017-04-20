@@ -12,7 +12,7 @@
 #import <LLARingSpinnerView/LLARingSpinnerView.h>
 #import "unidadeViewController.h"
 
-static const int COD_EMPRESA = 769;
+static const int COD_EMPRESA = 674;
 
 @interface loginViewController ()
 {
@@ -31,6 +31,16 @@ static const int COD_EMPRESA = 769;
     
     self.textEmail.delegate = self;
     self.textSenha.delegate = self;
+    
+    //VERIFICA SE O LOGIN FOI SALVO
+    //recupera a variavel
+    NSString *email = [[NSUserDefaults standardUserDefaults] valueForKey:@"email"];
+    
+    if(email != nil)
+    {
+        self.textEmail.text = email;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,6 +127,16 @@ static const int COD_EMPRESA = 769;
             [VariaveisGlobais shared]._codCliente = [[dict objectForKey:@"COD_CLIENTE"] integerValue];
             
             [[NSUserDefaults standardUserDefaults] setObject:@(COD_EMPRESA) forKey:@"UserLoginIdSession"];
+
+            if(self.swiLembrarEmail.isOn == YES)
+            {
+                [[NSUserDefaults standardUserDefaults] setObject:self.textEmail.text forKey:@"email"];
+            }
+            else
+            {
+                 [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"email"];
+            }
+            
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"unidadeViewController"];

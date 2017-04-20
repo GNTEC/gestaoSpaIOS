@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textEmail;
 @property (weak, nonatomic) IBOutlet UITextField *textSenha;
+@property (weak, nonatomic) IBOutlet UISwitch *swiLembrarEmail;
+
 
 
 @end
