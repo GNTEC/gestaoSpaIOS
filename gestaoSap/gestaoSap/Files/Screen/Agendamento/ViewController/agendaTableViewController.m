@@ -89,6 +89,7 @@
 
 -(void)limparTela
 {
+    [VariaveisGlobais shared]._servico = nil;
     [VariaveisGlobais shared]._profissional = nil;
     [VariaveisGlobais shared]._horarioAgendamento = nil;
     [VariaveisGlobais shared]._dataAgendamento = nil;

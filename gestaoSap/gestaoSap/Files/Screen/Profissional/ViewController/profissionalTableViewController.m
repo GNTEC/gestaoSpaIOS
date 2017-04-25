@@ -87,7 +87,7 @@
     [self getProfissionais:^(NSDictionary *dict, NSError *error) {
         
         NSMutableArray *arrayDataServico1 = [[NSMutableArray alloc] init];
-        arrayDataServico1 = [dict objectForKey:@"array"];
+        arrayDataServico1 = [dict objectForKey:@"ViewProfissional"];
             
         if(arrayDataServico1.count != 0)
         {
@@ -172,7 +172,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
         [soap setValue:strData forKey:@"DATA_AGENDA"];
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
-              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_PROFISSIONAIS_2"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_PROFISSIONAIS"
   completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
       
       block(dict, nil);
