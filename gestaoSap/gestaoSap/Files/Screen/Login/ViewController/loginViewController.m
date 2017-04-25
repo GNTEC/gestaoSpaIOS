@@ -128,7 +128,7 @@ static const int COD_EMPRESA = 674;
             
             [[NSUserDefaults standardUserDefaults] setObject:@(COD_EMPRESA) forKey:@"UserLoginIdSession"];
 
-            if(self.swiLembrarEmail.isOn == YES)
+            if(self.swiLembrarEmail.isOn)
             {
                 [[NSUserDefaults standardUserDefaults] setObject:self.textEmail.text forKey:@"email"];
             }
