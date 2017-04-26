@@ -35,10 +35,12 @@ static const int COD_EMPRESA = 674;
     //VERIFICA SE O LOGIN FOI SALVO
     //recupera a variavel
     NSString *email = [[NSUserDefaults standardUserDefaults] valueForKey:@"email"];
+    NSString *pass = [[NSUserDefaults standardUserDefaults] valueForKey:@"pass"];
     
     if(email != nil)
     {
         self.textEmail.text = email;
+        self.textSenha.text = pass;
     }
 
 }
@@ -131,10 +133,12 @@ static const int COD_EMPRESA = 674;
             if(self.swiLembrarEmail.isOn)
             {
                 [[NSUserDefaults standardUserDefaults] setObject:self.textEmail.text forKey:@"email"];
+                [[NSUserDefaults standardUserDefaults] setObject:self.textSenha.text forKey:@"pass"];
             }
             else
             {
                  [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"email"];
+                 [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"pass"];
             }
             
             [[NSUserDefaults standardUserDefaults] synchronize];

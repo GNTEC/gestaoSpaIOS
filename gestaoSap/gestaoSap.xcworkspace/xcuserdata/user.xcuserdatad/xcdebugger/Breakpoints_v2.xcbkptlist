@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/Agendamento/ViewController/agendaTableViewController.m"
-            timestampString = "514821474.600264"
+            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+            timestampString = "514928005.101505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "-onclickAgendar:"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "-getHorariosLivres:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestaoSap/Files/Screen/Agendamento/ViewController/agendaTableViewController.m"
-            timestampString = "514821474.600264"
+            timestampString = "514928179.976166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "-onclickAgendar:"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
+            landmarkName = "-agendar:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+            timestampString = "514928293.264235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "-getHorarios:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
