@@ -471,16 +471,17 @@
     
     [self limparHorarioAgendamento];
     
-    if(value == YES)
+    if(value == NO)
     {
         [VariaveisGlobais shared]._withProfissional = 0;
     }
     else
     {
         [VariaveisGlobais shared]._withProfissional = 1;
-        self.textProfissional.text = @"";
-        [VariaveisGlobais shared]._profissional = nil;
     }
+    
+    self.textProfissional.text = @"";
+    [VariaveisGlobais shared]._profissional = nil;
 }
 -(void)didPressScheduleButton{
     [self onclickAgendar:self];

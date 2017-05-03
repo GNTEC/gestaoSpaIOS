@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -269,7 +269,7 @@
             <objects>
                 <navigationController id="n7X-ft-FnO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Agendamento" image="icoAgendamento" id="9al-qD-Sx7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="N12-c8-2R8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N12-c8-2R8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -450,7 +450,7 @@
             </objects>
             <point key="canvasLocation" x="-1044" y="1562"/>
         </scene>
-        <!--SPA Stetic Class-->
+        <!--Stetic Class-->
         <scene sceneID="REg-9C-7bW">
             <objects>
                 <tableViewController storyboardIdentifier="agendaTableViewController" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SND-Le-qb3" customClass="agendaTableViewController" sceneMemberID="viewController">
@@ -721,7 +721,7 @@
                             <outlet property="delegate" destination="SND-Le-qb3" id="C9N-Ny-6Xd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SPA Stetic Class" id="96T-yM-ZsV">
+                    <navigationItem key="navigationItem" title="Stetic Class" id="96T-yM-ZsV">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ccF-no-YuD"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1430,7 +1430,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yg4-vv-Wu1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="localização" image="icoLocalizacao" id="bTa-H0-fYH"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6Ox-fN-bfs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Ox-fN-bfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1574,7 +1574,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVr-6Q-3R6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Promocões" image="icoPromocao" id="Zkl-DY-HdB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hZL-Ss-UDy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hZL-Ss-UDy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1593,7 +1593,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8S-lr-EAE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="histórico" image="icohistorico" id="Hg6-KX-C3n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8hK-sO-eOt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8hK-sO-eOt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1612,7 +1612,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vM6-Fx-Niy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mais" image="iconeMais" id="3yz-lf-7Iz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iWh-1j-PzQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iWh-1j-PzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

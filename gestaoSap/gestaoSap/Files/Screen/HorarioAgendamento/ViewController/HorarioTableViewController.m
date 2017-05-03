@@ -44,6 +44,7 @@
     if (!_arrayDataHorario) {
         _arrayDataHorario = [[NSMutableArray alloc] init];
     }
+    
     return _arrayDataHorario;
 }
 
@@ -97,6 +98,8 @@
         
         if (arrayDataServico1.count != 0)
         {
+            self.arrayDataHorario = nil;
+            
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
                 horario *objHorario = [[horario alloc]init];
@@ -141,7 +144,8 @@
             
         if (arrayDataServico1.count != 0)
         {
-        
+            self.arrayDataHorario = nil;
+            
             for(int i = 0; i < [arrayDataServico1 count]; ++i)
             {
                 horario *objHorario = [[horario alloc]init];
