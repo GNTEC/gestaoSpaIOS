@@ -204,7 +204,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     horario *stHorario = [self.arrayDataHorario objectAtIndex:indexPath.row];
-    [VariaveisGlobais shared]._horarioAgendamento = stHorario.dataIni;
+    
+    NSDate *time = [self stringToDate:stHorario.dataIni];
+    NSString *strHora = [self dateToString: time andFormat:@"HH:mm:ss"];
+    
+    [VariaveisGlobais shared]._horarioAgendamento = strHora;
+    [VariaveisGlobais shared]._codProfissional = stHorario.codProfissional;
     
     [self performSegueWithIdentifier:@"back" sender:self];
 }
@@ -266,6 +271,28 @@
   }];
         
     }
+}
+
+- (NSString*) dateToString:(NSDate*)inputDate andFormat:(NSString *)format {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:format];
+    
+    NSString *stringFromDate = [formatter stringFromDate:inputDate];
+    
+    return stringFromDate;
+}
+
+- (NSDate*) stringToDate:(NSString*)inputString {
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    //[dateFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [dateFormat setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
+    
+    NSDate *date = [dateFormat dateFromString:inputString];
+    
+    return date;
 }
 
 @end

@@ -1,0 +1,303 @@
+
+/* Class = "UILabel"; text = "Trocar Unidade"; ObjectID = "12L-tL-6E7"; */
+"12L-tL-6E7.text" = "Trocar Unidade";
+
+/* Class = "UILabel"; text = "São Paulo"; ObjectID = "2AI-3i-jVD"; */
+"2AI-3i-jVD.text" = "São Paulo";
+
+/* Class = "UITabBarItem"; title = "Mais"; ObjectID = "3yz-lf-7Iz"; */
+"3yz-lf-7Iz.title" = "Mais";
+
+/* Class = "UIButton"; normalTitle = "AGENDAR"; ObjectID = "44F-ZC-ck5"; */
+"44F-ZC-ck5.normalTitle" = "AGENDAR";
+
+/* Class = "UILabel"; text = "Serviço:"; ObjectID = "4UC-Bo-k7F"; */
+"4UC-Bo-k7F.text" = "Serviço:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Zl-4D-S3Q"; */
+"4Zl-4D-S3Q.text" = "Label";
+
+/* Class = "UILabel"; text = "data:"; ObjectID = "554-BI-2Z0"; */
+"554-BI-2Z0.text" = "data:";
+
+/* Class = "UILabel"; text = "Estatus:"; ObjectID = "6O8-Kr-da1"; */
+"6O8-Kr-da1.text" = "Estatus:";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "6v7-FK-agr"; */
+"6v7-FK-agr.placeholder" = "Email";
+
+/* Class = "UISegmentedControl"; 6wH-D6-MLz.segmentTitles[0] = "Confirmar"; ObjectID = "6wH-D6-MLz"; */
+"6wH-D6-MLz.segmentTitles[0]" = "Confirmar";
+
+/* Class = "UISegmentedControl"; 6wH-D6-MLz.segmentTitles[1] = "Alterar"; ObjectID = "6wH-D6-MLz"; */
+"6wH-D6-MLz.segmentTitles[1]" = "Alterar";
+
+/* Class = "UISegmentedControl"; 6wH-D6-MLz.segmentTitles[2] = "Cancelar"; ObjectID = "6wH-D6-MLz"; */
+"6wH-D6-MLz.segmentTitles[2]" = "Cancelar";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "7op-Pc-Pxv"; */
+"7op-Pc-Pxv.title" = "Voltar";
+
+/* Class = "UINavigationItem"; title = "Stetic Class"; ObjectID = "96T-yM-ZsV"; */
+"96T-yM-ZsV.title" = "Stetic Class";
+
+/* Class = "UITabBarItem"; title = "Agendamento"; ObjectID = "9al-qD-Sx7"; */
+"9al-qD-Sx7.title" = "Agendamento";
+
+/* Class = "UILabel"; text = "Lembrar email e senha"; ObjectID = "BBc-EK-Ywb"; */
+"BBc-EK-Ywb.text" = "Lembrar email e senha";
+
+/* Class = "UIViewController"; title = "login"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "login";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "CjU-zn-CTn"; */
+"CjU-zn-CTn.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "São Paulo"; ObjectID = "DVZ-Sb-sS5"; */
+"DVZ-Sb-sS5.text" = "São Paulo";
+
+/* Class = "UIButton"; normalTitle = "ENTRAR"; ObjectID = "Dmc-qk-Pod"; */
+"Dmc-qk-Pod.normalTitle" = "ENTRAR";
+
+/* Class = "UILabel"; text = "Nome Cliente:"; ObjectID = "EPx-W6-jrQ"; */
+"EPx-W6-jrQ.text" = "Nome Cliente:";
+
+/* Class = "UIButton"; normalTitle = "AGENDAR"; ObjectID = "EYM-Bn-VTq"; */
+"EYM-Bn-VTq.normalTitle" = "AGENDAR";
+
+/* Class = "UILabel"; text = "Data:"; ObjectID = "Fgj-5a-T81"; */
+"Fgj-5a-T81.text" = "Data:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "G4c-P9-DgN"; */
+"G4c-P9-DgN.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Resultado Agendamento"; ObjectID = "HMM-ft-9jg"; */
+"HMM-ft-9jg.title" = "Resultado Agendamento";
+
+/* Class = "UITabBarItem"; title = "histórico"; ObjectID = "Hg6-KX-C3n"; */
+"Hg6-KX-C3n.title" = "histórico";
+
+/* Class = "UINavigationItem"; title = "Profissional"; ObjectID = "IEJ-HL-BfV"; */
+"IEJ-HL-BfV.title" = "Profissional";
+
+/* Class = "UIViewController"; title = "localização"; ObjectID = "JVX-m4-XJ0"; */
+"JVX-m4-XJ0.title" = "localização";
+
+/* Class = "UILabel"; text = "Descrição do Serviço:"; ObjectID = "K2r-35-OZ3"; */
+"K2r-35-OZ3.text" = "Descrição do Serviço:";
+
+/* Class = "UILabel"; text = "Serviço:"; ObjectID = "KP1-Ft-oQE"; */
+"KP1-Ft-oQE.text" = "Serviço:";
+
+/* Class = "UILabel"; text = "Escolha uma data:"; ObjectID = "LmW-6m-Jhi"; */
+"LmW-6m-Jhi.text" = "Escolha uma data:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M1u-Zp-0qB"; */
+"M1u-Zp-0qB.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NIq-Ce-znn"; */
+"NIq-Ce-znn.text" = "Label";
+
+/* Class = "UILabel"; text = "Horario:"; ObjectID = "OCt-ga-8Jg"; */
+"OCt-ga-8Jg.text" = "Horario:";
+
+/* Class = "UILabel"; text = "Profissional:"; ObjectID = "PNi-xM-JV0"; */
+"PNi-xM-JV0.text" = "Profissional:";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "Plk-7S-2QL"; */
+"Plk-7S-2QL.placeholder" = "Senha";
+
+/* Class = "UILabel"; text = "hora:"; ObjectID = "QpQ-JO-AxZ"; */
+"QpQ-JO-AxZ.text" = "hora:";
+
+/* Class = "UINavigationItem"; title = "Hitórico Detalhe"; ObjectID = "QqO-NL-fmB"; */
+"QqO-NL-fmB.title" = "Hitórico Detalhe";
+
+/* Class = "UILabel"; text = "Valor:"; ObjectID = "RmJ-2f-6Wi"; */
+"RmJ-2f-6Wi.text" = "Valor:";
+
+/* Class = "UILabel"; text = "Prodissional:"; ObjectID = "SAj-5B-NHF"; */
+"SAj-5B-NHF.text" = "Prodissional:";
+
+/* Class = "UINavigationItem"; title = "Data Agendamento"; ObjectID = "Swd-rX-aRt"; */
+"Swd-rX-aRt.title" = "Data Agendamento";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TrP-sg-CWX"; */
+"TrP-sg-CWX.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Horário Agendamento"; ObjectID = "Ucn-bb-hev"; */
+"Ucn-bb-hev.title" = "Horário Agendamento";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "VIz-lP-3pk"; */
+"VIz-lP-3pk.normalTitle" = "OK";
+
+/* Class = "UINavigationItem"; title = "Histórico"; ObjectID = "Wjd-pD-gNo"; */
+"Wjd-pD-gNo.title" = "Histórico";
+
+/* Class = "UILabel"; text = "Código Agendamento:"; ObjectID = "XYY-Up-STX"; */
+"XYY-Up-STX.text" = "Código Agendamento:";
+
+/* Class = "UIButton"; normalTitle = "CADASTRE-SE"; ObjectID = "Xi8-6O-kvb"; */
+"Xi8-6O-kvb.normalTitle" = "CADASTRE-SE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y0T-jT-2m9"; */
+"Y0T-jT-2m9.text" = "Label";
+
+/* Class = "UILabel"; text = "Gerenciar"; ObjectID = "Y2C-Uc-GLh"; */
+"Y2C-Uc-GLh.text" = "Gerenciar";
+
+/* Class = "UILabel"; text = "Valor:"; ObjectID = "Yh7-bx-KaA"; */
+"Yh7-bx-KaA.text" = "Valor:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZkH-Wo-MHx"; */
+"ZkH-Wo-MHx.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Promocões"; ObjectID = "Zkl-DY-HdB"; */
+"Zkl-DY-HdB.title" = "Promocões";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "Zw1-Sh-XTZ"; */
+"Zw1-Sh-XTZ.text" = "Status:";
+
+/* Class = "UINavigationItem"; title = "Mais"; ObjectID = "aId-CX-7Pi"; */
+"aId-CX-7Pi.title" = "Mais";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ati-JB-l4I"; */
+"ati-JB-l4I.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Sobrenome"; ObjectID = "bDX-nU-Sus"; */
+"bDX-nU-Sus.placeholder" = "Sobrenome";
+
+/* Class = "UITabBarItem"; title = "localização"; ObjectID = "bTa-H0-fYH"; */
+"bTa-H0-fYH.title" = "localização";
+
+/* Class = "UILabel"; text = "Profissional"; ObjectID = "c0c-H8-G24"; */
+"c0c-H8-G24.text" = "Profissional";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c1s-fg-YCv"; */
+"c1s-fg-YCv.text" = "Label";
+
+/* Class = "UILabel"; text = "Horario"; ObjectID = "cEr-0g-npw"; */
+"cEr-0g-npw.text" = "Horario";
+
+/* Class = "UILabel"; text = "Preferencia por profissional ?"; ObjectID = "cT4-R3-KDe"; */
+"cT4-R3-KDe.text" = "Preferencia por profissional ?";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "cTv-N8-Wji"; */
+"cTv-N8-Wji.normalTitle" = "OK";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "ccF-no-YuD"; */
+"ccF-no-YuD.title" = "Voltar";
+
+/* Class = "UINavigationItem"; title = "Promoção"; ObjectID = "coK-RM-0gS"; */
+"coK-RM-0gS.title" = "Promoção";
+
+/* Class = "UILabel"; text = "Data:"; ObjectID = "cp2-b4-4gr"; */
+"cp2-b4-4gr.text" = "Data:";
+
+/* Class = "UIViewController"; title = "unidade"; ObjectID = "dtc-P1-Ydf"; */
+"dtc-P1-Ydf.title" = "unidade";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eGK-zo-gTo"; */
+"eGK-zo-gTo.text" = "Label";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "eHu-fq-Arw"; */
+"eHu-fq-Arw.text" = "Status:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fcG-pz-qI4"; */
+"fcG-pz-qI4.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "fpC-3m-uXy"; */
+"fpC-3m-uXy.placeholder" = "Senha";
+
+/* Class = "UIButton"; normalTitle = "VOLTAR"; ObjectID = "gfN-b7-6Pl"; */
+"gfN-b7-6Pl.normalTitle" = "VOLTAR";
+
+/* Class = "UILabel"; text = "Horario Disponível:"; ObjectID = "h06-J9-dOR"; */
+"h06-J9-dOR.text" = "Horario Disponível:";
+
+/* Class = "UILabel"; text = "Nome Cliente:"; ObjectID = "hhl-sp-Wz5"; */
+"hhl-sp-Wz5.text" = "Nome Cliente:";
+
+/* Class = "UILabel"; text = "Horario:"; ObjectID = "iAJ-xc-Wet"; */
+"iAJ-xc-Wet.text" = "Horario:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iBD-Fg-gTK"; */
+"iBD-Fg-gTK.text" = "Label";
+
+/* Class = "UILabel"; text = "Servico"; ObjectID = "ila-tf-94t"; */
+"ila-tf-94t.text" = "Servico";
+
+/* Class = "UILabel"; text = "HIGIENÓPOLIS"; ObjectID = "j1o-nO-72T"; */
+"j1o-nO-72T.text" = "HIGIENÓPOLIS";
+
+/* Class = "UILabel"; text = "Selecione a unidade"; ObjectID = "jWA-rb-tQW"; */
+"jWA-rb-tQW.text" = "Selecione a unidade";
+
+/* Class = "UILabel"; text = "Prodissional:"; ObjectID = "jbi-8H-Bx0"; */
+"jbi-8H-Bx0.text" = "Prodissional:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kGq-ME-wuH"; */
+"kGq-ME-wuH.text" = "Label";
+
+/* Class = "UILabel"; text = "Descrição do Serviço:"; ObjectID = "kOk-pb-ytl"; */
+"kOk-pb-ytl.text" = "Descrição do Serviço:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kib-rR-zgJ"; */
+"kib-rR-zgJ.text" = "Label";
+
+/* Class = "UISegmentedControl"; leR-IL-IYE.segmentTitles[0] = "Sim"; ObjectID = "leR-IL-IYE"; */
+"leR-IL-IYE.segmentTitles[0]" = "Sim";
+
+/* Class = "UISegmentedControl"; leR-IL-IYE.segmentTitles[1] = "Não"; ObjectID = "leR-IL-IYE"; */
+"leR-IL-IYE.segmentTitles[1]" = "Não";
+
+/* Class = "UILabel"; text = "HIGIENÓPOLIS"; ObjectID = "mhh-Qv-GGn"; */
+"mhh-Qv-GGn.text" = "HIGIENÓPOLIS";
+
+/* Class = "UILabel"; text = "HIGIENÓPOLIS"; ObjectID = "mhp-mh-q0q"; */
+"mhp-mh-q0q.text" = "HIGIENÓPOLIS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nOz-Pp-AOs"; */
+"nOz-Pp-AOs.text" = "Label";
+
+/* Class = "UILabel"; text = "Código Agendamento:"; ObjectID = "nQc-MG-7Fg"; */
+"nQc-MG-7Fg.text" = "Código Agendamento:";
+
+/* Class = "UILabel"; text = "Escolha um profissional:"; ObjectID = "ozk-zc-ovc"; */
+"ozk-zc-ovc.text" = "Escolha um profissional:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "p3o-6I-K8f"; */
+"p3o-6I-K8f.text" = "Label";
+
+/* Class = "UILabel"; text = "Sair"; ObjectID = "qw0-PZ-YGu"; */
+"qw0-PZ-YGu.text" = "Sair";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rBd-Uv-Pg9"; */
+"rBd-Uv-Pg9.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Serviço"; ObjectID = "rxO-tb-0i3"; */
+"rxO-tb-0i3.title" = "Serviço";
+
+/* Class = "UITextField"; placeholder = "Nome"; ObjectID = "sDJ-zb-2sJ"; */
+"sDJ-zb-2sJ.placeholder" = "Nome";
+
+/* Class = "UILabel"; text = "São Paulo"; ObjectID = "tuH-Ji-maR"; */
+"tuH-Ji-maR.text" = "São Paulo";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uwv-YZ-kqI"; */
+"uwv-YZ-kqI.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Localização"; ObjectID = "v7N-mF-TgZ"; */
+"v7N-mF-TgZ.title" = "Localização";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ySY-6g-13q"; */
+"ySY-6g-13q.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ycP-iI-9fl"; */
+"ycP-iI-9fl.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zL7-Bx-yg1"; */
+"zL7-Bx-yg1.text" = "Label";
+
+/* Class = "UILabel"; text = "Unidade:"; ObjectID = "zQR-wq-siG"; */
+"zQR-wq-siG.text" = "Unidade:";

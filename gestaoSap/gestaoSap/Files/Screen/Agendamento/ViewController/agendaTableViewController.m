@@ -102,7 +102,6 @@
 
 -(void) updateUI
 {
-    //self.textUnidade.text = [VariaveisGlobais shared]._nomeFilial;
     if([VariaveisGlobais shared]._servico != nil)
     {
         self.textServico.text = [VariaveisGlobais shared]._servico;
@@ -166,7 +165,7 @@
         return;
     }
     
-    if ([VariaveisGlobais shared]._withProfissional == 1)
+    if ([VariaveisGlobais shared]._withProfissional == 0)
     {
         if([VariaveisGlobais shared]._profissional == nil)
         {
@@ -201,8 +200,7 @@
         if (dict.count > 0) {
             
             NSInteger codAgendamento = [[dict objectForKey:@"COD_AGENDAMENTO"] integerValue];
-            //strMensagemRetorno = [dict objectForKey:@"MSG_RETORNO"];
-
+            
             if(codAgendamento != 0)
             {
                 [VariaveisGlobais shared]._codAgendamento = 0;
@@ -228,10 +226,12 @@
 
 - (void)agendar:(void(^)(NSDictionary *dict, NSError *error))block
 {
+    
+    NSString *strDataAgendamento;
+    
     if (block) {
         
-        NSString *strDataAgendamento;
-        
+
         if([VariaveisGlobais shared]._dataAgendamento != nil)
         {
             NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -242,16 +242,6 @@
         {
             strDataAgendamento = [VariaveisGlobais shared]._dataAgendamento1;
         }
-        
-        //HORA
-        NSString *dateStr = [VariaveisGlobais shared]._horarioAgendamento;
-        NSDateFormatter *dateFormatter=[NSDateFormatter new];
-        [dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
-        NSDate *date=[dateFormatter dateFromString:dateStr];
-        
-        NSDateFormatter *dfTime = [NSDateFormatter new];
-        [dfTime setDateFormat:@"hh:mm:ss"];
-        NSString *strHora=[dfTime stringFromDate:date];
         
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
@@ -273,7 +263,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codProfissional forKey:@"COD_PROFISSIONAL"];
         [soap setValue:strDataAgendamento forKey:@"DATA"];
-        [soap setValue:strHora forKey:@"HORA"];
+        [soap setValue:[VariaveisGlobais shared]._horarioAgendamento forKey:@"HORA"];
     
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
               soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/SET_AGENDAMENTO_2"
@@ -377,12 +367,10 @@
     }
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
-    
 }
+
 
 #pragma mark - Table view data source
 
@@ -469,8 +457,6 @@
 -(void)didSelect:(NSInteger)value {
     self.showProfessional = value == 0 ? YES : NO;
     
-    [self limparHorarioAgendamento];
-    
     if(value == NO)
     {
         [VariaveisGlobais shared]._withProfissional = 0;
@@ -479,6 +465,8 @@
     {
         [VariaveisGlobais shared]._withProfissional = 1;
     }
+    
+    [self limparHorarioAgendamento];
     
     self.textProfissional.text = @"";
     [VariaveisGlobais shared]._profissional = nil;

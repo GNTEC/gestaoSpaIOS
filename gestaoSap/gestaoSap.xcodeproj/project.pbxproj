@@ -60,6 +60,8 @@
 		CE0B88C41E3145AF00A1BDD5 /* logOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = logOutViewController.m; path = Files/Screen/LogOut/ViewController/logOutViewController.m; sourceTree = "<group>"; };
 		CE0B88C91E355DFC00A1BDD5 /* localizacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = localizacaoViewController.h; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.h; sourceTree = "<group>"; };
 		CE0B88CA1E355DFC00A1BDD5 /* localizacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = localizacaoViewController.m; path = Files/Screen/Localizacao/ViewController/localizacaoViewController.m; sourceTree = "<group>"; };
+		CE2A13331EBBC694004F7A81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		CE2A13341EBBC694004F7A81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CE3900721E65086600B00758 /* maisTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maisTableViewController.h; path = Files/Screen/Mais/ViewController/maisTableViewController.h; sourceTree = "<group>"; };
 		CE3900731E65086600B00758 /* maisTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = maisTableViewController.m; path = Files/Screen/Mais/ViewController/maisTableViewController.m; sourceTree = "<group>"; };
 		CE3AC0641E42449100CC64D4 /* HistoricoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricoTableViewCell.h; path = Files/Screen/HistoricoAgendamento/HistoricoTableViewCell.h; sourceTree = "<group>"; };
@@ -747,6 +749,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEE2EFE01E0BF61000F7EC4B /* Base */,
+				CE2A13331EBBC694004F7A81 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEE2EFE51E0BF61000F7EC4B /* Base */,
+				CE2A13341EBBC694004F7A81 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -766,6 +770,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -814,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -900,7 +906,7 @@
 				CEE2EFE91E0BF61000F7EC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CEE2EFEA1E0BF61000F7EC4B /* Build configuration list for PBXNativeTarget "gestaoSap" */ = {
 			isa = XCConfigurationList;
@@ -909,7 +915,7 @@
 				CEE2EFEC1E0BF61000F7EC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
