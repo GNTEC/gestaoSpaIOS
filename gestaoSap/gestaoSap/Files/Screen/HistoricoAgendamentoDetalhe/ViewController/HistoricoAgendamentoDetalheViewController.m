@@ -85,15 +85,6 @@
         self.labelData.text = self.stHistoricoAgendamento.dataAgendametoServico;
         self.labelHorario.text = self.stHistoricoAgendamento.horaAgendamentoServico;
         self.labelStatus.text = self.stHistoricoAgendamento.statusServico;
-        
-//        if([self.labelStatus.text isEqualToString:@"CONFIRMADO"] || [self.labelStatus.text isEqualToString:@"DESMARCADO"])
-//        {
-//            self.sgnGerenciar.selectedSegmentIndex = 0;
-//            self.sgnGerenciar.enabled = false;
-//            //self.sgnGerenciar.alpha = 0;
-//            self.btnOk.enabled = false;
-//            self.btnOk.alpha = 0.5;
-//        }
     }
     else
     {

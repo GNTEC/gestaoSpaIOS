@@ -218,9 +218,18 @@
 {
     if (block) {
         
-        NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"dd/MM/yyyy"];
-        NSString *strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        NSString *strData;
+        
+        if([VariaveisGlobais shared]._dataAgendamento != nil)
+        {
+            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"dd/MM/yyyy"];
+             strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        }
+        else
+        {
+             strData = [VariaveisGlobais shared]._dataAgendamento1;
+        }
     
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;
@@ -248,9 +257,18 @@
 {
     if (block) {
         
-        NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"dd/MM/yyyy"];
-        NSString *strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        NSString *strData;
+        
+        if([VariaveisGlobais shared]._dataAgendamento != nil)
+        {
+            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"dd/MM/yyyy"];
+            strData = [format stringFromDate:[VariaveisGlobais shared]._dataAgendamento];
+        }
+        else
+        {
+            strData = [VariaveisGlobais shared]._dataAgendamento1;
+        }
         
         SOAPEngine *soap = [[SOAPEngine alloc]init];
         soap.actionNamespaceSlash = YES;

@@ -126,6 +126,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+//    [self setupUI];
+//    [self updateUI];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
     [self setupUI];
     [self updateUI];
 }

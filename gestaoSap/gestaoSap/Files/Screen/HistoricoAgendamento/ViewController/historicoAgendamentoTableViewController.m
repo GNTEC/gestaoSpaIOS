@@ -86,7 +86,7 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -105,8 +105,8 @@
         
         if (dict.count > 0)
         {
-            
-            NSArray *dataArray = [dict objectForKey:@"Agendamento"];
+            //NSArray *dataArray = [dict objectForKey:@"Agendamento"];
+            NSArray *dataArray = [dict objectForKey:@"array"];
       
             for(int i = 0; i < [dataArray count]; ++i)
             {
@@ -207,7 +207,7 @@
         [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codCliente forKey:@"COD_CLIENTE"];
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
-              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_AGENDAMENTOS"
+              soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_AGENDAMENTOS_2"
   completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
       
       block(dict, nil);
