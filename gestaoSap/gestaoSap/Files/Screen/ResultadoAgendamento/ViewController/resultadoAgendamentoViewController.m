@@ -126,14 +126,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    [self setupUI];
-//    [self updateUI];
+    [self setupUI];
+    [self updateUI];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self setupUI];
-    [self updateUI];
+//    [self setupUI];
+//    [self updateUI];
 }
 
 - (void)didReceiveMemoryWarning {

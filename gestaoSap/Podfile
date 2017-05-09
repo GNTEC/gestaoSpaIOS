@@ -13,7 +13,6 @@ pod 'LLARingSpinnerView', '~> 0.1'
 pod 'JTCalendar', '~> 2.0'
 pod 'GoogleMaps', '~> 2.1'
 
-
 end
 
 target 'gestaoSap' do

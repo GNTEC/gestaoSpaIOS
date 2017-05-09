@@ -9,102 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-            timestampString = "515697207.953984"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-horariosLivres"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HorarioTableViewController horariosLivres]"
-                  moduleName = "gestaoSap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Projetos/GestaoSpa/Fontes/IOS/SteticClass/gestaoSpaIOS/gestaoSap/gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-                  timestampString = "515700525.528566"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "73">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__44-[HorarioTableViewController horariosLivres]_block_invoke"
-                  moduleName = "gestaoSap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Projetos/GestaoSpa/Fontes/IOS/SteticClass/gestaoSpaIOS/gestaoSap/gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-                  timestampString = "515700525.531069"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "90">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-            timestampString = "515699306.608461"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "-getHorariosLivres:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-            timestampString = "515699309.100563"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
-            landmarkName = "-getHorariosLivres:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-            timestampString = "515699310.083838"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
-            landmarkName = "-getHorariosLivres:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "gestaoSap/Files/Screen/Agendamento/ViewController/agendaTableViewController.m"
             timestampString = "515699655.871702"
             startingColumnNumber = "9223372036854775807"
@@ -112,22 +16,6 @@
             startingLineNumber = "323"
             endingLineNumber = "323"
             landmarkName = "-getAgendamento"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
-            timestampString = "515700371.827581"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -145,6 +33,198 @@
             endingLineNumber = "292"
             landmarkName = "-getAgendamento"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+            timestampString = "515940333.501451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-getHistoricoAgendamentos:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+            timestampString = "515940335.931118"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "-getHistoricoAgendamentos:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[historicoAgendamentoTableViewController getHistoricoAgendamentos:]"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/GestaoSpa/Fontes/IOS/SteticClass/gestaoSpaIOS/gestaoSap/gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+                  timestampString = "516034563.569578"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "567">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__68-[historicoAgendamentoTableViewController getHistoricoAgendamentos:]_block_invoke"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/GestaoSpa/Fontes/IOS/SteticClass/gestaoSpaIOS/gestaoSap/gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+                  timestampString = "516034563.572911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+            timestampString = "515940340.473053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "-getHistoricoAgendamentos:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+            timestampString = "515940349.894873"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-historicoAgendamentos"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HistoricoAgendamento/ViewController/historicoAgendamentoTableViewController.m"
+            timestampString = "515940352.063934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-historicoAgendamentos"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+            timestampString = "516028330.004406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "-getHorariosLivres:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+            timestampString = "516028331.159676"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "-getHorariosLivres:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+            timestampString = "516028334.205419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "-getHorariosLivres:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HorarioTableViewController getHorariosLivres:]"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/GestaoSpa/Fontes/IOS/SteticClass/gestaoSpaIOS/gestaoSap/gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+                  timestampString = "516034563.627193"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "284"
+                  endingLineNumber = "284"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[HorarioTableViewController getHorariosLivres:]_block_invoke"
+                  moduleName = "gestaoSap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Projetos/GestaoSpa/Fontes/IOS/SteticClass/gestaoSpaIOS/gestaoSap/gestaoSap/Files/Screen/HorarioAgendamento/ViewController/HorarioTableViewController.m"
+                  timestampString = "516034563.634744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "284"
+                  endingLineNumber = "284"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
