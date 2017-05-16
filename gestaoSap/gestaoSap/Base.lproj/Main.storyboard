@@ -1356,13 +1356,13 @@
                                 <rect key="frame" x="123" y="310" width="130" height="53"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuH-Ji-maR">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a unidade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWA-rb-tQW">
-                                        <rect key="frame" x="0.0" y="36" width="130" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1593,7 +1593,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8S-lr-EAE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="histórico" image="icohistorico" id="Hg6-KX-C3n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8hK-sO-eOt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8hK-sO-eOt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1612,7 +1612,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vM6-Fx-Niy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mais" image="iconeMais" id="3yz-lf-7Iz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iWh-1j-PzQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iWh-1j-PzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

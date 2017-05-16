@@ -118,7 +118,7 @@
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERRO" message:@"Não Existe Horarios Disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ATENÇÃO" message:@"Não Existe Horarios Disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                        handler:^(UIAlertAction * _Nonnull action) {
@@ -164,7 +164,7 @@
         }
         else
         {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERRO" message:@"Não Existe Horários disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ATENÇÃO" message:@"Não Existe Horários disponiveis !" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                        handler:^(UIAlertAction * _Nonnull action) {
@@ -277,8 +277,8 @@
         
         [soap setIntegerValue:[VariaveisGlobais shared]._codEmpresa forKey:@"COD_EMPRESA"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codUnidade forKey:@"COD_FILIAL"];
-        [soap setValue:strData forKey:@"DATA_AGENDA"];
         [soap setIntegerValue:[VariaveisGlobais shared]._codServico forKey:@"COD_SERVICO"];
+        [soap setValue:strData forKey:@"DATA_AGENDA"];
         [soap requestURL:@"http://www.gestaospa.com.br/PROD/WebSrv/WebServiceGestao.asmx"
               soapAction:@"http://www.gestaospa.com.br/PROD/WebSrv/GET_HORARIO_LIVRE_2"
   completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {

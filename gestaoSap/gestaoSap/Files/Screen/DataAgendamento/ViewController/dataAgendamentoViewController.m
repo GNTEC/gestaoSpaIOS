@@ -27,7 +27,7 @@
     _calendarManager = [JTCalendarManager new];
     _calendarManager.delegate = self;
     
-    _calendarManager.settings.pageViewHaveWeekDaysView = NO;
+    _calendarManager.settings.pageViewHaveWeekDaysView = YES;
     _calendarManager.settings.pageViewNumberOfWeeks = 0; // Automatic
     
     // Create a min and max date for limit the calendar, optional
